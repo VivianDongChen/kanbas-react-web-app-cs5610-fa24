@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import logo from './logo.svg';
 import './App.css';
 import Labs from './Labs';
