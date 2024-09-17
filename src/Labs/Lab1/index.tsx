@@ -57,10 +57,27 @@ tag to tell browsers to render the gaps.
         </ol>
         My favorite recipe:
         <ol id="wd-your-favorite-recipe">
-          <li>ix flour, sugar, and baking powder in a bowl.</li>M
+          <li>Mix flour, sugar, and baking powder in a bowl.</li>
           <li>Add milk, egg, and melted butter to the dry ingredients. Stir until combined.</li>
           <li>Pour batter onto a hot, greased skillet. Cook until bubbles form, then flip and cook until golden brown. Enjoy!</li>
         </ol>
+        <h5>Unordered List Tag</h5>
+        My favorite books (in no particular order)
+        <ul id="wd-my-books">
+          <li>Dune</li>
+          <li>Lord of the Rings</li>
+          <li>Ender's Game</li>
+          <li>Red Mars</li>
+          <li>The Forever War</li>
+        </ul>
+        Your favorite books (in no particular order)
+        <ul id="wd-your-books">
+          <li>To Kill a Mockingbird</li>
+          <li>1984</li>
+          <li>The Great Gatsby</li>
+          <li>Pride and Prejudice</li>
+          <li>The Catcher in the Rye</li>
+        </ul>
       </div>
       <div id="wd-tables">
         <h4>Table Tag</h4>
