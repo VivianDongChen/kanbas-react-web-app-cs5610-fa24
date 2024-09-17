@@ -121,7 +121,6 @@ tag to tell browsers to render the gaps.
               </tr>
             </tfoot>
           </table>
-        </div>
       </div>
     </div>
   )
