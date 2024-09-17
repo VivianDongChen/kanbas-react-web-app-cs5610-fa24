@@ -312,13 +312,13 @@ export default function Lab1() {
         <h4>Anchor tag</h4>
         Please
         <a id="wd-lipsum" href="https://www.lipsum.com">
-          click here
+           click here 
         </a>
         to get dummy text
         <br />
         Please
         <a id="wd-github" href="https://github.com/VivianDongChen/kanbas-react-web-app-cs5610-fa24/tree/a1">
-          click here
+           click here 
         </a>
         to navigate to github repository
         <br />
