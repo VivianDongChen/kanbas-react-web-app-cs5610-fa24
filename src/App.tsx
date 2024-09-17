@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Labs from './Labs';
 
-export default function App() {
+function App() {
   return (
     <div>
       <h1>Welcome to Web Dev</h1>
