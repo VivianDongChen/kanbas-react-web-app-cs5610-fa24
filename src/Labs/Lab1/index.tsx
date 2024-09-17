@@ -225,6 +225,8 @@ export default function Lab1() {
           >
             Hello World!
           </button>
+          <h5>File upload</h5>
+          <input id="wd-upload" type="file" />
         </form>
       </div>
     </div>
