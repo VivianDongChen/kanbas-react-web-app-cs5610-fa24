@@ -309,6 +309,19 @@ export default function Lab1() {
           <input type="date" id="wd-text-fields-dob" value="2000-01-21" />
           <br />
         </form>
+        <h4>Anchor tag</h4>
+        Please
+        <a id="wd-lipsum" href="https://www.lipsum.com">
+          click here
+        </a>
+        to get dummy text
+        <br />
+        Please
+        <a id="wd-github" href="https://github.com/VivianDongChen/kanbas-react-web-app-cs5610-fa24/tree/a1">
+          click here
+        </a>
+        to navigate to github repository
+        <br />
       </div>
     </div>
   );
