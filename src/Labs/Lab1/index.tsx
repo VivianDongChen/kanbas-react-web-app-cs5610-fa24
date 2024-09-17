@@ -111,21 +111,51 @@ tag to tell browsers to render the gaps.
             </tr>
             <tr>
               <td>Q4</td>
-              <td>JavaScript</td>
-              <td>2/17/21</td>
-              <td>95</td>
+              <td>React</td>
+              <td>2/24/21</td>
+              <td>92</td>
             </tr>
             <tr>
               <td>Q5</td>
-              <td>JavaScript</td>
-              <td>2/17/21</td>
-              <td>95</td>
+              <td>Node.js</td>
+              <td>3/3/21</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>Q6</td>
+              <td>SQL</td>
+              <td>3/10/21</td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td>Q7</td>
+              <td>Docker</td>
+              <td>3/17/21</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td>Q8</td>
+              <td>Java</td>
+              <td>3/24/21</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td>Q9</td>
+              <td>Python</td>
+              <td>3/31/21</td>
+              <td>93</td>
+            </tr>
+            <tr>
+              <td>Q10</td>
+              <td>Angular</td>
+              <td>4/7/21</td>
+              <td>86</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td colSpan={3}>Average</td>
-              <td>90</td>
+              <td>90.6</td>
             </tr>
           </tfoot>
         </table>
