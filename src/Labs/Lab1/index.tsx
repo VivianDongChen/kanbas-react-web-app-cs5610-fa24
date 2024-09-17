@@ -41,86 +41,69 @@ This is the third paragraph. Wrap each paragraph with the paragraph
 tag to tell browsers to render the gaps.
         </p>
       </div>
-        <p id="wd-p-1">
-        This is a paragraph. We often separate a long set of sentences with
-        vertical spaces to make the text easier to read. Browsers ignore vertical
-        white spaces and render all the text as one single set of sentences. To
-        force the browser to add vertical spacing, wrap the paragraphs you want to
-        separate with the paragraph tag</p>
-        <div id="wd-lists">
-          <h5>Ordered List Tag</h5>
-          How to make pancakes:
-          <ol id="wd-pancakes">
-            <li>Mix dry ingredients.</li>
-            <li>Add wet ingredients.</li>
-            <li>Stir to combine.</li>
-            <li>Heat a skillet or griddle.</li>
-            <li>Pour batter onto the skillet.</li>
-            <li>Cook until bubbly on top.</li>
-            <li>Flip and cook the other side.</li>
-            <li>Serve and enjoy!</li>
-          </ol>
-
-          <h5>Unordered List Tag</h5>
-          My favorite books (in no particular order):
-          <ul id="wd-my-books">
-            <li>Dune</li>
-            <li>Lord of the Rings</li>
-            <li>Ender's Game</li>
-            <li>Red Mars</li>
-            <li>The Forever War</li>
-          </ul>
-        </div>
-        <div id="wd-tables">
-          <h4>Table Tag</h4>
-          <table border={1} width="100%">
-            <thead>
-              <tr>
-                <th>Quiz</th>
-                <th>Topic</th>
-                <th>Date</th>
-                <th>Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Q1</td>
-                <td>HTML</td>
-                <td>2/3/21</td>
-                <td>85</td>
-              </tr>
-              <tr>
-                <td>Q2</td>
-                <td>CSS</td>
-                <td>2/10/21</td>
-                <td>90</td>
-              </tr>
-              <tr>
-                <td>Q3</td>
-                <td>JavaScript</td>
-                <td>2/17/21</td>
-                <td>95</td>
-              </tr>
-              <tr>
-                <td>Q4</td>
-                <td>JavaScript</td>
-                <td>2/17/21</td>
-                <td>95</td>
-              </tr>
-              <tr>
-                <td>Q5</td>
-                <td>JavaScript</td>
-                <td>2/17/21</td>
-                <td>95</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colSpan={3}>Average</td>
-                <td>90</td>
-              </tr>
-            </tfoot>
-          </table>
+      <div id="wd-lists">
+        <h4>List Tags</h4>
+        <h5>Ordered List Tag</h5>
+        How to make pancakes:
+        1. Mix dry ingredients.
+        2. Add wet ingredients.
+        3. Stir to combine.
+        4. Heat a skillet or griddle.
+        5. Pour batter onto the skillet.
+        6. Cook until bubbly on top.
+        7. Flip and cook the other side.
+        8. Serve and enjoy!
+      </div>
+      <div id="wd-tables">
+        <h4>Table Tag</h4>
+        <table border={1} width="100%">
+          <thead>
+            <tr>
+              <th>Quiz</th>
+              <th>Topic</th>
+              <th>Date</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q1</td>
+              <td>HTML</td>
+              <td>2/3/21</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td>Q2</td>
+              <td>CSS</td>
+              <td>2/10/21</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>Q3</td>
+              <td>JavaScript</td>
+              <td>2/17/21</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Q4</td>
+              <td>JavaScript</td>
+              <td>2/17/21</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Q5</td>
+              <td>JavaScript</td>
+              <td>2/17/21</td>
+              <td>95</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan={3}>Average</td>
+              <td>90</td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   )
