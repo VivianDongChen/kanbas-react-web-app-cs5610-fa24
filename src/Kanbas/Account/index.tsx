@@ -1,3 +1,4 @@
+import Profile from "./Profile";
 import Signin from "./Signin";
 
 export default function Account() {
@@ -5,6 +6,7 @@ export default function Account() {
     <div id="wd-account-screen">
       <h2>Account</h2>
       <Signin />
+      <Profile />
     </div>
   );
 }
