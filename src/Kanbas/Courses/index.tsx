@@ -1,6 +1,7 @@
 export default function Courses() {
-    return (
+  return (
     <div id="wd-courses">
-    <h2>Course 1234</h2>
+      <h2>Course 1234</h2>
     </div>
-    );}
+  );
+}
