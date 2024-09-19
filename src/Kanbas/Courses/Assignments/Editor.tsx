@@ -160,8 +160,8 @@ export default function AssignmentEditor() {
         </tr>
         <br />
         <tr>
-          <td>
-            <div style="border-top: 2px solid black; width: 100%;"></div>
+          <td style={{ borderTop: "2px solid black", width: "100%" }}>
+            <div></div>
           </td>
         </tr>
         <br />
