@@ -3,6 +3,7 @@ import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
+import Editor from "./Assignments/Editor";
 
 export default function Courses() {
   return (
@@ -22,7 +23,7 @@ export default function Courses() {
               <Route path="Assignments" element={<Assignments />} />
               <Route
                 path="Assignments/:aid"
-                element={<h2>Assignment Editor</h2>}
+                element={<Editor />}
               />
               <Route path="People"  element={<h3>People</h3>} />
             </Routes>
