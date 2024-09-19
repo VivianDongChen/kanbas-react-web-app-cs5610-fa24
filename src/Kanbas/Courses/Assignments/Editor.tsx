@@ -20,13 +20,35 @@ export default function AssignmentEditor() {
         </tr>
         <tr>
           <td align="right" valign="top">
-            <label htmlFor="wd-assignment-group">Assignment Group</label>
+            <label htmlFor="wd-group">Assignment Group</label>
           </td>
           <td>
-            <select id ="wd-assignment-group">
+            <select id ="wd-group">
             <option value="Group1">Group1</option>
             <option value="Group2">Group2</option>
             <option selected value="Assignment">ASSIGNMENT</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="right" valign="top">
+            <label htmlFor="wd-display-grade-as">Display Grade as</label>
+          </td>
+          <td>
+            <select id ="wd-display-grade-as">
+            <option value="Score">Score</option>
+            <option selected value="Percentage">Percentage</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="right" valign="top">
+            <label htmlFor="wd-submission-type">Submission Type</label>
+          </td>
+          <td>
+            <select id ="wd-submission-type">
+            <option value="In person">In person</option>
+            <option selected value="Online">Online</option>
             </select>
           </td>
         </tr>

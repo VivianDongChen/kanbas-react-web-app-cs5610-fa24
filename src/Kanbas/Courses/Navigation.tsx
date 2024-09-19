@@ -18,8 +18,20 @@ export default function CoursesNavigation() {
         Zoom
       </Link>
       <br />
-      <Link id="wd-course-quizzes-link" to="/Kanbas/Courses/1234/Assignments">
+      <Link id="wd-course-assignment-link" to="/Kanbas/Courses/1234/Assignments">
         Assignments
+      </Link>
+      <br />
+      <Link id="wd-course-assignment-link" to="/Kanbas/Courses/1234/Assignments/Editor">
+        A1 - ENV + HTML
+      </Link>
+      <br />
+      <Link id="wd-course-assignment-link" to="/Kanbas/Courses/1234/Assignments/Editor">
+        A2 - CSS + BOOTSTRAP
+      </Link>
+      <br />
+      <Link id="wd-course-assignment-link" to="/Kanbas/Courses/1234/Assignments/Editor">
+        A3 - JAVASCRIPT + REACT
       </Link>
       <br />
       <Link id="wd-course-assignments-link" to="/Kanbas/Courses/1234/Quizzes">
