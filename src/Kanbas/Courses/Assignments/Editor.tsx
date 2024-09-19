@@ -115,8 +115,8 @@ export default function AssignmentEditor() {
         </tr>
         <br />
         <tr>
-            <td></td>
-            <td>
+          <td></td>
+          <td>
             <label htmlFor="wd-assign-to">Assign to</label>
           </td>
         </tr>
@@ -134,11 +134,11 @@ export default function AssignmentEditor() {
           </td>
         </tr>
         <tr>
-            <td></td>
+          <td></td>
           <td>
             <input type="date" id="wd-due-date" value="2024-05-13" />
           </td>
-          </tr>
+        </tr>
         <br />
         <tr>
           <td></td>
@@ -146,28 +146,38 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-available-from">Available from</label>
           </td>
           <td>
-          <label htmlFor="wd-available-until">Until</label>
+            <label htmlFor="wd-available-until">Until</label>
           </td>
         </tr>
         <tr>
-            <td></td>
+          <td></td>
           <td>
             <input type="date" id="wd-available-from" value="2024-05-06" />
           </td>
           <td>
             <input type="date" id="wd-available-until" value="2024-05-20" />
           </td>
-          </tr>
-        <br />
-        <hr />
+        </tr>
         <br />
         <tr>
-            <td></td>
-            <td></td>
-            <td align="right" valign="top">
-               <button type ="button"> Save </button> 
-               <button type ="button"> Cancel </button> 
-            </td>
+          <td>
+            <hr />
+          </td>
+          <td>
+            <hr />
+          </td>
+          <td>
+            <hr />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td></td>
+          <td></td>
+          <td align="right" valign="top">
+            <button type="button"> Cancel </button>
+            <button type="button"> Save </button>
+          </td>
         </tr>
       </table>
     </div>
