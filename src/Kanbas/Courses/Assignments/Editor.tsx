@@ -115,7 +115,8 @@ export default function AssignmentEditor() {
         </tr>
         <br />
         <tr>
-        <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+            <td></td>
+            <td>
             <label htmlFor="wd-assign-to">Assign to</label>
           </td>
         </tr>
@@ -135,7 +136,7 @@ export default function AssignmentEditor() {
         <tr>
             <td></td>
           <td>
-            <input type="date" id="wd-due-date" value="2024-05-20" />
+            <input type="date" id="wd-due-date" value="2024-05-13" />
           </td>
           </tr>
         <br />
