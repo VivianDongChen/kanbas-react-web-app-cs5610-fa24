@@ -64,32 +64,51 @@ export default function AssignmentEditor() {
             </select>
           </td>
         </tr>
+        <tr>
+          <td></td>
+          <td>
+            <label htmlFor="wd-online-entry-options">
+              Online Entry Options
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              name="online-entry-options"
+              id="wd-text-entry"
+            />
+            <label htmlFor="wd-text-entry">Text Entry</label>
+            <br />
+            <input
+              type="checkbox"
+              name="online-entry-options"
+              id="wd-website-url"
+            />
+            <label htmlFor="wd-website-url">Website URL</label>
+            <br />
+            <input
+              type="checkbox"
+              name="online-entry-options"
+              id="wd-media-recordings"
+            />
+            <label htmlFor="wd-media-recordings">Media Recordings</label>
+            <br />
+            <input
+              type="checkbox"
+              name="online-entry-options"
+              id="wd-student-annotation"
+            />
+            <label htmlFor="wd-student-annotation">Student Annotation</label>
+            <br />
+            <input
+              type="checkbox"
+              name="online-entry-options"
+              id="wd-file-upload"
+            />
+            <label htmlFor="wd-file-upload">Files Uploads</label>
+            <br />
+          </td>
+        </tr>
       </table>
-      <label htmlFor="wd-online-entry-options">Online Entry Options</label>
-      <br />
-      <input type="checkbox" name="online-entry-options" id="wd-text-entry" />
-      <label htmlFor="wd-text-entry">Text Entry</label>
-      <br />
-      <input type="checkbox" name="online-entry-options" id="wd-website-url" />
-      <label htmlFor="wd-website-url">Website URL</label>
-      <br />
-      <input
-        type="checkbox"
-        name="online-entry-options"
-        id="wd-media-recordings"
-      />
-      <label htmlFor="wd-media-recordings">Media Recordings</label>
-      <br />
-      <input
-        type="checkbox"
-        name="online-entry-options"
-        id="wd-student-annotation"
-      />
-      <label htmlFor="wd-student-annotation">Student Annotation</label>
-      <br />
-      <input type="checkbox" name="online-entry-options" id="wd-file-upload" />
-      <label htmlFor="wd-file-upload">Files Uploads</label>
-      <br />
     </div>
   );
 }
