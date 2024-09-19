@@ -11,7 +11,7 @@ export default function Assignments() {
         <li className="wd-assignment-list-item">
           <a
             className="wd-assignment-link"
-            href="/Kanbas/Courses/1234/Assignments/Editor"
+            href="#/Kanbas/Courses/1234/Assignments/Editor"
           >
             A1 - ENV + HTML
           </a>
