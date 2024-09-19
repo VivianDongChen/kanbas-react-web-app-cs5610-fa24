@@ -11,7 +11,7 @@ export default function Assignments() {
         <li className="wd-assignment-list-item">
           <a
             className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/123"
+            href="/Kanbas/Courses/1234/Assignments/Editor"
           >
             A1 - ENV + HTML
           </a>
@@ -24,7 +24,7 @@ export default function Assignments() {
         <li className="wd-assignment-list-item">
           <a
             className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/456"
+            href="#/Kanbas/Courses/1234/Assignments/Editor"
           >
             A2 - CSS + BOOTSTRAP
           </a>
@@ -37,7 +37,7 @@ export default function Assignments() {
         <li className="wd-assignment-list-item">
           <a
             className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/789"
+            href="#/Kanbas/Courses/1234/Assignments/Editor"
           >
             A3 - JAVASCRIPT + REACT
           </a>
