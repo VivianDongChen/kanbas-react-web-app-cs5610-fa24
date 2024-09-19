@@ -115,7 +115,7 @@ export default function AssignmentEditor() {
         </tr>
         <br />
         <tr>
-          <td>
+          <td align="center">
             <label htmlFor="wd-assign-to">Assign to</label>
           </td>
         </tr>
@@ -125,6 +125,19 @@ export default function AssignmentEditor() {
             <input type="text" id="wd-assign-to" value="Everyone" />
           </td>
         </tr>
+        <br />
+        <tr>
+          <td></td>
+          <td>
+            <label htmlFor="wd-due-date">Due</label>
+          </td>
+        </tr>
+        <tr>
+            <td></td>
+          <td>
+            <input type="date" id="wd-due-date" value="2024-5-20" />
+          </td>
+          </tr>
         <br />
       </table>
     </div>
