@@ -1,12 +1,18 @@
 export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
-      <label htmlFor="wd-name">Assignment Name</label><br />
+      <label htmlFor="wd-name">Assignment Name</label>
+      <br />
       <input id="wd-name" value="A1 - ENV + HTML" />
       <br />
       <br />
-      <textarea id="wd-description"cols ={50} rows={10}>
-        The assignment is available online Submit a link to the landing page of your Web application running on Netlify. The Landing page should include the following: Your full name and section Links to each of the lab assignments Link to the Kanbas application Links to all relevent source code repositories The Kanbas application should include a link to navigate back to the landing page.
+      <textarea id="wd-description" cols={50} rows={10}>
+        The assignment is available online Submit a link to the landing page of
+        your Web application running on Netlify. The Landing page should include
+        the following: Your full name and section Links to each of the lab
+        assignments Link to the Kanbas application Links to all relevent source
+        code repositories The Kanbas application should include a link to
+        navigate back to the landing page.
       </textarea>
       <br />
       <table>
@@ -23,10 +29,12 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-group">Assignment Group</label>
           </td>
           <td>
-            <select id ="wd-group">
-            <option value="Group1">Group1</option>
-            <option value="Group2">Group2</option>
-            <option selected value="Assignment">ASSIGNMENT</option>
+            <select id="wd-group">
+              <option value="Group1">Group1</option>
+              <option value="Group2">Group2</option>
+              <option selected value="Assignment">
+                ASSIGNMENT
+              </option>
             </select>
           </td>
         </tr>
@@ -35,9 +43,11 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-display-grade-as">Display Grade as</label>
           </td>
           <td>
-            <select id ="wd-display-grade-as">
-            <option value="Score">Score</option>
-            <option selected value="Percentage">Percentage</option>
+            <select id="wd-display-grade-as">
+              <option value="Score">Score</option>
+              <option selected value="Percentage">
+                Percentage
+              </option>
             </select>
           </td>
         </tr>
@@ -46,13 +56,40 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-submission-type">Submission Type</label>
           </td>
           <td>
-            <select id ="wd-submission-type">
-            <option value="In person">In person</option>
-            <option selected value="Online">Online</option>
+            <select id="wd-submission-type">
+              <option value="In person">In person</option>
+              <option selected value="Online">
+                Online
+              </option>
             </select>
           </td>
         </tr>
       </table>
+      <label htmlFor="wd-online-entry-options">Online Entry Options</label>
+      <br />
+      <input type="checkbox" name="online-entry-options" id="wd-text-entry" />
+      <label htmlFor="wd-text-entry">Text Entry</label>
+      <br />
+      <input type="checkbox" name="online-entry-options" id="wd-website-url" />
+      <label htmlFor="wd-website-url">Website URL</label>
+      <br />
+      <input
+        type="checkbox"
+        name="online-entry-options"
+        id="wd-media-recordings"
+      />
+      <label htmlFor="wd-media-recordings">Media Recordings</label>
+      <br />
+      <input
+        type="checkbox"
+        name="online-entry-options"
+        id="wd-student-annotation"
+      />
+      <label htmlFor="wd-student-annotation">Student Annotation</label>
+      <br />
+      <input type="checkbox" name="online-entry-options" id="wd-file-upload" />
+      <label htmlFor="wd-file-upload">Files Uploads</label>
+      <br />
     </div>
   );
 }
