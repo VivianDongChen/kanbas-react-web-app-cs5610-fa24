@@ -162,6 +162,8 @@ export default function AssignmentEditor() {
         <hr />
         <br />
         <tr>
+            <td></td>
+            <td></td>
             <td align="right" valign="top">
                <button type ="button"> Save </button> 
                <button type ="button"> Cancel </button> 
