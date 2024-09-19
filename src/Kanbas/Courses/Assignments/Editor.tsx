@@ -15,6 +15,7 @@ export default function AssignmentEditor() {
         navigate back to the landing page.
       </textarea>
       <br />
+      <br />
       <table>
         <tr>
           <td align="right" valign="top">
@@ -24,6 +25,7 @@ export default function AssignmentEditor() {
             <input id="wd-points" value={100} />
           </td>
         </tr>
+        <br />
         <tr>
           <td align="right" valign="top">
             <label htmlFor="wd-group">Assignment Group</label>
@@ -38,6 +40,7 @@ export default function AssignmentEditor() {
             </select>
           </td>
         </tr>
+        <br />
         <tr>
           <td align="right" valign="top">
             <label htmlFor="wd-display-grade-as">Display Grade as</label>
@@ -51,6 +54,7 @@ export default function AssignmentEditor() {
             </select>
           </td>
         </tr>
+        <br />
         <tr>
           <td align="right" valign="top">
             <label htmlFor="wd-submission-type">Submission Type</label>
@@ -64,6 +68,7 @@ export default function AssignmentEditor() {
             </select>
           </td>
         </tr>
+        <br />
         <tr>
           <td></td>
           <td>
@@ -108,6 +113,19 @@ export default function AssignmentEditor() {
             <br />
           </td>
         </tr>
+        <br />
+        <tr>
+          <td>
+            <label htmlFor="wd-assign-to">Assign to</label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="text" id="wd-assign-to" value="Everyone" />
+          </td>
+        </tr>
+        <br />
       </table>
     </div>
   );
