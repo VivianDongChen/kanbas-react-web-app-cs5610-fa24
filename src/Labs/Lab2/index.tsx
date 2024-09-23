@@ -1,4 +1,5 @@
 import "./index.css";
+import ReactIcons from "./ReactIcons";
 
 export default function Lab2() {
   return (
@@ -355,6 +356,9 @@ export default function Lab2() {
             Column 3
           </div>
         </div>
+      </div>
+      <div id="wd-react-icons">
+        <ReactIcons />
       </div>
     </div>
   );
