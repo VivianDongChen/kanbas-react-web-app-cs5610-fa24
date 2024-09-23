@@ -7,7 +7,7 @@ import Lab3 from "./Lab3"
 export default function Labs(){
   return (
     <div>
-      <h1>Dong Chen</h1>
+      <h1>Dong Chen - SEC 02</h1>
       <TOC />
       <h1>Labs</h1>
       <Routes>
