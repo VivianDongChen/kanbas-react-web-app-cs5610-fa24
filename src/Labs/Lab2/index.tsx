@@ -6,12 +6,12 @@ import Borders from "./Borders";
 import Padding from "./Padding";
 import Margins from "./Margins";
 import Corners from "./Corners";
-import Dimensions from "./dimensions";
 import Positions from "./Positions";
 import Zindex from "./Zindex";
 import Float from "./Float";
 import GridLayout from "./GridLayout";
 import Flex from "./Flex";
+import Dimensions from "./Dimensions";
 
 export default function Lab2() {
   return (
