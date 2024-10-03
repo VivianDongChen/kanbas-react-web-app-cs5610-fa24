@@ -16,10 +16,10 @@ export default function KanbasNavigation() {
         id="wd-neu-link"
         target="_blank"
         href="https://www.northeastern.edu/"
-        className="list-group-item bg-black border-0" rel="noreferrer"
+        className="list-group-item bg-black border-0 text-center" rel="noreferrer"
       >
         <img src="/images/NEU.png" width="75px" />
-      </a>
+      </a><br />
 
       <Link
         to="/Kanbas/Account"
