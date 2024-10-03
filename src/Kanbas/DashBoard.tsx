@@ -92,13 +92,13 @@ export default function Dashboard() {
               </Link>
             </div>
           </div>
-          {/* <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
           <div className="card">
               <Link
                 className="wd-dashboard-course-link text-decoration-none text-dark"
                 to="/Kanbas/Courses/5004/Home"
               >
-                <img src="/images/5004.jpg" width="100%" />
+                <img src="/images/5004.jpg" width="100%" alt="CS5004 Java course"/>
                 <div className="card-body">
                   <h5 className="wd-dashboard-course-title card-title">
                     CS5004 Java
@@ -109,7 +109,7 @@ export default function Dashboard() {
               </Link>
             </div>
           </div>
-          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+          {/* <div className="wd-dashboard-course col" style={{ width: "300px" }}>
           <div className="card">
               <Link
                 className="wd-dashboard-course-link text-decoration-none text-dark"
