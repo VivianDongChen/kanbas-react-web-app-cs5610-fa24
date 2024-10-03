@@ -1,85 +1,97 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; // Use NavLink for active links
 import { AiOutlineDashboard } from "react-icons/ai";
-import { IoCalendarOutline } from "react-icons/io5";
-import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
-import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
+import { LiaBookSolid } from "react-icons/lia";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { BsCalendar3, BsInbox, BsGear } from "react-icons/bs";
 
 export default function KanbasNavigation() {
   return (
     <div
       id="wd-kanbas-navigation"
-      style={{ width: 120 }}
       className="list-group rounded-0 position-fixed top-0 bottom-0 d-none d-md-block z-2 bg-black"
+      style={{ width: 110 }} // Sidebar width set to 110px
     >
       <a
         id="wd-neu-link"
         target="_blank"
         href="https://www.northeastern.edu/"
-        className="list-group-item bg-black border-0 text-center" rel="noreferrer"
+        className="list-group-item bg-black border-0 text-center"
+        rel="noreferrer"
       >
-        <img src="/images/NEU.png" width="75px" />
+        <img src="/images/NEU.png" width="75px" alt="Northeastern University Logo" />
       </a>
 
-      <Link
+      <NavLink
         to="/Kanbas/Account"
         id="wd-account-link"
-        className="list-group-item text-white bg-black text-center border-0"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <FaRegCircleUser className="fs-1 text text-white" />
+        <FaRegCircleUser className="fs-1 text-white" /> {/* Account icon in white */}
         <br />
         Account
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/Kanbas/Dashboard"
         id="wd-dashboard-link"
-        className="list-group-item text-center border-0 bg-white text-danger"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <AiOutlineDashboard className="fs-1 text-danger" />
+        <AiOutlineDashboard className="fs-1 text-danger" /> {/* Dashboard icon in red */}
         <br />
         Dashboard
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/Kanbas/Courses"
         id="wd-course-link"
-        className="list-group-item text-white bg-black text-center border-0"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <LiaBookSolid className="fs-1 text-danger" />
+        <LiaBookSolid className="fs-1 text-danger" /> {/* Courses icon in red */}
         <br />
         Courses
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/Kanbas/Calendar"
         id="wd-calendar-link"
-        className="list-group-item text-white bg-black text-center border-0"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <BsCalendar3 className="fs-1 text-danger" />
+        <BsCalendar3 className="fs-1 text-danger" /> {/* Calendar icon in red */}
         <br />
         Calendar
-      </Link>
+      </NavLink>
       
-      <Link
+      <NavLink
         to="/Kanbas/Inbox"
         id="wd-inbox-link"
-        className="list-group-item text-white bg-black text-center border-0"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <BsInbox className="fs-1 text-danger" />
+        <BsInbox className="fs-1 text-danger" /> {/* Inbox icon in red */}
         <br />
         Inbox
-      </Link>
+      </NavLink>
 
-      <Link
-        to="/Kanbas/Labs"
+      <NavLink
+        to="/Labs"
         id="wd-labs-link"
-        className="list-group-item text-white bg-black text-center border-0"
+        className={({ isActive }) =>
+          `list-group-item text-center border-0 ${isActive ? 'bg-white text-danger' : 'bg-black text-white'}`
+        }
       >
-        <BsGear className="fs-1 text-danger" />
+        <BsGear className="fs-1 text-danger" /> {/* Labs icon in red */}
         <br />
         Labs
-      </Link>
+      </NavLink>
       
     </div>
   );
