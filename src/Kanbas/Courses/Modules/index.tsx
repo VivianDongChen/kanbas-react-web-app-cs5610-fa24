@@ -14,8 +14,8 @@ export default function Modules() {
               </ul>
               <span className="wd-title">READING</span>
               <ul className="wd-content">
-                <li className="wd-content-item">Full Stack Development - Chapter 1 - Introduction</li>
-                <li className="wd-content-item">Full Stack Development - Chapter 2 - Creating Us</li>  
+                <li className="wd-content-item">Full Stack Developer - Chapter 1 - Introduction</li>
+                <li className="wd-content-item">Full Stack Developer - Chapter 2 - Creating Us</li>  
               </ul>
               <span className="wd-title">SLIDES</span>
               <ul className="wd-content">
