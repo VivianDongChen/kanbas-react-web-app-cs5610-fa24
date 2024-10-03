@@ -1,9 +1,5 @@
+/* eslint-disable no-unused-vars, react/jsx-no-target-blank */
 export default function BootstrapNavigation() {
-
-    const handleTabClick = (event: { preventDefault: () => void; }) => {
-        event.preventDefault(); // Prevent default anchor click behavior
-        // Add your tab-switching logic here
-      };
 
   return (
     <div id="wd-css-navigating-with-tabs">
