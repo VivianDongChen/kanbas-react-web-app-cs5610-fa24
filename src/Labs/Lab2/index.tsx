@@ -14,6 +14,7 @@ import Flex from "./Flex";
 import Dimensions from "./Dimensions";
 import BootstrapGrids from "./BootstrapGrids";
 import ScreenSizeLabel from "./ScreenSizeLabel";
+import BootstrapTables from "./BootstrapTables";
 
 export default function Lab2() {
   return (
@@ -86,6 +87,7 @@ export default function Lab2() {
         <ReactIcons />
         <BootstrapGrids />
         <ScreenSizeLabel />
+        <BootstrapTables />
       </div>
     </div>
   );
