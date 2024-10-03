@@ -10,7 +10,7 @@ export default function KanbasNavigation() {
     <div
       id="wd-kanbas-navigation"
       style={{ width: 120 }}
-      className="list-group rounded-0"
+      className="list-group rounded-0 position-fixed top-0 bottom-0 d-none d-md-block z-2 bg-black"
     >
       <a
         id="wd-neu-link"
@@ -19,7 +19,7 @@ export default function KanbasNavigation() {
         className="list-group-item bg-black border-0 text-center" rel="noreferrer"
       >
         <img src="/images/NEU.png" width="75px" />
-      </a><br />
+      </a>
 
       <Link
         to="/Kanbas/Account"
