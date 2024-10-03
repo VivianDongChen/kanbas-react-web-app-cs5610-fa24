@@ -37,7 +37,6 @@ Lab 2
 <a id="wd-a3" href="#/Labs/Lab3"
 className={`nav-link ${pathname.includes("Lab3") ? "active" : ""}`}>
 Lab 3
-Copyright © 2024 Jose Annunziato. All rights reserved. 23
 </a>
 </li>
 <li className="nav-item">
