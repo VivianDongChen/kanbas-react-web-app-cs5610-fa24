@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars, react/jsx-no-target-blank */
+/* eslint-disable */
 export default function BootstrapNavigation() {
 
   return (
