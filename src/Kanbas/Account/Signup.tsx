@@ -1,31 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Profile from "./Profile";
+import Signin from "./Signin";
+import Signup from "./Signup";
+import AccountNavigation from "./Navigation";
 
-export default function Signup() {
+export default function Account() {
   return (
-    <div id="wd-signup-screen">
-      <h1>Sign up</h1>
-      <input
-        id="wd-username"
-        placeholder="username"
-        className="form-control mb-2"
-      />
-      <input
-        id="wd-password"
-        placeholder="password"
-        type="password"
-        className="form-control mb-2"
-      />
-      <Link
-        id="wd-signup-btn"
-        to="/Kanbas/Account/Profile"
-        className="btn btn-primary w-100"
-      >
-        Sign up
-      </Link>
-      <Link id="wd-signin-link" to="/Kanbas/Account/Signin">
-        Sign in
-      </Link>
+    <div id="wd-account-screen" className="container-fluid">
+      <div className="row">
+        {/* Account Navigation Column */}
+        <div className="col-md-1"> {/* Further reduced width for AccountNavigation */}
+          <AccountNavigation />
+        </div>
+
+        {/* Spacer and Main Content */}
+        <div className="col-md-4 offset-md-1"> {/* Further reduced width and offset for content */}
+          <Routes>
+            <Route path="/" element={<Navigate to="/Kanbas/Account/Signin" />} />
+            <Route path="/Signin" element={<Signin />} />
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Signup" element={<Signup />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
