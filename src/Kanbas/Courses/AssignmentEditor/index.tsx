@@ -30,7 +30,7 @@ export default function AssignmentEditor() {
 
       {/* Points */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Points</label>
+        <label className="col-sm-2 col-form-label text-end">Points</label>
         <div className="col-sm-10">
           <input type="number" className="form-control" defaultValue="100" />
         </div>
