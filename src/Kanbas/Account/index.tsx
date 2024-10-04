@@ -11,7 +11,7 @@ export default function Account() {
         <div className="col-md-1"> 
           <AccountNavigation />
         </div>
-        <div className="col-md-1 offset-md-1"> 
+        <div className="col-md-3 offset-md-1"> 
           <Routes>
             <Route path="/" element={<Navigate to="/Kanbas/Account/Signin" />} />
             <Route path="/Signin" element={<Signin />} />
