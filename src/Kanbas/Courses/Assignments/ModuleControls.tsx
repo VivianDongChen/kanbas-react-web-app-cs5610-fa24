@@ -16,27 +16,21 @@ export default function ModulesControls() {
       </div>
 
       {/* Group and Assignment Buttons */}
-      <div className="dropdown d-inline me-1 float-end">
-        <button
-          id="wd-publish-all-btn"
-          className="btn btn-lg dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-        >
-          Group
-        </button>
-      </div>
+      <button
+        id="wd-add-module-btn"
+        className="btn btn-lg me-1 float-end"
+      >
+        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
+        Group
+      </button>
 
-      <div className="dropdown d-inline me-1 float-end">
-        <button
-          id="wd-publish-all-btn"
-          className="btn btn-lg btn-danger dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-        >
-          Assignment
-        </button>
-      </div>
+      <button
+        id="wd-add-module-btn"
+        className="btn btn-lg btn-danger me-1 float-end"
+      >
+        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
+        Assignment
+      </button>
     </div>
   );
 }
