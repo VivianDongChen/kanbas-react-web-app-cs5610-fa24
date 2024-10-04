@@ -24,7 +24,7 @@ export default function PeopleTable() {
             <td className="wd-login-id">001234561S</td>
             <td className="wd-section">S101</td>
             <td className="wd-role">STUDENT</td>
-            <td className="wd-last-activity">2020-10-01</td>
+            <td className="wd-last-activity">2020-10-01T00:00:00.000Z</td>
             <td className="wd-total-activity">10:21:32</td>
           </tr>
           <tr>
@@ -36,7 +36,7 @@ export default function PeopleTable() {
             <td className="wd-login-id">001234562S</td>
             <td className="wd-section">S101</td>
             <td className="wd-role">STUDENT</td>
-            <td className="wd-last-activity">2020-11-02</td>
+            <td className="wd-last-activity">2020-11-02T00:00:00.000Z</td>
             <td className="wd-total-activity">15:32:43</td>
           </tr>
           <tr>
@@ -48,7 +48,7 @@ export default function PeopleTable() {
             <td className="wd-login-id">001234563S</td>
             <td className="wd-section">S101</td>
             <td className="wd-role">STUDENT</td>
-            <td className="wd-last-activity">2020-10-02</td>
+            <td className="wd-last-activity">2020-10-02T00:00:00.000Z</td>
             <td className="wd-total-activity">23:32:43</td>
           </tr>
           <tr>
@@ -60,7 +60,7 @@ export default function PeopleTable() {
             <td className="wd-login-id">001234564S</td>
             <td className="wd-section">S101</td>
             <td className="wd-role">TA</td>
-            <td className="wd-last-activity">2020-11-05</td>
+            <td className="wd-last-activity">2020-11-05T00:00:00.000Z</td>
             <td className="wd-total-activity">13:23:34</td>
           </tr>
         </tbody>
