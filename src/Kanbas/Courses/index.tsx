@@ -6,6 +6,8 @@ import Assignments from "./Assignments/Editor";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
+import '../styles.css';
+
 
 export default function Courses() {
   return (
