@@ -18,15 +18,15 @@ export default function AssignmentEditor() {
         <div className="col-sm-10">
           <div className="border p-3">
             <p>The assignment is <span style={{ color: "red" }}>available online</span></p>
-            <p>Submit a link to the landing page of your Web application running on <span style={{ color: "red" }}>Netlify</span>.</p>
+            <p>Submit a link to the landing page of your Web application running on <span style={{ color: "black" }}>Netlify</span>.</p>
             <p>The landing page should include the following:</p>
             <ul>
               <li>Your full name and section</li>
               <li>Links to each of the lab assignments</li>
-              <li>Link to the <span style={{ color: "red" }}>Kanbas</span> application</li>
+              <li>Link to the <span style={{ color: "black" }}>Kanbas</span> application</li>
               <li>Links to all relevant source code repositories</li>
             </ul>
-            <p>The <span style={{ color: "red" }}>Kanbas</span> application should include a link to navigate back to the landing page.</p>
+            <p>The <span style={{ color: "black" }}>Kanbas</span> application should include a link to navigate back to the landing page.</p>
           </div>
         </div>
       </div>
@@ -46,7 +46,10 @@ export default function AssignmentEditor() {
         <label className="col-sm-2 col-form-label text-right">Assignment Group</label>
         <div className="col-sm-10">
           <select className="form-control">
-            <option>ASSIGNMENTS</option>
+            <option>Assignments</option>
+            <option>Quizzes</option>
+            <option>Labs</option>
+            <option>Projects</option>
           </select>
         </div>
       </div>
@@ -58,6 +61,9 @@ export default function AssignmentEditor() {
         <div className="col-sm-10">
           <select className="form-control">
             <option>Percentage</option>
+            <option>Points</option>
+            <option>Complete/Incomplete</option>
+            <option>Letter Grade</option>
           </select>
         </div>
       </div>
@@ -70,6 +76,7 @@ export default function AssignmentEditor() {
           <div className="border p-3">
             <select className="form-control">
               <option>Online</option>
+              <option>In-person</option>
             </select>
             <br />
             <label>Online Entry Options</label>
