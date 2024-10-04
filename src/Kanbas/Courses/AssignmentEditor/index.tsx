@@ -55,7 +55,7 @@ export default function AssignmentEditor() {
       <div className="form-group row">
         <label className="col-sm-2 col-form-label text-end">Display Grade as</label>
         <div className="col-sm-10">
-          <select className="form-control">
+          <select className="form-select">
             <option>Percentage</option>
             <option>Points</option>
             <option>Complete/Incomplete</option>
@@ -70,7 +70,7 @@ export default function AssignmentEditor() {
         <label className="col-sm-2 col-form-label text-end">Submission Type</label>
         <div className="col-sm-10">
           <div className="border p-3">
-            <select className="form-control">
+            <select className="form-select">
               <option>Online</option>
               <option>In-person</option>
             </select>
