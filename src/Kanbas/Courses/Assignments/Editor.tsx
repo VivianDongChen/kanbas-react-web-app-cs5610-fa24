@@ -15,9 +15,16 @@ export default function AssignmentEditor() {
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
+        <div
+            className="wd-title d-flex justify-content-between align-items-center p-3 bg-light"
+            data-bs-toggle="collapse"
+            data-bs-target="#assignmentCollapse"
+            aria-expanded="true"
+            style={{ cursor: "pointer" }}
+          >
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-4 text-secondary" />
-              <span className="dropdown">ASSIGNMENTS</span>
+              <span className="dropdown-item">ASSIGNMENTS</span>
             </div>
             <div className="d-flex align-items-center">
               {/* Oval Box - 40% of Total */}
@@ -26,6 +33,7 @@ export default function AssignmentEditor() {
               </span>
               <AssignmentsControlButtons />
             </div>
+          </div>
           <div id="assignmentCollapse" className="collapse show">
             <ul className="wd-assignments list-group list-group-flush">
               {/* Assignment A1 */}
