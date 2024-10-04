@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
-import Assignments from "./Assignments/Editor";
-import AssignmentEditor from "./Assignments/Editor";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
 

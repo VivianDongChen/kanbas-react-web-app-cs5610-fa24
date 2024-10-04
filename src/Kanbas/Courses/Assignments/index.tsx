@@ -6,7 +6,7 @@ import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function AssignmentEditor() {
+export default function Assignments() {
   return (
     <div>
       <ModuleControls />
