@@ -41,8 +41,8 @@ export default function AssignmentEditor() {
       <div className="form-group row">
         <label className="col-sm-2 col-form-label text-end">Assignment Group</label>
         <div className="col-sm-10">
-          <select className="form-control">
-            <option>Assignments</option>
+          <select className="form-select">
+            <option>ASSIGNMENT</option>
             <option>Quizzes</option>
             <option>Labs</option>
             <option>Projects</option>
