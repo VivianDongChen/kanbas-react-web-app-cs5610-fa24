@@ -47,7 +47,8 @@ export default function CourseStatus() {
       </button>
       <br />
       <button className="btn btn-lg btn-secondary w-100 mt-1 text-start">
-        <AiOutlineNotification className="me-2 fs-5" /> View Course Notifications
+        <AiOutlineNotification className="me-2 fs-5" /> View Course
+        Notifications
       </button>
     </div>
   );
