@@ -4,6 +4,7 @@ import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function AssignmentEditor() {
   return (
@@ -58,7 +59,9 @@ export default function AssignmentEditor() {
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
                   <div>
+                  <Link className="wd-assignment-link" to="/Kanbas/AssignmentEditor/A1/">
                     <span>A1</span>
+                    </Link>
                     <small className="text-muted d-block">
                       <span className="text-danger">Multiple Modules</span> |
                       Not available until May 6 at 12:00am | Due May 13 at
@@ -75,7 +78,9 @@ export default function AssignmentEditor() {
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
                   <div>
+                  <Link className="wd-assignment-link" to="/Kanbas/AssignmentEditor/A1/">
                     <span>A2</span>
+                    </Link>
                     <small className="text-muted d-block">
                       <span className="text-danger">Multiple Modules</span> |
                       Not available until May 13 at 12:00am | Due May 20 at
@@ -92,7 +97,9 @@ export default function AssignmentEditor() {
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
                   <div>
+                  <Link className="wd-assignment-link" to="/Kanbas/AssignmentEditor/A1/">
                     <span>A3</span>
+                    </Link>
                     <small className="text-muted d-block">
                       <span className="text-danger">Multiple Modules</span> |
                       Not available until May 20 at 12:00am | Due May 27 at
