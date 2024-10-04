@@ -26,7 +26,6 @@ export default function AssignmentEditor() {
               </span>
               <AssignmentsControlButtons />
             </div>
-          </div>
           <div id="assignmentCollapse" className="collapse show">
             <ul className="wd-assignments list-group list-group-flush">
               {/* Assignment A1 */}
