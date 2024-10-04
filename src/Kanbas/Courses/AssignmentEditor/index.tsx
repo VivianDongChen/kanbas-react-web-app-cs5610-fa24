@@ -15,17 +15,17 @@ export default function AssignmentEditor() {
         <label>Instructions</label>
         <div className="border p-3">
           <p>The assignment is <a href="#">available online</a></p>
-          <p>Submit a link to the landing page of your Web application running on Netlify.</p>
+          <p>Submit a link to the landing page of your Web application running on <a href="#">Netlify</a>.</p>
           <br />
           <p>The landing page should include the following:</p>
           <ul>
             <li>Your full name and section</li>
             <li>Links to each of the lab assignments</li>
-            <li>Link to the Kanbas application</li>
+            <li>Link to the <a href="#">Kanbas</a> application</li>
             <li>Links to all relevant source code repositories</li>
           </ul>
           <br />
-          <p>The Kanbas application should include a link to navigate back to the landing page.</p>
+          <p>The <a href="#">Kanbas</a> application should include a link to navigate back to the landing page.</p>
         </div>
       </div>
       <br />
@@ -41,7 +41,7 @@ export default function AssignmentEditor() {
       <div>
         <label>Assignment Group</label>
         <select className="form-control">
-          <option>Assignments</option>
+          <option>ASSIGNMENTS</option>
         </select>
       </div>
       <br />
