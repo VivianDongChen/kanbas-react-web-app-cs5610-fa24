@@ -16,21 +16,26 @@ export default function ModulesControls() {
       </div>
 
       {/* Group and Assignment Buttons */}
-      <button
-        id="wd-add-module-btn"
-        className="btn btn-lg me-1 float-end"
-      >
-        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-        Group
-      </button>
+      <div className="d-flex align-items-center">
+        <button
+          id="wd-add-group-btn"
+          className="btn btn-outline-secondary d-flex align-items-center me-2"
+          style={{ height: "100%" }}
+        >
+          <FaPlus className="me-2" />
+          Group
+        </button>
 
-      <button
-        id="wd-add-module-btn"
-        className="btn btn-lg btn-danger me-1 float-end"
-      >
-        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-        Assignment
-      </button>
+        <button
+          id="wd-add-assignment-btn"
+          className="btn btn-danger d-flex align-items-center"
+          style={{ height: "100%" }}
+        >
+          <FaPlus className="me-2" />
+          Assignment
+        </button>
+      </div>
     </div>
   );
 }
+
