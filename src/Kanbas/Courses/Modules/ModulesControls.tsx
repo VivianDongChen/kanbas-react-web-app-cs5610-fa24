@@ -2,7 +2,7 @@ import { FaPlus } from "react-icons/fa6";
 import GreenCheckmark from "./GreenCheckmark";
 export default function ModulesControls() {
   return (
-    <div id="wd-modules-controls" className="text-nowrap">
+    <div id="wd-modules-controls" className="d-inline-flex align-items-center justify-content-end">
       <button
         id="wd-add-module-btn"
         className="btn btn-lg btn-danger me-1 float-end"
@@ -10,7 +10,7 @@ export default function ModulesControls() {
         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
         Module
       </button>
-      <div className="dropdown d-inline me-1 float-end">
+      <div className="dropdown d-inline me-2">
         <button
           id="wd-publish-all-btn"
           className="btn btn-lg btn-secondary dropdown-toggle"
@@ -63,7 +63,7 @@ export default function ModulesControls() {
           </li>
         </ul>
       </div>
-      <div className="btn d-inline me-1 float-end">
+      <div className="btn d-inline me-2">
         <button
           id="wd-view-progress-btn"
           className="btn btn-lg btn-secondary"
@@ -72,7 +72,7 @@ export default function ModulesControls() {
           View Progress
         </button>
         </div>
-      <div className="btn d-inline me-1 float-end">
+      <div className="btn d-inline me-2">
         <button
           id="wd-collapse-all-btn"
           className="btn btn-lg btn-secondary"
