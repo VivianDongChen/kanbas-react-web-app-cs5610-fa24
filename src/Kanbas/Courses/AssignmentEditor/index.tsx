@@ -4,30 +4,26 @@ export default function AssignmentEditor() {
   return (
     <div className="p-4">
       {/* Assignment Name */}
-      <div className="form-group row">
-        <label htmlFor="assignmentName" className="col-sm-2 col-form-label text-right">Assignment Name</label>
-        <div className="col-sm-10">
-          <input type="text" id="assignmentName" className="form-control" defaultValue="A1" />
-        </div>
+      <div className="form-group">
+        <label htmlFor="assignmentName">Assignment Name</label>
+        <input type="text" id="assignmentName" className="form-control" defaultValue="A1" />
       </div>
       <br />
 
       {/* Instructions */}
-      <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Instructions</label>
-        <div className="col-sm-10">
-          <div className="border p-3">
-            <p>The assignment is <span style={{ color: "red" }}>available online</span></p>
-            <p>Submit a link to the landing page of your Web application running on <span style={{ color: "black" }}>Netlify</span>.</p>
-            <p>The landing page should include the following:</p>
-            <ul>
-              <li>Your full name and section</li>
-              <li>Links to each of the lab assignments</li>
-              <li>Link to the <span style={{ color: "black" }}>Kanbas</span> application</li>
-              <li>Links to all relevant source code repositories</li>
-            </ul>
-            <p>The <span style={{ color: "black" }}>Kanbas</span> application should include a link to navigate back to the landing page.</p>
-          </div>
+      <div className="form-group">
+        <label>Instructions</label>
+        <div className="border p-3">
+          <p>The assignment is <span style={{ color: "red" }}>available online</span></p>
+          <p>Submit a link to the landing page of your Web application running on <span style={{ color: "black" }}>Netlify</span>.</p>
+          <p>The landing page should include the following:</p>
+          <ul>
+            <li>Your full name and section</li>
+            <li>Links to each of the lab assignments</li>
+            <li>Link to the <span style={{ color: "black" }}>Kanbas</span> application</li>
+            <li>Links to all relevant source code repositories</li>
+          </ul>
+          <p>The <span style={{ color: "black" }}>Kanbas</span> application should include a link to navigate back to the landing page.</p>
         </div>
       </div>
       <br />
