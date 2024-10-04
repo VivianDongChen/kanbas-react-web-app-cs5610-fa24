@@ -32,7 +32,6 @@ export default function AssignmentEditor() {
                   aria-expanded="false"
                   style={{ cursor: "pointer" }}
                 >
-                  &#9660;
                 </span>
                 <button
                   id="wd-publish-all-btn"
