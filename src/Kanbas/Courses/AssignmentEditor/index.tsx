@@ -107,24 +107,12 @@ export default function AssignmentEditor() {
       <div className="form-group row">
         <label className="col-sm-2 col-form-label text-end">Assign</label>
         <div className="col-sm-10 border p-3">
-          {/* <div className="form-group">
+          <div className="form-group">
             <label>Assign to</label>
             <select className="form-control">
               <option>Everyone</option>
             </select>
-          </div> */}
-          <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-end">Assign to</label>
-        <div className="col-sm-10">
-          <Select
-            value={selectedOption}
-            onChange={handleChange}
-            options={options}
-            isMulti
-          />
-        </div>
-        
-      </div>
+          </div>
           <div className="form-group">
             <label>Due</label>
             <input type="datetime-local" className="form-control" defaultValue="2024-05-13T23:59" />
