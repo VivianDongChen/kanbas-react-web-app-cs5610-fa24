@@ -1,14 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ModulesControls from "./ModuleControls";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-reportWebVitals();
+export default function Modules() {
+  return (
+    <div>
+      <ModulesControls />
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  );
+}
