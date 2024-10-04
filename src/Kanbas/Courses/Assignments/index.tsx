@@ -1,53 +1,44 @@
+import React from 'react';
+import ModulesControls from './ModulesControls';
+import AssignmentListItem from './AssignmentListItem';
+import { FaEllipsisV } from "react-icons/fa";
+
 export default function Assignments() {
   return (
-    <div id="wd-assignments">
-      <input id="wd-search-assignment" placeholder="Search for Assignments" />
-      <button id="wd-add-assignment-group">+ Group</button>
-      <button id="wd-add-assignment">+ Assignment</button>
-      <h3 id="wd-assignments-title">
-        ASSIGNMENTS 40% of Total <button>+</button>
-      </h3>
-      <ul id="wd-assignment-list">
-        <li className="wd-assignment-list-item">
-          <a
-            className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/Editor"
-          >
-            A1 - ENV + HTML
-          </a>
-          <p>
-            {" "}
-            Multiple Modules|Not available until May 6 at 12:00am|Due May 13 at
-            11:59pm|100 pts
-          </p>
-        </li>
-        <li className="wd-assignment-list-item">
-          <a
-            className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/Editor"
-          >
-            A2 - CSS + BOOTSTRAP
-          </a>
-          <p>
-            {" "}
-            Multiple Modules|Not available until May 13 at 12:00am|Due May 20 at
-            11:59pm|100 pts
-          </p>
-        </li>
-        <li className="wd-assignment-list-item">
-          <a
-            className="wd-assignment-link"
-            href="#/Kanbas/Courses/1234/Assignments/Editor"
-          >
-            A3 - JAVASCRIPT + REACT
-          </a>
-          <p>
-            {" "}
-            Multiple Modules|Not available until May 20 at 12:00am|Due May 27 at
-            11:59pm|100 pts
-          </p>
-        </li>
-      </ul>
+    <div className="container mt-4">
+      <ModulesControls />
+      
+      <div className="card">
+        <div className="card-header bg-light d-flex justify-content-between align-items-center">
+          <h4 className="mb-0">
+            <FaEllipsisV className="me-2" /> ASSIGNMENTS
+          </h4>
+          <span className="badge bg-secondary">40% of Total</span>
+        </div>
+        <div className="card-body">
+          <AssignmentListItem
+            title="A1"
+            modules="Multiple Modules"
+            availableDate="May 6 at 12:00am"
+            dueDate="May 13 at 11:59pm"
+            points="100"
+          />
+          <AssignmentListItem
+            title="A2"
+            modules="Multiple Modules"
+            availableDate="May 13 at 12:00am"
+            dueDate="May 20 at 11:59pm"
+            points="100"
+          />
+          <AssignmentListItem
+            title="A3"
+            modules="Multiple Modules"
+            availableDate="May 20 at 12:00am"
+            dueDate="May 27 at 11:59pm"
+            points="100"
+          />
+        </div>
+      </div>
     </div>
   );
 }
