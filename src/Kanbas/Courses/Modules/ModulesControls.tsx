@@ -72,6 +72,15 @@ export default function ModulesControls() {
           View Progress
         </button>
         </div>
+      <div className="btn d-inline me-1 float-end">
+        <button
+          id="wd-collapse-all-btn"
+          className="btn btn-lg btn-secondary"
+          type="button"
+        >
+          Collapse All
+        </button>
+        </div>
     </div>
   );
 }
