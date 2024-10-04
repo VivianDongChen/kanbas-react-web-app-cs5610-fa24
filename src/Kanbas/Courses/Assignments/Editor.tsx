@@ -53,7 +53,7 @@ export default function AssignmentEditor() {
           <div id="assignmentCollapse" className="collapse show">
             <ul className="wd-assignments list-group list-group-flush">
               {/* Assignment A1 */}
-              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light border-start border-success border-3">
+              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light">
                 <div className="d-flex align-items-center">
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
@@ -70,7 +70,7 @@ export default function AssignmentEditor() {
               </li>
 
               {/* Assignment A2 */}
-              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light border-start border-success border-3">
+              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light">
                 <div className="d-flex align-items-center">
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
@@ -87,7 +87,7 @@ export default function AssignmentEditor() {
               </li>
 
               {/* Assignment A3 */}
-              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light border-start border-success border-3">
+              <li className="wd-lesson wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-light">
                 <div className="d-flex align-items-center">
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
