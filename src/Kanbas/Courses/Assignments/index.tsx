@@ -78,7 +78,7 @@ export default function Assignments() {
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
                   <div>
-                  <Link className="wd-assignment-link" to="/Kanbas/Courses/AssignmentEditor/A1/">
+                  <Link className="wd-assignment-link" to="/Kanbas/Courses/1234/AssignmentEditor/A1/">
                     <span>A2</span>
                     </Link>
                     <small className="text-muted d-block">
@@ -97,7 +97,7 @@ export default function Assignments() {
                   <BsGripVertical className="me-2 fs-5" />
                   <FaFileAlt className="me-2 fs-5 text-success" />
                   <div>
-                  <Link className="wd-assignment-link" to="/Kanbas/Courses/AssignmentEditor/A1/">
+                  <Link className="wd-assignment-link" to="/Kanbas/Courses/1234/AssignmentEditor/A1/">
                     <span>A3</span>
                     </Link>
                     <small className="text-muted d-block">
