@@ -1,25 +1,29 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Profile from "./Profile";
-import Signin from "./Signin";
-import Signup from "./Signup";
-import AccountNavigation from "./Navigation";
-
-export default function Account() {
+import { Link } from "react-router-dom";
+export default function Signup() {
   return (
-    <div id="wd-account-screen" className="container-fluid">
-      <div className="row">
-        <div className="col-md-1"> 
-          <AccountNavigation />
-        </div>
-        <div className="col-md-1 offset-md-1"> 
-          <Routes>
-            <Route path="/" element={<Navigate to="/Kanbas/Account/Signin" />} />
-            <Route path="/Signin" element={<Signin />} />
-            <Route path="/Profile" element={<Profile />} />
-            <Route path="/Signup" element={<Signup />} />
-          </Routes>
-        </div>
-      </div>
+    <div id="wd-signup-screen">
+      <h1>Sign up</h1>
+      <input
+        id="wd-username"
+        placeholder="username"
+        className="form-control mb-2"
+      />
+      <input
+        id="wd-password"
+        placeholder="password"
+        type="password"
+        className="form-control mb-2"
+      />
+      <Link
+        id="wd-signup-btn"
+        to="/Kanbas/Account/Profile"
+        className="btn btn-primary w-100"
+      >
+        Sign up
+      </Link>
+      <Link id="wd-signin-link" to="/Kanbas/Account/Signin">
+        Sign in      
+        </Link>
     </div>
   );
 }

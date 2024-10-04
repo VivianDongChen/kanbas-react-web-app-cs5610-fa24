@@ -8,13 +8,10 @@ export default function Account() {
   return (
     <div id="wd-account-screen" className="container-fluid">
       <div className="row">
-        {/* Account Navigation Column */}
-        <div className="col-md-2"> {/* Reduced width for AccountNavigation */}
+        <div className="col-md-1"> 
           <AccountNavigation />
         </div>
-
-        {/* Spacer and Main Content */}
-        <div className="col-md-5 offset-md-1"> {/* Reduced width for content and added an offset */}
+        <div className="col-md-1 offset-md-1"> 
           <Routes>
             <Route path="/" element={<Navigate to="/Kanbas/Account/Signin" />} />
             <Route path="/Signin" element={<Signin />} />
