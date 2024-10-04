@@ -39,7 +39,7 @@ export default function AssignmentEditor() {
 
       {/* Assignment Group */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Assignment Group</label>
+        <label className="col-sm-2 col-form-label text-end">Assignment Group</label>
         <div className="col-sm-10">
           <select className="form-control">
             <option>Assignments</option>
@@ -53,7 +53,7 @@ export default function AssignmentEditor() {
 
       {/* Display Grade as */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Display Grade as</label>
+        <label className="col-sm-2 col-form-label text-end">Display Grade as</label>
         <div className="col-sm-10">
           <select className="form-control">
             <option>Percentage</option>
@@ -67,7 +67,7 @@ export default function AssignmentEditor() {
 
       {/* Submission Type */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Submission Type</label>
+        <label className="col-sm-2 col-form-label text-end">Submission Type</label>
         <div className="col-sm-10">
           <div className="border p-3">
             <select className="form-control">
@@ -105,7 +105,7 @@ export default function AssignmentEditor() {
 
       {/* Assign to */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label text-right">Assign</label>
+        <label className="col-sm-2 col-form-label text-end">Assign</label>
         <div className="col-sm-10 border p-3">
           <div className="form-group">
             <label>Assign to</label>
