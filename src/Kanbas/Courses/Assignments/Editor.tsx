@@ -9,55 +9,60 @@ export default function AssignmentEditor() {
   return (
     <div>
       <ModuleControls />
-      <br />
-      <br />
-      <br />
-      <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
-          <div className="wd-title p-3 ps-2 bg-secondary"><BsGripVertical className="me-2 fs-3" />
-          <span>
-              <BsGripVertical className="me-2 fs-4" /> ASSIGNMENTS
-          </span>
-            <span className="badge bg-light text-dark border rounded-pill px-3">
-              40% of Total
-            </span>
-            <AssignmentsControlButtons />
+          <div className="wd-title d-flex justify-content-between align-items-center p-3 bg-light">
+            <div className="d-flex align-items-center">
+              <BsGripVertical className="me-2 fs-4 text-secondary" />
+              <span>ASSIGNMENTS</span>
             </div>
-          <ul className="wd-assignments list-group rounded-0">
-            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              {/* Oval Box - 40% of Total */}
+              <span className="badge bg-light text-dark border rounded-pill px-3 me-3">
+                40% of Total
+              </span>
+              <AssignmentsControlButtons />
+            </div>
+          </div>
+          <ul className="wd-assignments list-group list-group-flush">
+            {/* Assignment A1 */}
+            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-start border-success border-3">
               <div>
-                <BsGripVertical className="me-2 fs-5" />
-                <FaFileAlt className="me-2 fs-5" /> 
+                <BsGripVertical className="me-2 fs-5 text-success" />
+                <FaFileAlt className="me-2 fs-5 text-success" />
                 <span>A1</span>
                 <small className="text-muted d-block">
-                <span className="text-danger">Multiple Modules</span> | Not available until May 6 at 12:00am | Due May 13 at 11:59pm | 100 pts
+                  <span className="text-danger">Multiple Modules</span> | Not available until May 6 at 12:00am | Due May 13 at 11:59pm | 100 pts
                 </small>
               </div>
               <AssignmentControlButtons />
             </li>
-            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center">
+
+            {/* Assignment A2 */}
+            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-start border-success border-3">
               <div>
-                <BsGripVertical className="me-2 fs-5" />
-                <FaFileAlt className="me-2 fs-5" /> 
+                <BsGripVertical className="me-2 fs-5 text-success" />
+                <FaFileAlt className="me-2 fs-5 text-success" />
                 <span>A2</span>
                 <small className="text-muted d-block">
-                <span className="text-danger">Multiple Modules</span> | Not available until May 13 at 12:00am | Due May 20 at 11:59pm | 100 pts
+                  <span className="text-danger">Multiple Modules</span> | Not available until May 13 at 12:00am | Due May 20 at 11:59pm | 100 pts
                 </small>
               </div>
               <AssignmentControlButtons />
             </li>
-            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center">
-            <div>
-                <BsGripVertical className="me-2 fs-5" />
-                <FaFileAlt className="me-2 fs-5" /> 
+
+            {/* Assignment A3 */}
+            <li className="wd-assignment list-group-item d-flex justify-content-between align-items-center ps-3 border-start border-success border-3">
+              <div>
+                <BsGripVertical className="me-2 fs-5 text-success" />
+                <FaFileAlt className="me-2 fs-5 text-success" />
                 <span>A3</span>
                 <small className="text-muted d-block">
-                <span className="text-danger">Multiple Modules</span> | Not available until May 20 at 12:00am | Due May 27 at 11:59pm | 100 pts
+                  <span className="text-danger">Multiple Modules</span> | Not available until May 20 at 12:00am | Due May 27 at 11:59pm | 100 pts
                 </small>
               </div>
               <AssignmentControlButtons />
-              </li>
+            </li>
           </ul>
         </li>
       </ul>
