@@ -5,7 +5,7 @@ import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import ".../styles.css";
+import "../../styles.css";
 
 export default function Assignments() {
   return (
