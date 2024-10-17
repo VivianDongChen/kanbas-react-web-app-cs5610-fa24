@@ -31,6 +31,7 @@ import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
 import Highlight from "./HighLight";
 import PathParameters from "./PathParameters";
+import AddPathParameters from "./AddPathParameters";
 
 export default function Lab3() {
   return (
@@ -79,6 +80,7 @@ export default function Lab3() {
         voluptates.
       </Highlight>
       <PathParameters/>
+      <AddPathParameters/>
     </div>
   );
 }
