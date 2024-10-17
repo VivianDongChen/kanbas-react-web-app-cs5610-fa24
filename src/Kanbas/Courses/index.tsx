@@ -34,6 +34,7 @@ export default function Courses() {
   const { pathname } = useLocation();
   return (
     <div id="wd-courses">
+      <div className="flex-fill">
       <h2 className="text-danger">
         <FaAlignJustify className="me-4 fs-4 mb-1" />
         {course && course.name} &gt; {pathname.split("/")[4]}
@@ -41,7 +42,8 @@ export default function Courses() {
       <div className="d-flex">
        <div className="d-none d-md-block">
          <CoursesNavigation />
-       </div></div>
+       </div>
+      </div>
       <div className="flex-fill">
         <Routes>
           <Route path="Home" element={<Home />} />
@@ -53,6 +55,7 @@ export default function Courses() {
           />
           <Route path="People" element={<PeopleTable />} />
         </Routes>
+      </div>   
       </div>
     </div>
   );
