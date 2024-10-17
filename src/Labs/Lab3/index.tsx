@@ -20,6 +20,7 @@ import LegacyFunctions from "./LegacyFunctions";
 import MapFunction from "./MapFunction";
 import SimpleArrays from "./SimpleArrays";
 import Spreading from "./Spreading";
+import Styles from "./Styles";
 import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import TodoItem from "./todos/TodoItem";
@@ -62,6 +63,7 @@ export default function Lab3() {
       <FunctionDestructing/>
       <DestructingImports/>
       <Classes/>
+      <Styles/>
       
       
     </div>
