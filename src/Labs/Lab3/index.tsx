@@ -17,6 +17,7 @@ import MapFunction from "./MapFunction";
 import SimpleArrays from "./SimpleArrays";
 import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
+import TodoItem from "./todos/TodoItem";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
 
@@ -48,6 +49,7 @@ export default function Lab3() {
         <JsonStringify/>
       </div>
       <House/>
+      <TodoItem/>
       
       
     </div>
