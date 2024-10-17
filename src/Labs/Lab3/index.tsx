@@ -9,6 +9,7 @@ import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
 import FindIndex from "./FindIndex";
 import ForLoops from "./ForLoops";
+import FunctionDestructing from "./FunctionDestructing";
 import House from "./House";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
@@ -56,6 +57,7 @@ export default function Lab3() {
       <TodoList/>
       <Spreading/>
       <Destructing/>
+      <FunctionDestructing/>
       
       
     </div>
