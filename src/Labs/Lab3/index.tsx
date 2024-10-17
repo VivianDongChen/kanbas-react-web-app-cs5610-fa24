@@ -8,6 +8,7 @@ import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
 import FindIndex from "./FindIndex";
 import ForLoops from "./ForLoops";
+import House from "./House";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import JsonStringify from "./JsonStringify";
@@ -46,6 +47,7 @@ export default function Lab3() {
         <FilterFunction/>
         <JsonStringify/>
       </div>
+      <House/>
       
       
     </div>
