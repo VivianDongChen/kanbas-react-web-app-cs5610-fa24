@@ -13,6 +13,7 @@ import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
+import WorkingWithArrays from "./WorkingWithArrays";
 
 export default function Lab3() {
   return (
@@ -33,6 +34,8 @@ export default function Lab3() {
       <ArrayIndexAndLength/>
       <AddingAndRemovingToFromArrays/>
       <ForLoops/>
+      <WorkingWithArrays/>
+      
     </div>
   );
 }
