@@ -1,3 +1,4 @@
+import BooleanVariables from "./BooleanVariables";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
 
@@ -7,6 +8,7 @@ export default function Lab3() {
       <h3>Lab 3</h3>
       <VariablesAndConstants/>
       <VariableTypes/>
+      <BooleanVariables/>
     </div>
   );
 }
