@@ -4,6 +4,7 @@ import ArrowFunctions from "./ArrowFunctions";
 import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
+import ForLoops from "./ForLoops";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
@@ -31,6 +32,7 @@ export default function Lab3() {
       <SimpleArrays/>
       <ArrayIndexAndLength/>
       <AddingAndRemovingToFromArrays/>
+      <ForLoops/>
     </div>
   );
 }
