@@ -4,6 +4,7 @@ import ArrowFunctions from "./ArrowFunctions";
 import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
+import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
 import ForLoops from "./ForLoops";
 import IfELse from "./IfElse";
@@ -39,6 +40,7 @@ export default function Lab3() {
         <h3>Working With Arrays</h3> 
         <MapFunction/>
         <FindFunction/>
+        <FilterFunction/>
       </div>
       
       
