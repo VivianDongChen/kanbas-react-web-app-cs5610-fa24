@@ -5,6 +5,7 @@ import ConditionalOutputInline from "./ConditionalOutputInline";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
+import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
@@ -23,6 +24,7 @@ export default function Lab3() {
       <LegacyFunctions/>
       <ArrowFunctions/>
       <ImpliedReturn/>
+      <TemplateLiterals/>
     </div>
   );
 }
