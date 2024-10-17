@@ -1,3 +1,4 @@
+import Add from "./Add";
 import AddingAndRemovingToFromArrays from "./AddingAndRemovingDataToFromArrays";
 import ArrayIndexAndLength from "./ArrayIndexAndLength";
 import ArrowFunctions from "./ArrowFunctions";
@@ -64,6 +65,7 @@ export default function Lab3() {
       <DestructingImports/>
       <Classes/>
       <Styles/>
+      <Add a={3} b={4} />
       
       
     </div>
