@@ -6,6 +6,7 @@ import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
 import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
 import ForLoops from "./ForLoops";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
@@ -41,6 +42,7 @@ export default function Lab3() {
         <h3>Working With Arrays</h3> 
         <MapFunction/>
         <FindFunction/>
+        <FindIndex/>
         <FilterFunction/>
         <JsonStringify/>
       </div>
