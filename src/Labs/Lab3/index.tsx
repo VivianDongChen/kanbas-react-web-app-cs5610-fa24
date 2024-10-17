@@ -18,6 +18,7 @@ import SimpleArrays from "./SimpleArrays";
 import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import TodoItem from "./todos/TodoItem";
+import TodoList from "./todos/TodoList";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
 
@@ -50,6 +51,7 @@ export default function Lab3() {
       </div>
       <House/>
       <TodoItem/>
+      <TodoList/>
       
       
     </div>
