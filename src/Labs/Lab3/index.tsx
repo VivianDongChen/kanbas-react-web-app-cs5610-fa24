@@ -8,12 +8,12 @@ import ForLoops from "./ForLoops";
 import IfELse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import LegacyFunctions from "./LegacyFunctions";
+import MapFunction from "./MapFunction";
 import SimpleArrays from "./SimpleArrays";
 import TemplateLiterals from "./TamplateLiterals";
 import TernaryOperator from "./TernaryOperator";
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
-import WorkingWithArrays from "./WorkingWithArrays";
 
 export default function Lab3() {
   return (
@@ -34,7 +34,11 @@ export default function Lab3() {
       <ArrayIndexAndLength/>
       <AddingAndRemovingToFromArrays/>
       <ForLoops/>
-      <WorkingWithArrays/>
+      <div>
+        <h3>Working With Arrays</h3> 
+        <MapFunction/>
+      </div>
+      
       
     </div>
   );
