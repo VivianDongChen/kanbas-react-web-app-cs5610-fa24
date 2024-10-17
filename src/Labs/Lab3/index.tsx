@@ -4,6 +4,7 @@ import ArrowFunctions from "./ArrowFunctions";
 import BooleanVariables from "./BooleanVariables";
 import ConditionalOutputIfElse from "./ConditionalOutputIfElse";
 import ConditionalOutputInline from "./ConditionalOutputInline";
+import Destructing from "./DEstructing";
 import FilterFunction from "./FilterFunction";
 import FindFunction from "./FindFunction";
 import FindIndex from "./FindIndex";
@@ -54,6 +55,7 @@ export default function Lab3() {
       <TodoItem/>
       <TodoList/>
       <Spreading/>
+      <Destructing/>
       
       
     </div>
