@@ -1,3 +1,4 @@
+import AddingAndRemovingToFromArrays from "./AddingAndRemovingDataToFromArrays";
 import ArrayIndexAndLength from "./ArrayIndexAndLength";
 import ArrowFunctions from "./ArrowFunctions";
 import BooleanVariables from "./BooleanVariables";
@@ -29,6 +30,7 @@ export default function Lab3() {
       <TemplateLiterals/>
       <SimpleArrays/>
       <ArrayIndexAndLength/>
+      <AddingAndRemovingToFromArrays/>
     </div>
   );
 }
