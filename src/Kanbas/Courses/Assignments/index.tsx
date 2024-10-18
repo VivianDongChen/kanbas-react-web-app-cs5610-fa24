@@ -187,7 +187,12 @@ export default function Assignments() {
                       <FaFileAlt className="me-2 fs-5 text-success" />
 
                       <div className="text-start flex-grow-1">
-                        <div>{module._id}</div>
+                        <Link
+                          className="wd-assignment-link"
+                          to="/Kanbas/Courses/1234/AssignmentEditor/A1/"
+                        >
+                          <span>{module._id}</span>
+                        </Link>
                         {module.modules && (
                           <span className="text-danger">{module.modules}</span>
                         )}
