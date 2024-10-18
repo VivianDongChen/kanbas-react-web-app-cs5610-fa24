@@ -152,6 +152,7 @@ export default function Assignments() {
           >
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-4 text-secondary" />
+              <FaFileAlt className="me-2 fs-5 text-success" />
               <div className="dropdown d-inline me-1 float-end">
                 <span
                   className="dropdown-toggle"
