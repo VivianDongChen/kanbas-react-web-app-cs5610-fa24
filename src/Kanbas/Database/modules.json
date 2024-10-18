@@ -112,7 +112,165 @@
       "name": "Spacecraft Systems Engineering",
       "description": "Overview of spacecraft systems and subsystems engineering.",
       "course": "RS103"
+    },
+
+    {
+      "_id": "M401",
+      "name": "aaaaaaaaaaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaa.",
+      "course": "RS104"
+    },
+    {
+      "_id": "M402",
+      "name": "aaaaaaaaaaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaa.",
+      "course": "RS104"
+    },
+    {
+      "_id": "M403",
+      "name": "aaaaaaaaaaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaa.",
+      "course": "RS104"
     }
+    // Organic Chemistry (RS104)
+  {
+    "_id": "M401",
+    "name": "Organic Molecules",
+    "description": "Introduction to the structure and classification of organic molecules.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M402",
+    "name": "Reaction Mechanisms",
+    "description": "Detailed exploration of organic reaction mechanisms.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M403",
+    "name": "Spectroscopy in Organic Chemistry",
+    "description": "Using spectroscopy techniques for identifying organic compounds.",
+    "course": "RS104"
+  },
+
+  // Inorganic Chemistry (RS105)
+  {
+    "_id": "M501",
+    "name": "Coordination Chemistry",
+    "description": "Study of coordination compounds and their properties.",
+    "course": "RS105"
+  },
+  {
+    "_id": "M502",
+    "name": "Transition Metals",
+    "description": "Exploring the chemistry of transition metals and their applications.",
+    "course": "RS105"
+  },
+  {
+    "_id": "M503",
+    "name": "Bioinorganic Chemistry",
+    "description": "Role of inorganic elements in biological systems.",
+    "course": "RS105"
+  },
+
+  // Physical Chemistry (RS106)
+  {
+    "_id": "M601",
+    "name": "Thermodynamics",
+    "description": "Fundamentals of thermodynamics and its applications in chemistry.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M602",
+    "name": "Chemical Kinetics",
+    "description": "Study of the rates of chemical reactions and reaction dynamics.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M603",
+    "name": "Quantum Chemistry",
+    "description": "Application of quantum mechanics to chemical systems.",
+    "course": "RS106"
+  },
+
+  // Ancient Languages and Scripts of Middle-earth (RS107)
+  {
+    "_id": "M701",
+    "name": "Introduction to Elvish",
+    "description": "Basics of Sindarin and Quenya languages.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M702",
+    "name": "Dwarvish Language",
+    "description": "Study of Khuzdul and its linguistic features.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M703",
+    "name": "Black Speech of Mordor",
+    "description": "Exploration of the language of Sauron's forces.",
+    "course": "RS107"
+  },
+
+  // Wizards, Elves, and Men: Inter-species Diplomacy in Middle-earth (RS108)
+  {
+    "_id": "M801",
+    "name": "Elven Diplomacy",
+    "description": "Understanding the diplomatic traditions of the Elves.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M802",
+    "name": "Human Alliances",
+    "description": "Examining alliances between Men and other species.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M803",
+    "name": "Council of Elrond",
+    "description": "Analysis of the historical Council of Elrond.",
+    "course": "RS108"
+  },
+
+  // History and Practice of Middle-earth Magic (RS109)
+  {
+    "_id": "M901",
+    "name": "Sources of Magic",
+    "description": "Understanding the origins and sources of magic in Middle-earth.",
+    "course": "RS109"
+  },
+  {
+    "_id": "M902",
+    "name": "Artifacts of Power",
+    "description": "Study of powerful artifacts such as the Rings of Power.",
+    "course": "RS109"
+  },
+  {
+    "_id": "M903",
+    "name": "Ethics of Magic Use",
+    "description": "Philosophical and ethical aspects of magic use.",
+    "course": "RS109"
+  },
+
+  // Principles of Democratic Education (RS110)
+  {
+    "_id": "M1001",
+    "name": "Historical Models of Education",
+    "description": "Review of historical examples of democratic education.",
+    "course": "RS110"
+  },
+  {
+    "_id": "M1002",
+    "name": "Civic Responsibility",
+    "description": "Role of education in promoting civic engagement.",
+    "course": "RS110"
+  },
+  {
+    "_id": "M1003",
+    "name": "Participatory Learning",
+    "description": "Principles and practices of participatory learning environments.",
+    "course": "RS110"
+  }
   ]
   
   
