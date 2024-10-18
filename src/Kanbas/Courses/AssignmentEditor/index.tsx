@@ -149,13 +149,15 @@ import * as db from "../../Database"; // 导入数据库
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams(); // 从 URL 中解析课程ID和作业ID
-  const assignments = db.assignments; // 直接从数据库中获取 assignments
+  const assignments = db.assignments || []; // 防止 assignments 为 undefined
   const [assignment, setAssignment] = useState(null); // 用于存储当前作业的数据
 
   // 根据作业ID找到对应的作业信息
   useEffect(() => {
     const selectedAssignment = assignments.find((a) => a._id === aid);
-    setAssignment(selectedAssignment);
+    if (selectedAssignment) {
+      setAssignment(selectedAssignment);
+    }
   }, [aid, assignments]);
 
   if (!assignment) return <div>Loading...</div>; // 在数据加载前显示 Loading...
@@ -169,7 +171,7 @@ export default function AssignmentEditor() {
           type="text"
           id="assignmentName"
           className="form-control"
-          defaultValue={assignment.title}
+          defaultValue={assignment?.title || ""}
         />
       </div>
       <br />
@@ -181,7 +183,9 @@ export default function AssignmentEditor() {
           <input
             type="number"
             className="form-control"
-            defaultValue={assignment.score?.replace("pt", "") || ""}
+            defaultValue={typeof assignment?.score === "string" 
+              ? assignment.score.replace("pt", "") 
+              : ""}
           />
         </div>
       </div>
@@ -194,7 +198,7 @@ export default function AssignmentEditor() {
           <input
             type="datetime-local"
             className="form-control"
-            defaultValue={formatDateTime(assignment.due_date)}
+            defaultValue={assignment?.due_date ? formatDateTime(assignment.due_date) : ""}
           />
         </div>
       </div>
@@ -207,7 +211,7 @@ export default function AssignmentEditor() {
           <input
             type="datetime-local"
             className="form-control"
-            defaultValue={formatDateTime(assignment.available_date)}
+            defaultValue={assignment?.available_date ? formatDateTime(assignment.available_date) : ""}
           />
         </div>
       </div>
