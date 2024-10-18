@@ -27,7 +27,7 @@ export default function Courses() {
             <Route path="Home" element={<Home />} />
             <Route path="Modules" element={<Modules />} />
             <Route path="Assignments" element={<Assignments />} />
-            <Route path="/Kanbas/Courses/:cid/AssignmentEditor/:aid" element={<AssignmentEditor />} />
+            <Route path="AssignmentEditor/:aid" element={<AssignmentEditor />} />
             <Route path="People" element={<PeopleTable />} />
           </Routes>
         </div>
