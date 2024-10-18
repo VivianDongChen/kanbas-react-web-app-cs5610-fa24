@@ -119,19 +119,24 @@
 // }
 
 
-import React from "react";
 import ModuleControls from "./ModuleControls";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import * as db from "../../Database"; 
+// import * as db from "../../Database"; 
+import assignments from "../../Database/assignments.json";
+
 import "../../styles.css";
+import React, { useEffect, useState } from "react";
+
 
 export default function Assignments() {
   const { cid } = useParams(); 
   const assignments = db.assignments;
+
+  console.log(assignments); 
 
   return (
     <div>
@@ -173,8 +178,7 @@ export default function Assignments() {
           </div>
           <div id="assignmentCollapse" className="collapse show">
             <ul className="wd-assignments list-group list-group-flush">
-              {assignments
-                .filter((module: any) => module.course === cid)
+              {assignments.filter((module: any) => module.course === cid)
                 .map((module: any) => (
                   <li
                     key={module._id}
