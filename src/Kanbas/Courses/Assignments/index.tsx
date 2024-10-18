@@ -192,7 +192,7 @@ export default function Assignments() {
                           to="/Kanbas/Courses/1234/AssignmentEditor/A1/"
                         >
                           <span>{module._id}</span>
-                        </Link>
+                        </Link><br/>
                         {module.modules && (
                           <span className="text-danger">{module.modules}</span>
                         )}
