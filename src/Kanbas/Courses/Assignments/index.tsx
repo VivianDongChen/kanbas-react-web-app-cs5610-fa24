@@ -118,24 +118,22 @@
 //   );
 // }
 
-
 import ModuleControls from "./ModuleControls";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import * as db from "../../Database"; 
+import * as db from "../../Database";
 
 import "../../styles.css";
 import React, { useEffect, useState } from "react";
 
-
 export default function Assignments() {
-  const { cid } = useParams(); 
+  const { cid } = useParams();
   const assignments = db.assignments;
 
-  console.log(assignments); 
+  console.log(assignments);
 
   return (
     <div>
@@ -152,7 +150,6 @@ export default function Assignments() {
           >
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-4 text-secondary" />
-              <FaFileAlt className="me-2 fs-5 text-success" />
               <div className="dropdown d-inline me-1 float-end">
                 <span
                   className="dropdown-toggle"
@@ -178,7 +175,8 @@ export default function Assignments() {
           </div>
           <div id="assignmentCollapse" className="collapse show">
             <ul className="wd-assignments list-group list-group-flush">
-              {assignments.filter((module: any) => module.course === cid)
+              {assignments
+                .filter((module: any) => module.course === cid)
                 .map((module: any) => (
                   <li
                     key={module._id}
@@ -186,7 +184,15 @@ export default function Assignments() {
                   >
                     <div className="wd-title d-flex justify-content-between align-items-center p-3 bg-light">
                       <BsGripVertical className="me-2 fs-3" />
-                      {module.title}
+                      <FaFileAlt className="me-2 fs-5 text-success" />
+                      <div>
+                        <strong>ID: </strong> {module._id} <br />
+                        <strong>Details: </strong>
+                        {`${module.modules || "No Modules"} | 
+                          ${module.available_date || "No Available Date"} | 
+                          ${module.due_date || "No Due Date"} | 
+                          ${module.score || "No Score"}`}
+                      </div>
                       <AssignmentControlButtons />
                     </div>
                   </li>
