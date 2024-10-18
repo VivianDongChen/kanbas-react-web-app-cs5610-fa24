@@ -1,12 +1,26 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import * as db from "../../Database"; 
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams(); 
+  const assignments = db.assignments;
+
+  const assignment = assignments.find(
+    (a) => a.course === cid && a._id === aid
+  );
+
+  if (!assignment) {
+    return <h2>Assignment not found</h2>;
+  }
+
+
   return (
     <div className="p-4">
       {/* Assignment Name */}
       <div className="form-group">
         <label htmlFor="assignmentName">Assignment Name</label>
-        <input type="text" id="assignmentName" className="form-control" defaultValue="A1" />
+        <input type="text" id="assignmentName" className="form-control" defaultValue={assignment.title} />
       </div>
       <br />
 
@@ -32,7 +46,7 @@ export default function AssignmentEditor() {
       <div className="form-group row">
         <label className="col-sm-2 col-form-label text-end">Points</label>
         <div className="col-sm-10">
-          <input type="number" className="form-control" defaultValue="100" />
+          <input type="number" className="form-control" defaultValue={assignment.score} />
         </div>
       </div>
       <br />
@@ -115,12 +129,12 @@ export default function AssignmentEditor() {
           </div>
           <div className="form-group">
             <label>Due</label>
-            <input type="datetime-local" className="form-control" defaultValue="2024-05-13T23:59" />
+            <input type="datetime-local" className="form-control" defaultValue={assignment.due_date} />
           </div>
           <div className="row">
             <div className="col">
               <label>Available from</label>
-              <input type="datetime-local" className="form-control" defaultValue="2024-05-06T12:00" />
+              <input type="datetime-local" className="form-control" defaultValue={assignment.available_date} />
             </div>
             <div className="col">
               <label>Until</label>
