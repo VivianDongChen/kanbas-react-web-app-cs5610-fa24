@@ -125,8 +125,7 @@ import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-// import * as db from "../../Database"; 
-import assignments from "../../Database/assignments.json";
+import * as db from "../../Database"; 
 
 import "../../styles.css";
 import React, { useEffect, useState } from "react";
