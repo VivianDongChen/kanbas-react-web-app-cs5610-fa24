@@ -192,12 +192,19 @@ export default function Assignments() {
                           to="/Kanbas/Courses/1234/AssignmentEditor/A1/"
                         >
                           <span>{module._id}</span>
-                        </Link><br/>
+                        </Link>
+                        <br />
                         {module.modules && (
                           <span className="text-danger">{module.modules}</span>
                         )}
-                        {module.available_date && ` | ${module.available_date}`}
-                        {module.due_date && ` | ${module.due_date}`}
+                        {module.available_date && (
+                          <span>
+                            | Not available until {module.available_date}
+                          </span>
+                        )}
+                        {module.due_date && (
+                          <span> | Due {module.due_date}</span>
+                        )}
                         {module.score && ` | ${module.score}`}
                       </div>
 
