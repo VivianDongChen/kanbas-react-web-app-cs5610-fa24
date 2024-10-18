@@ -1,268 +1,572 @@
 [
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "70pt",
-      "course": "RS101"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "70pt",
+        "course": "RS101"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "80pt",
-      "course": "RS101"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "80pt",
+        "course": "RS101"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "80pt",
-      "course": "RS101"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "80pt",
+        "course": "RS101"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "120pt",
+        "course": "RS102"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "120pt",
+        "course": "RS102"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "120pt",
+        "course": "RS102"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "80pt",
-      "course": "RS103"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "80pt",
+        "course": "RS103"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "100pt",
-      "course": "RS103"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS103"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "110pt",
-      "course": "RS103"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "110pt",
+        "course": "RS103"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "110pt",
+        "course": "RS104"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "90pt",
+        "course": "RS104"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "70pt",
+        "course": "RS104"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "80pt",
+        "course": "RS105"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS105"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "110pt",
+        "course": "RS105"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "120pt",
+        "course": "RS106"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "150pt",
+        "course": "RS106"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "110pt",
+        "course": "RS106"
     }
-    // (此处省略部分课程内容，如有需要请告知)
-  ]
-  修改说明：
-  日期格式：所有日期格式已更改为 YYYY-MM-DDTHH:mm:ss，这是标准的 ISO 8601 格式。
-  时间修订：due_date 的时间设为 23:59，以标明当天截止的最后时刻。
-  如果需要展示全部课程的完整 JSON 数据，或者有其他调整需求，请告诉我！
-  
-  
-  
-  
-  
-  
-  您说：
-  不要省略！ 谁让你省略的！
-  ChatGPT 说：
-  ChatGPT
-  以下是完整的 21 门课程（每门 3 个作业）的 JSON 数据，所有日期已更新为 ISO 8601 格式：
-  
-  json
-  复制代码
-  [
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "70pt",
-      "course": "RS101"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "100pt",
+        "course": "RS107"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "80pt",
-      "course": "RS101"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "110pt",
+        "course": "RS107"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "80pt",
-      "course": "RS101"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "120pt",
+        "course": "RS107"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "90pt",
+        "course": "RS108"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS108"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "120pt",
-      "course": "RS102"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "110pt",
+        "course": "RS108"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "80pt",
-      "course": "RS103"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "85pt",
+        "course": "RS109"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "100pt",
-      "course": "RS103"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "90pt",
+        "course": "RS109"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "110pt",
-      "course": "RS103"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "95pt",
+        "course": "RS109"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "110pt",
-      "course": "RS104"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "95pt",
+        "course": "RS110"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "90pt",
-      "course": "RS104"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS110"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "70pt",
-      "course": "RS104"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "105pt",
+        "course": "RS110"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "80pt",
-      "course": "RS105"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "100pt",
+        "course": "RS111"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "100pt",
-      "course": "RS105"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "105pt",
+        "course": "RS111"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "110pt",
-      "course": "RS105"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "110pt",
+        "course": "RS111"
     },
     {
-      "_id": "A1",
-      "title": "Assignment 1",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-07T00:00:00",
-      "due_date": "2024-05-14T23:59:00",
-      "score": "120pt",
-      "course": "RS106"
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "110pt",
+        "course": "RS112"
     },
     {
-      "_id": "A2",
-      "title": "Assignment 2",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-08T00:00:00",
-      "due_date": "2024-05-15T23:59:00",
-      "score": "150pt",
-      "course": "RS106"
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "115pt",
+        "course": "RS112"
     },
     {
-      "_id": "A3",
-      "title": "Assignment 3",
-      "modules": "Multiple Modules",
-      "available_date": "2024-05-09T00:00:00",
-      "due_date": "2024-05-16T23:59:00",
-      "score": "110pt",
-      "course": "RS106"
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "120pt",
+        "course": "RS112"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "90pt",
+        "course": "RS113"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "95pt",
+        "course": "RS113"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "100pt",
+        "course": "RS113"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "105pt",
+        "course": "RS114"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "110pt",
+        "course": "RS114"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "115pt",
+        "course": "RS114"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "95pt",
+        "course": "RS115"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS115"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "105pt",
+        "course": "RS115"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "85pt",
+        "course": "RS116"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "90pt",
+        "course": "RS116"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "95pt",
+        "course": "RS116"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "90pt",
+        "course": "RS117"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "95pt",
+        "course": "RS117"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "100pt",
+        "course": "RS117"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "105pt",
+        "course": "RS118"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "110pt",
+        "course": "RS118"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "115pt",
+        "course": "RS118"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "95pt",
+        "course": "RS119"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "100pt",
+        "course": "RS119"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "105pt",
+        "course": "RS119"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "100pt",
+        "course": "RS120"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "110pt",
+        "course": "RS120"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "115pt",
+        "course": "RS120"
+    },
+    {
+        "_id": "A1",
+        "title": "Assignment 1",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-07T00:00:00",
+        "due_date": "2024-05-14T23:59:00",
+        "score": "105pt",
+        "course": "RS121"
+    },
+    {
+        "_id": "A2",
+        "title": "Assignment 2",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-08T00:00:00",
+        "due_date": "2024-05-15T23:59:00",
+        "score": "110pt",
+        "course": "RS121"
+    },
+    {
+        "_id": "A3",
+        "title": "Assignment 3",
+        "modules": "Multiple Modules",
+        "available_date": "2024-05-09T00:00:00",
+        "due_date": "2024-05-16T23:59:00",
+        "score": "120pt",
+        "course": "RS121"
     }
-  ]
+]
+
 
   
