@@ -1,11 +1,84 @@
 [
-    { "_id": "A101", "title": "Propulsion Assignment", "course": "RS101" },
-    { "_id": "A102", "title": "Combustion Analysis", "course": "RS101" },
-    { "_id": "A103", "title": "Nozzle Design Project", "course": "RS101" },
-    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "RS102" },
-    { "_id": "A202", "title": "Flow Analysis", "course": "RS102" },
-    { "_id": "A203", "title": "Heating Analysis", "course": "RS102" },
-    { "_id": "A301", "title": "Structural Design Task", "course": "RS103" },
-    { "_id": "A302", "title": "Orbital Calculations", "course": "RS103" },
-    { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103" }
+    {
+      "_id": "A101",
+      "title": "Propulsion Assignment",
+      "modules": "Multiple Modules",
+      "available_date": "Not available until May 6 at 12:00am",
+      "due_date": "Due May 13 at 11:59pm",
+      "score": "100pt",
+      "course": "RS101"
+    },
+    {
+      "_id": "A102",
+      "title": "Combustion Analysis",
+      "modules": "Module 1: Rocket Combustion",
+      "available_date": "Available from May 7 at 9:00am",
+      "due_date": "Due May 14 at 11:59pm",
+      "score": "80pt",
+      "course": "RS101"
+    },
+    {
+      "_id": "A103",
+      "title": "Nozzle Design Project",
+      "modules": "Module 2: Nozzle Design Basics",
+      "available_date": "Available from May 8 at 9:00am",
+      "due_date": "Due May 15 at 11:59pm",
+      "score": "120pt",
+      "course": "RS101"
+    },
+    {
+      "_id": "A201",
+      "title": "Aerodynamics Quiz",
+      "modules": "Module 3: Aerodynamics",
+      "available_date": "Available from May 9 at 9:00am",
+      "due_date": "Due May 16 at 11:59pm",
+      "score": "50pt",
+      "course": "RS102"
+    },
+    {
+      "_id": "A202",
+      "title": "Flow Analysis",
+      "modules": "Module 4: Flow Dynamics",
+      "available_date": "Available from May 10 at 9:00am",
+      "due_date": "Due May 17 at 11:59pm",
+      "score": "70pt",
+      "course": "RS102"
+    },
+    {
+      "_id": "A203",
+      "title": "Heating Analysis",
+      "modules": "Module 5: Thermal Studies",
+      "available_date": "Available from May 11 at 9:00am",
+      "due_date": "Due May 18 at 11:59pm",
+      "score": "90pt",
+      "course": "RS102"
+    },
+    {
+      "_id": "A301",
+      "title": "Structural Design Task",
+      "modules": "Module 6: Spacecraft Structures",
+      "available_date": "Available from May 12 at 9:00am",
+      "due_date": "Due May 19 at 11:59pm",
+      "score": "100pt",
+      "course": "RS103"
+    },
+    {
+      "_id": "A302",
+      "title": "Orbital Calculations",
+      "modules": "Module 7: Orbital Mechanics",
+      "available_date": "Available from May 13 at 9:00am",
+      "due_date": "Due May 20 at 11:59pm",
+      "score": "110pt",
+      "course": "RS103"
+    },
+    {
+      "_id": "A303",
+      "title": "Systems Engineering Exam",
+      "modules": "Module 8: Systems Engineering",
+      "available_date": "Available from May 14 at 9:00am",
+      "due_date": "Due May 21 at 11:59pm",
+      "score": "150pt",
+      "course": "RS103"
+    }
   ]
+  

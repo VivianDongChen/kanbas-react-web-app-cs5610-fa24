@@ -182,16 +182,18 @@ export default function Assignments() {
                     key={module._id}
                     className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray"
                   >
-                    <div className="wd-title d-flex justify-content-between align-items-center p-3 bg-light">
+                    <div className="wd-title d-flex align-items-start p-3 bg-light">
                       <BsGripVertical className="me-2 fs-3" />
                       <FaFileAlt className="me-2 fs-5 text-success" />
-                      <div>
-                        <strong>ID: </strong> {module._id} <br />
-                        <strong>Details: </strong>
-                        {`${module.modules || "No Modules"} | 
-                          ${module.available_date || "No Available Date"} | 
-                          ${module.due_date || "No Due Date"} | 
-                          ${module.score || "No Score"}`}
+
+                      <div className="text-start">
+                        <div>{module._id}</div> 
+                        {module.modules && (
+                          <span className="text-danger">{module.modules}</span>
+                        )}
+                        {module.available_date && ` | ${module.available_date}`}
+                        {module.due_date && ` | ${module.due_date}`}
+                        {module.score && ` | ${module.score}`}
                       </div>
                       <AssignmentControlButtons />
                     </div>
