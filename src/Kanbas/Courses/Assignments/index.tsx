@@ -186,8 +186,8 @@ export default function Assignments() {
                       <BsGripVertical className="me-2 fs-3" />
                       <FaFileAlt className="me-2 fs-5 text-success" />
 
-                      <div className="text-start">
-                        <div>{module._id}</div> 
+                      <div className="text-start flex-grow-1">
+                        <div>{module._id}</div>
                         {module.modules && (
                           <span className="text-danger">{module.modules}</span>
                         )}
@@ -195,6 +195,7 @@ export default function Assignments() {
                         {module.due_date && ` | ${module.due_date}`}
                         {module.score && ` | ${module.score}`}
                       </div>
+
                       <AssignmentControlButtons />
                     </div>
                   </li>
