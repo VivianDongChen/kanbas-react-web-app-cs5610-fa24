@@ -148,115 +148,13 @@ export default function AssignmentEditor() {
       {/* Action Buttons */}
       <hr />
       <div className="d-flex justify-content-end">
-      <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-secondary me-2">
+      <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-secondary me-2">
            Cancel
          </Link>
-      <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-danger">
+      <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-danger">
        Save
          </Link>
       </div>
     </div>
   );
 }
-
-
-
-// import React, { useState, useEffect } from "react";
-// import { useParams, Link } from "react-router-dom";
-// import * as db from "../../Database"; // 导入数据库
-
-// export default function AssignmentEditor() {
-//   const { cid, aid } = useParams(); // 从 URL 中解析课程ID和作业ID
-//   const assignments = db.assignments || []; // 防止 assignments 为 undefined
-//   const [assignment, setAssignment] = useState(null); // 用于存储当前作业的数据
-
-//   // 根据作业ID找到对应的作业信息
-//   useEffect(() => {
-//     const selectedAssignment = assignments.find((a) => a._id === aid);
-//     if (selectedAssignment) {
-//       setAssignment(selectedAssignment);
-//     }
-//   }, [aid, assignments]);
-
-//   if (!assignment) return <div>Loading...</div>; // 在数据加载前显示 Loading...
-
-//   return (
-//     <div className="p-4">
-//       {/* 作业名称 */}
-//       <div className="form-group">
-//         <label htmlFor="assignmentName">Assignment Name</label>
-//         <input
-//           type="text"
-//           id="assignmentName"
-//           className="form-control"
-//           defaultValue={assignment?.title || ""}
-//         />
-//       </div>
-//       <br />
-
-//       {/* Points */}
-//       <div className="form-group row">
-//         <label className="col-sm-2 col-form-label text-end">Points</label>
-//         <div className="col-sm-10">
-//           <input
-//             type="number"
-//             className="form-control"
-//             defaultValue={typeof assignment?.score === "string" 
-//               ? assignment.score.replace("pt", "") 
-//               : ""}
-//           />
-//         </div>
-//       </div>
-//       <br />
-
-//       {/* Due Date */}
-//       <div className="form-group row">
-//         <label className="col-sm-2 col-form-label text-end">Due Date</label>
-//         <div className="col-sm-10">
-//           <input
-//             type="datetime-local"
-//             className="form-control"
-//             defaultValue={assignment?.due_date ? formatDateTime(assignment.due_date) : ""}
-//           />
-//         </div>
-//       </div>
-//       <br />
-
-//       {/* Available Date */}
-//       <div className="form-group row">
-//         <label className="col-sm-2 col-form-label text-end">Available Date</label>
-//         <div className="col-sm-10">
-//           <input
-//             type="datetime-local"
-//             className="form-control"
-//             defaultValue={assignment?.available_date ? formatDateTime(assignment.available_date) : ""}
-//           />
-//         </div>
-//       </div>
-//       <br />
-
-//       {/* Action Buttons */}
-//       <hr />
-//       <div className="d-flex justify-content-end">
-//         <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-secondary me-2">
-//           Cancel
-//         </Link>
-//         <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-danger">
-//           Save
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// }
-
-// // 辅助函数：将日期格式转换为 HTML5 datetime-local 格式
-// function formatDateTime(dateString) {
-//   if (!dateString) return ""; // 如果日期不存在，返回空字符串
-//   const date = new Date(dateString);
-//   const year = date.getFullYear();
-//   const month = String(date.getMonth() + 1).padStart(2, "0");
-//   const day = String(date.getDate()).padStart(2, "0");
-//   const hours = String(date.getHours()).padStart(2, "0");
-//   const minutes = String(date.getMinutes()).padStart(2, "0");
-//   return `${year}-${month}-${day}T${hours}:${minutes}`;
-// }
