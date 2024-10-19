@@ -85,7 +85,7 @@ export default function Assignments() {
                         {module.due_date && (
                           <span> | Due {module.due_date}</span>
                         )}
-                        {module.score && ` | ${module.score}`}
+                        {module.score && ` | ${module.score}pt`}
                       </div>
 
                       <AssignmentControlButtons />

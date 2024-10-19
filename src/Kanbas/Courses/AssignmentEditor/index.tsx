@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import * as db from "../../Database"; 
 
 export default function AssignmentEditor() {
@@ -148,8 +148,12 @@ export default function AssignmentEditor() {
       {/* Action Buttons */}
       <hr />
       <div className="d-flex justify-content-end">
-        <button className="btn btn-secondary me-2">Cancel</button>
-        <button className="btn btn-danger">Save</button>
+      <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-secondary me-2">
+           Cancel
+         </Link>
+      <Link to={`/Kanbas/Courses/${cid}`} className="btn btn-danger">
+       Save
+         </Link>
       </div>
     </div>
   );

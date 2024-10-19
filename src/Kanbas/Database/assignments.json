@@ -5,7 +5,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "70pt",
+        "score": "70",
         "course": "RS101"
     },
     {
@@ -14,7 +14,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "80pt",
+        "score": "80",
         "course": "RS101"
     },
     {
@@ -23,7 +23,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "80pt",
+        "score": "80",
         "course": "RS101"
     },
     {
@@ -32,7 +32,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS102"
     },
     {
@@ -41,7 +41,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS102"
     },
     {
@@ -50,7 +50,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS102"
     },
     {
@@ -59,7 +59,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "80pt",
+        "score": "80",
         "course": "RS103"
     },
     {
@@ -68,7 +68,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS103"
     },
     {
@@ -77,7 +77,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS103"
     },
     {
@@ -86,7 +86,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS104"
     },
     {
@@ -95,7 +95,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS104"
     },
     {
@@ -104,7 +104,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "70pt",
+        "score": "70",
         "course": "RS104"
     },
     {
@@ -113,7 +113,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "80pt",
+        "score": "80",
         "course": "RS105"
     },
     {
@@ -122,7 +122,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS105"
     },
     {
@@ -131,7 +131,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS105"
     },
     {
@@ -140,7 +140,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS106"
     },
     {
@@ -149,7 +149,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "150pt",
+        "score": "150",
         "course": "RS106"
     },
     {
@@ -158,7 +158,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS106"
     },
     {
@@ -167,7 +167,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS107"
     },
     {
@@ -176,7 +176,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS107"
     },
     {
@@ -185,7 +185,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS107"
     },
     {
@@ -194,7 +194,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS108"
     },
     {
@@ -203,7 +203,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS108"
     },
     {
@@ -212,7 +212,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS108"
     },
     {
@@ -221,7 +221,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "85pt",
+        "score": "85",
         "course": "RS109"
     },
     {
@@ -230,7 +230,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS109"
     },
     {
@@ -239,7 +239,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS109"
     },
     {
@@ -248,7 +248,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS110"
     },
     {
@@ -257,7 +257,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS110"
     },
     {
@@ -266,7 +266,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS110"
     },
     {
@@ -275,7 +275,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS111"
     },
     {
@@ -284,7 +284,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS111"
     },
     {
@@ -293,7 +293,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS111"
     },
     {
@@ -311,7 +311,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "115pt",
+        "score": "115",
         "course": "RS112"
     },
     {
@@ -320,7 +320,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS112"
     },
     {
@@ -329,7 +329,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS113"
     },
     {
@@ -338,7 +338,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS113"
     },
     {
@@ -347,7 +347,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS113"
     },
     {
@@ -356,7 +356,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS114"
     },
     {
@@ -365,7 +365,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS114"
     },
     {
@@ -374,7 +374,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "115pt",
+        "score": "115",
         "course": "RS114"
     },
     {
@@ -383,7 +383,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS115"
     },
     {
@@ -392,7 +392,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS115"
     },
     {
@@ -401,7 +401,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS115"
     },
     {
@@ -410,7 +410,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "85pt",
+        "score": "85",
         "course": "RS116"
     },
     {
@@ -419,7 +419,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS116"
     },
     {
@@ -428,7 +428,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS116"
     },
     {
@@ -437,7 +437,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "90pt",
+        "score": "90",
         "course": "RS117"
     },
     {
@@ -446,7 +446,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS117"
     },
     {
@@ -455,7 +455,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS117"
     },
     {
@@ -464,7 +464,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS118"
     },
     {
@@ -473,7 +473,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS118"
     },
     {
@@ -482,7 +482,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "115pt",
+        "score": "115",
         "course": "RS118"
     },
     {
@@ -491,7 +491,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "95pt",
+        "score": "95",
         "course": "RS119"
     },
     {
@@ -500,7 +500,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS119"
     },
     {
@@ -509,7 +509,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS119"
     },
     {
@@ -518,7 +518,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "100pt",
+        "score": "100",
         "course": "RS120"
     },
     {
@@ -527,7 +527,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS120"
     },
     {
@@ -536,7 +536,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "115pt",
+        "score": "115",
         "course": "RS120"
     },
     {
@@ -545,7 +545,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-07T00:00:00",
         "due_date": "2024-05-14T23:59:00",
-        "score": "105pt",
+        "score": "105",
         "course": "RS121"
     },
     {
@@ -554,7 +554,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-08T00:00:00",
         "due_date": "2024-05-15T23:59:00",
-        "score": "110pt",
+        "score": "110",
         "course": "RS121"
     },
     {
@@ -563,7 +563,7 @@
         "modules": "Multiple Modules",
         "available_date": "2024-05-09T00:00:00",
         "due_date": "2024-05-16T23:59:00",
-        "score": "120pt",
+        "score": "120",
         "course": "RS121"
     }
 ]
