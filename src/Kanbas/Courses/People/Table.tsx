@@ -1,10 +1,10 @@
 // import React from "react";
 // import { FaUserCircle } from "react-icons/fa";
 // import { useParams } from "react-router-dom";
-// import * as db from "../../Database"; 
+// import * as db from "../../Database";
 
 // export default function PeopleTable() {
-//   const { cid } = useParams(); 
+//   const { cid } = useParams();
 //   const { users, enrollments } = db;
 
 //   const enrolledParticipants = enrollments
@@ -80,8 +80,6 @@
 //   );
 // }
 
-
-
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { useParams } from "react-router-dom";
@@ -91,58 +89,43 @@ export default function PeopleTable() {
   const { cid } = useParams();
   const { users, enrollments } = db;
 
-  // 获取指定课程的注册用户列表
-  const enrolledParticipants = enrollments
-    .filter((enrollment) => enrollment.course === cid)
-    .map((enrollment) =>
-      users.find((user) => user._id === enrollment.user)
-    )
-    .filter(Boolean); // 确保用户存在
-
   return (
-    <div>
-      <h1>Participants Enrolled in {cid}</h1>
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <div id="wd-people-table">
+      <table className="table table-striped">
         <thead>
           <tr>
-            <th style={thStyle}>Name</th>
-            <th style={thStyle}>Login ID</th>
-            <th style={thStyle}>Section</th>
-            <th style={thStyle}>Role</th>
-            <th style={thStyle}>Last Activity</th>
-            <th style={thStyle}>Total Activity</th>
+            <th>Name</th>
+            <th>Login ID</th>
+            <th>Section</th>
+            <th>Role</th>
+            <th>Last Activity</th>
+            <th>Total Activity</th>
           </tr>
         </thead>
         <tbody>
-          {enrolledParticipants.map((participant) => (
-            <tr key={participant._id}>
-              <td style={tdStyle}>
-                <FaUserCircle style={{ marginRight: "10px" }} />
-                {participant.firstName} {participant.lastName}
-              </td>
-              <td style={tdStyle}>{participant.loginId}</td>
-              <td style={tdStyle}>{participant.section}</td>
-              <td style={tdStyle}>{participant.role}</td>
-              <td style={tdStyle}>{participant.lastActivity}</td>
-              <td style={tdStyle}>{participant.totalActivity}</td>
-            </tr>
-          ))}
+          {users
+            .filter((usr) =>
+              enrollments.some(
+                (enrollment) =>
+                  enrollment.user === usr._id && enrollment.course === cid
+              )
+            )
+            .map((user: any) => (
+              <tr key={user._id}>
+                <td className="wd-full-name text-nowrap">
+                  <FaUserCircle className="me-2 fs-1 text-secondary" />
+                  <span className="wd-first-name">{user.firstName}</span>
+                  <span className="wd-last-name">{user.lastName}</span>
+                </td>
+                <td className="wd-login-id">{user.loginId}</td>
+                <td className="wd-section">{user.section}</td>
+                <td className="wd-role">{user.role}</td>
+                <td className="wd-last-activity">{user.lastActivity}</td>
+                <td className="wd-total-activity">{user.totalActivity}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
   );
 }
-
-// 表格头部和单元格的样式
-const thStyle = {
-  border: "1px solid #ddd",
-  padding: "8px",
-  backgroundColor: "#f2f2f2",
-  fontWeight: "bold",
-  textAlign: "left"
-};
-
-const tdStyle = {
-  border: "1px solid #ddd",
-  padding: "8px"
-};
