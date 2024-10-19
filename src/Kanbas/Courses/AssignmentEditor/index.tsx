@@ -123,6 +123,7 @@ export default function AssignmentEditor() {
         <div className="col-sm-10 border p-3">
           <div className="form-group">
             <label>Assign to</label>
+            <select className="form-control"></select>
           </div>
           <div className="form-group">
             <label>Due</label>
