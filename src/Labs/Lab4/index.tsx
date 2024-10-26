@@ -1,3 +1,4 @@
+import ArrayStateVariable from "./ArrayStateVaraibels";
 import BooleanStateVariables from "./BooleanStateVariables";
 import ClickEvent from "./ClickEvent";
 import Counter from "./Counter";
@@ -24,6 +25,7 @@ export default function Lab4() {
             <StringStateVariables/>
             <DateStateVariable/>
             <ObjectStateVariable/>
+            <ArrayStateVariable/>
         </div>
         
     )
