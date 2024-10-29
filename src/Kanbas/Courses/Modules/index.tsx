@@ -24,13 +24,13 @@ export default function Modules() {
   };
   return (
     <div>
-      <ModulesControls />
+      <ModulesControls setModuleName={setModuleName} moduleName={moduleName} addModule={addModule} />
       <br />
       <br />
       <br />
       <br />
       <ul id="wd-modules" className="list-group rounded-0">
-      <ModulesControls setModuleName={setModuleName} moduleName={moduleName} addModule={addModule} />
+      
         {modules
           .filter((module: any) => module.course === cid)
           .map((module: any) => (
