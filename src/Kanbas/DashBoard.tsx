@@ -3,7 +3,7 @@ import "./Dashboard.css";
 import * as db from "./Database";
 import React, { useState } from "react";
 
-export default function Dashboard() 
+export default function Dashboard(
   { courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
     courses: any[]; course: any; 
