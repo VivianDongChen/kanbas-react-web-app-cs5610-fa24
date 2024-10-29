@@ -48,8 +48,6 @@ export default function Lab3() {
         ))}
       </ul>
       <hr />
-      <TodoForm />
-      <hr />
       <VariablesAndConstants />
       <VariableTypes />
       <BooleanVariables />
