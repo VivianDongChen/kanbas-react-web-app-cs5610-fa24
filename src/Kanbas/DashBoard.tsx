@@ -26,6 +26,10 @@ export default function Dashboard() {
     setCourses([...courses, { ...course, ...newCourse }]);
   };
 
+  const deleteCourse = (courseId: string) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
+
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -39,8 +43,6 @@ export default function Dashboard() {
           {" "}
           Add{" "}
         </button>
-
-        
       </h5>
       <br />
       <input
@@ -61,8 +63,6 @@ export default function Dashboard() {
         onChange={(e) => setCourse({ ...course, image: e.target.value })}
       />
       <hr />
-
-
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
@@ -91,6 +91,16 @@ export default function Dashboard() {
                       {course.description}{" "}
                     </p>
                     <button className="btn btn-primary"> Go </button>
+                    <button
+                      onClick={(event) => {
+                        event.preventDefault();
+                        deleteCourse(course._id);
+                      }}
+                      className="btn btn-danger float-end"
+                      id="wd-delete-course-click"
+                    >
+                      Delete
+                    </button>
                   </div>
                 </Link>
               </div>
