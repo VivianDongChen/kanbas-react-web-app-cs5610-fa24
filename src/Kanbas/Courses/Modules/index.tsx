@@ -4,10 +4,24 @@ import ModuleControlButtons from "./ModuleControlButtons";
 import ModulesControls from "./ModulesControls";
 import { useParams } from "react-router";
 import * as db from "../../Database";
+import React, { useState } from "react";
 
 export default function Modules() {
   const { cid } = useParams();
-  const modules = db.modules;
+  const [modules, setModules] = useState<any[]>(db.modules);
+  const [moduleName, setModuleName] = useState("");
+  const addModule = () => {
+    setModules([
+      ...modules,
+      {
+        _id: new Date().getTime().toString(),
+        name: moduleName,
+        course: cid,
+        lessons: [],
+      },
+    ]);
+    setModuleName("");
+  };
   return (
     <div>
       <ModulesControls />
@@ -16,6 +30,7 @@ export default function Modules() {
       <br />
       <br />
       <ul id="wd-modules" className="list-group rounded-0">
+      <ModulesControls setModuleName={setModuleName} moduleName={moduleName} addModule={addModule} />
         {modules
           .filter((module: any) => module.course === cid)
           .map((module: any) => (
