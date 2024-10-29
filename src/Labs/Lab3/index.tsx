@@ -32,20 +32,14 @@ import VariableTypes from "./VariableTypes";
 import Highlight from "./HighLight";
 import PathParameters from "./PathParameters";
 import AddPathParameters from "./AddPathParameters";
-import { useSelector } from "react-redux";
+import TodoForm from "../Lab4/ReduxExamples/todos/TodoForm";
 
 export default function Lab3() {
   console.log("Hello World!");
   return (
     <div id="wd-lab3">
       <h3>Lab 3</h3>
-      <ul className="list-group">
-        {todos.map((todo: any) => (
-          <li className="list-group-item" key={todo.id}>
-            {todo.title}
-          </li>
-        ))}
-      </ul>
+      <TodoForm/>
       <hr />
       <VariablesAndConstants />
       <VariableTypes />
