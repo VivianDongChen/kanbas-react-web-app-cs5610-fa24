@@ -17,7 +17,7 @@ const newTodos = todos.filter((todo) => todo.id !== id);
 setTodos(newTodos);
 };
 const updateTodo = (todo: any) => {
-const newTodos = todos.map((item) =>›
+const newTodos = todos.map((item) =>
 (item.id === todo.id ? todo : item));
 setTodos(newTodos);
 setTodo({id: "-1", title: ""});
