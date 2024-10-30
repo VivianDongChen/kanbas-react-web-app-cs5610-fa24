@@ -100,7 +100,7 @@ export default function Dashboard({
                       </p>
                       <button className="btn btn-primary"> Go </button>
 
-                      <button
+                      <ProtectedRoute1><button
                         onClick={(event) => {
                           event.preventDefault();
                           deleteCourse(course._id);
@@ -120,7 +120,7 @@ export default function Dashboard({
                         className="btn btn-warning me-2 float-end"
                       >
                         Edit
-                      </button>
+                      </button></ProtectedRoute1>
                     </div>
                   </Link>
                 </div>

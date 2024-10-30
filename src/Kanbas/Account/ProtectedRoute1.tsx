@@ -6,6 +6,6 @@ export default function ProtectedRoute1({ children }: { children: any }) {
   if (currentUser.role === "FACULTY") {
     return children;
   } else {
-    return <div>You do not have permission to edit this page.</div>;;
+    return null;
   }
 }
