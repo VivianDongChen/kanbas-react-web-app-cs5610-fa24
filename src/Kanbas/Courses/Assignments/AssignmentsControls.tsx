@@ -38,7 +38,7 @@ export default function AssignmentsControls({
           Group
         </button>
 
-        <Link
+        {/* <Link
             className="wd-assignment-link"
             to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
             >
@@ -50,9 +50,9 @@ export default function AssignmentsControls({
           <FaPlus className="me-2" />
           Assignment
         </button>
-        </Link>
+        </Link> */}
 
-        {/* <Link
+        <Link
           to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
           className="btn btn-danger d-flex align-items-center wd-assignment-link"
           style={{ height: "100%" }}
@@ -60,7 +60,7 @@ export default function AssignmentsControls({
         >
           <FaPlus className="me-2" />
           Assignment
-        </Link> */}
+        </Link>
         
       </div>
     </div>
