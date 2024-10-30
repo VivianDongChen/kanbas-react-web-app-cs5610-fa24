@@ -38,22 +38,8 @@ export default function AssignmentsControls({
           Group
         </button>
 
-        {/* <Link
-            className="wd-assignment-link"
-            to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
-            >
-        <button
-          id="wd-add-assignment-btn"
-          className="btn btn-danger d-flex align-items-center"
-          style={{ height: "100%" }}
-        >
-          <FaPlus className="me-2" />
-          Assignment
-        </button>
-        </Link> */}
-
         <Link
-          to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
+          to={`/Kanbas/Courses/${cid}/AssignmentEditor/new`}
           className="btn btn-danger d-flex align-items-center wd-assignment-link"
           style={{ height: "100%" }}
           id="wd-add-assignment-btn"

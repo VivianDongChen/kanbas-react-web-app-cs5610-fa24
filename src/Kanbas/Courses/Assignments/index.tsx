@@ -78,7 +78,7 @@ export default function Assignments() {
                       <div className="text-start flex-grow-1">
                         <Link
                           className="wd-assignment-link"
-                          to={`/Kanbas/Courses/${cid}/AssignmentEditor/${module._id}`}
+                          to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
                         >
                           <span>{module._id}</span>
                         </Link>
