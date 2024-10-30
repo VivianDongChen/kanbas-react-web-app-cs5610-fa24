@@ -6,6 +6,7 @@ import { FaAlignJustify } from "react-icons/fa6";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router";
 import Modules from "./Modules";
 import CoursesNavigation from "./Navigation";
+import ProtectedRoute1 from "../Account/ProtectedRoute1";
 
 export default function Courses({ courses }: { courses: any[]; }) {
   const { cid } = useParams();
@@ -26,7 +27,7 @@ export default function Courses({ courses }: { courses: any[]; }) {
             <Route path="Home" element={<Home />} />
             <Route path="Modules" element={<Modules />} />
             <Route path="Assignments" element={<Assignments />} />
-            <Route path="AssignmentEditor/:aid" element={<AssignmentEditor />} />
+            <ProtectedRoute1><Route path="AssignmentEditor/:aid" element={<AssignmentEditor />} /></ProtectedRoute1>
             <Route path="People" element={<PeopleTable />} />
           </Routes>
         </div>
