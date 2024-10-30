@@ -173,7 +173,7 @@ export default function AssignmentEditor() {
 
   // Find the existing assignment (if not "new"), or set an empty assignment object
   const existingAssignment = aid !== "new"
-    ? assignments.find((a) => a.course === cid && a._id === aid)
+    ? assignments.find((a:any) => a.course === cid && a._id === aid)
     : null;
 
   // Initialize state with either existing assignment data or an empty form
@@ -182,7 +182,7 @@ export default function AssignmentEditor() {
   );
 
   // Handle input changes and update the state
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setAssignmentData({ ...assignmentData, [name]: value });
   };
