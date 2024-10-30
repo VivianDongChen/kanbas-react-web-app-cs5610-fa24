@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import * as db from "./Database";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import ProtectedRoute1 from "./Account/ProtectedRoute1";
 
 export default function Dashboard({
   courses,
@@ -25,7 +26,7 @@ export default function Dashboard({
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h5>
+      <ProtectedRoute1><h5>
         New Course
         <button
           className="btn btn-primary float-end"
@@ -61,7 +62,7 @@ export default function Dashboard({
         value={course.image}
         onChange={(e) => setCourse({ ...course, image: e.target.value })}
       />
-      <hr />
+      <hr /></ProtectedRoute1>
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
