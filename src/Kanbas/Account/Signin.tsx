@@ -8,6 +8,7 @@ export default function Signin() {
   const [credentials, setCredentials] = useState<any>({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const signin = () => {
     const user = db.users.find(
       (u: any) =>
@@ -18,6 +19,7 @@ export default function Signin() {
     dispatch(setCurrentUser(user));
     navigate("/Kanbas/Dashboard");
   };
+  
   return (
     <div id="wd-signin-screen">
       <h1>Sign in</h1>

@@ -1,24 +1,32 @@
-import ModuleControls from "./ModuleControls";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import * as db from "../../Database";
-
 import "../../styles.css";
 import React, { useEffect, useState } from "react";
 import ProtectedRoute1 from "../../Account/ProtectedRoute1";
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, editAssignment, updateAssignment, deleteAssignment } from "./reducer";
+import AssignmentsControls from "./AssignmentsControls";
 
 export default function Assignments() {
-  const { cid } = useParams();
-  const assignments = db.assignments;
 
-  console.log(assignments);
+  const { cid } = useParams();
+  const [assignmentName, setAssignmentName] = useState("");
+  const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+  const dispatch = useDispatch();
 
   return (
     <div>
-      <ProtectedRoute1><ModuleControls /></ProtectedRoute1>
+      <ProtectedRoute1><AssignmentsControls 
+      assignmentName = {assignmentName}
+      setAssignmentName = {setAssignmentName}
+      addAssignment = {() => {
+        dispatch(addAssignment({name: assignmentName, course: cid }));
+        setAssignmentName("");
+      }}
+      /></ProtectedRoute1>
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">

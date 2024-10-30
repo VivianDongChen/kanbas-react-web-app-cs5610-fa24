@@ -3,17 +3,18 @@ import LessonControlButtons from "./LessonControlButtons";
 import ModuleControlButtons from "./ModuleControlButtons";
 import ModulesControls from "./ModulesControls";
 import { useParams } from "react-router";
-import * as db from "../../Database";
 import React, { useState } from "react";
 import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
 import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 
 export default function Modules() {
+  
   const { cid } = useParams();
   const [moduleName, setModuleName] = useState("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
+
   return (
     <div className="wd-modules">
       <ProtectedRoute1><ModulesControls

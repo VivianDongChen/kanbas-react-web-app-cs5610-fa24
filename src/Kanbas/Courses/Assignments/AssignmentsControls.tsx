@@ -1,7 +1,19 @@
 import { FaPlus } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import AssignmentEditor from "./AssignmentEditor";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
-export default function ModulesControls() {
+export default function AssignmentsControls({
+  assignmentName,
+  setAssignmentName,
+  addAssignment,
+}: {
+  assignmentName: string;
+  setAssignmentName: (title: string) => void;
+  addAssignment: () => void;
+}) {
+  const { cid } = useParams();
   return (
     <div
       id="wd-modules-controls"
@@ -26,6 +38,10 @@ export default function ModulesControls() {
           Group
         </button>
 
+        <Link
+            className="wd-assignment-link"
+            to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
+            >
         <button
           id="wd-add-assignment-btn"
           className="btn btn-danger d-flex align-items-center"
@@ -34,8 +50,19 @@ export default function ModulesControls() {
           <FaPlus className="me-2" />
           Assignment
         </button>
+        </Link>
+
+        {/* <Link
+          to={`/Kanbas/Courses/${cid}/AssignmentEditor/`}
+          className="btn btn-danger d-flex align-items-center wd-assignment-link"
+          style={{ height: "100%" }}
+          id="wd-add-assignment-btn"
+        >
+          <FaPlus className="me-2" />
+          Assignment
+        </Link> */}
+        
       </div>
     </div>
   );
 }
-
