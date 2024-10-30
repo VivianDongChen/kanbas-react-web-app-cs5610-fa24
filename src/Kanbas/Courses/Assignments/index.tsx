@@ -8,6 +8,7 @@ import * as db from "../../Database";
 
 import "../../styles.css";
 import React, { useEffect, useState } from "react";
+import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -17,7 +18,7 @@ export default function Assignments() {
 
   return (
     <div>
-      <ModuleControls />
+      <ProtectedRoute1><ModuleControls /></ProtectedRoute1>
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
@@ -50,7 +51,7 @@ export default function Assignments() {
               <span className="badge bg-light text-dark border rounded-pill px-3 me-3">
                 40% of Total
               </span>
-              <AssignmentsControlButtons />
+              <ProtectedRoute1><AssignmentsControlButtons /></ProtectedRoute1>
             </div>
           </div>
           <div id="assignmentCollapse" className="collapse show">
@@ -88,7 +89,7 @@ export default function Assignments() {
                         {module.score && ` | ${module.score}pt`}
                       </div>
 
-                      <AssignmentControlButtons />
+                      <ProtectedRoute1><AssignmentControlButtons /></ProtectedRoute1>
                     </div>
                   </li>
                 ))}
