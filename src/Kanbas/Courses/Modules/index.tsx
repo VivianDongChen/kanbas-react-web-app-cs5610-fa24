@@ -7,6 +7,7 @@ import * as db from "../../Database";
 import React, { useState } from "react";
 import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
+import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 
 export default function Modules() {
   const { cid } = useParams();
@@ -15,14 +16,14 @@ export default function Modules() {
   const dispatch = useDispatch();
   return (
     <div className="wd-modules">
-      <ModulesControls
+      <ProtectedRoute1><ModulesControls
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
           dispatch(addModule({ name: moduleName, course: cid }));
           setModuleName("");
         }}
-      />
+      /></ProtectedRoute1>
       <br />
       <br />
       <br />
@@ -51,20 +52,20 @@ export default function Modules() {
                     defaultValue={module.name}
                   />
                 )}
-                <ModuleControlButtons
+                <ProtectedRoute1><ModuleControlButtons
                   moduleId={module._id}
                   deleteModule={(moduleId) => {
                     dispatch(deleteModule(moduleId));
                   }}
                   editModule={(moduleId) => dispatch(editModule(moduleId))}
-                />
+                /></ProtectedRoute1>
               </div>
               {module.lessons && (
                 <ul className="wd-lessons list-group rounded-0">
                   {module.lessons.map((lesson: any) => (
                     <li className="wd-lesson list-group-item p-3 ps-1">
                       <BsGripVertical className="me-2 fs-3" /> {lesson.name}{" "}
-                      <LessonControlButtons />
+                      <ProtectedRoute1><LessonControlButtons /></ProtectedRoute1>
                     </li>
                   ))}
                 </ul>
