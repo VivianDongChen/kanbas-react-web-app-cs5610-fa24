@@ -48,10 +48,10 @@ export default function Assignments() {
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <span className="badge bg-light text-dark border rounded-pill px-3 me-3">
+              <ProtectedRoute1><span className="badge bg-light text-dark border rounded-pill px-3 me-3">
                 40% of Total
               </span>
-              <ProtectedRoute1><AssignmentsControlButtons /></ProtectedRoute1>
+              <AssignmentsControlButtons /></ProtectedRoute1>
             </div>
           </div>
           <div id="assignmentCollapse" className="collapse show">

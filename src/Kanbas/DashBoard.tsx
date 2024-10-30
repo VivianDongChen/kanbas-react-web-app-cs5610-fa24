@@ -63,7 +63,7 @@ export default function Dashboard({
         onChange={(e) => setCourse({ ...course, image: e.target.value })}
       />
       <hr /></ProtectedRoute1>
-      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
+      <h2 id="wd-dashboard-published">Published Courses <ProtectedRoute1>({courses.length})</ProtectedRoute1></h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
