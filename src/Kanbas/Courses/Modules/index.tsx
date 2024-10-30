@@ -73,6 +73,7 @@ export default function Modules() {
                 <ModuleControlButtons
                   moduleId={module._id}
                   deleteModule={deleteModule}
+                  editModule={editModule}
                 />
               </div>
               {module.lessons && (
