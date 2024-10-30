@@ -114,7 +114,7 @@ export default function AssignmentEditor() {
           id="assignmentName"
           name="name"
           className="form-control"
-          value={assignmentData.name}
+          defaultValue={assignmentData.name}
           onChange={handleChange}
         />
       </div>
@@ -146,7 +146,7 @@ export default function AssignmentEditor() {
             type="number"
             name="score"
             className="form-control"
-            value={assignmentData.score}
+            defaultValue={assignmentData.score}
             onChange={handleChange}
           />
         </div>
