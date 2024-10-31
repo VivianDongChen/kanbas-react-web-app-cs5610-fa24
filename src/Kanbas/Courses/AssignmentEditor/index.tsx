@@ -18,13 +18,7 @@ export default function AssignmentEditor() {
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
       : null;
 
-  useEffect(() => {
-    if (existingAssignment) {
-      setAssignmentData(existingAssignment);
-    }
-  }, [existingAssignment]);
-
-  // Initialize state with either existing assignment data or an empty form
+    // Initialize state with either existing assignment data or an empty form
   const [assignmentData, setAssignmentData] = useState(
     existingAssignment || {
       title: "",
@@ -33,6 +27,14 @@ export default function AssignmentEditor() {
       due_date: "",
     }
   );
+  
+  useEffect(() => {
+    if (existingAssignment) {
+      setAssignmentData(existingAssignment);
+    }
+  }, [existingAssignment]);
+
+
 
   // Handle input changes and update the state
   const handleChange = (e: any) => {
@@ -124,7 +126,7 @@ export default function AssignmentEditor() {
           Assignment Group
         </label>
         <div className="col-sm-10">
-          <select className="form-select">
+          <select name="assignmentGroup" className="form-select" value={assignmentData.assignmentGroup} onChange={handleChange}>
             <option>ASSIGNMENT</option>
             <option>Quizzes</option>
             <option>Labs</option>
@@ -140,7 +142,7 @@ export default function AssignmentEditor() {
           Display Grade as
         </label>
         <div className="col-sm-10">
-          <select className="form-select">
+          <select className="form-select" name="displayGradeAs" value={assignmentData.displayGradeAs} onChange={handleChange}>
             <option>Percentage</option>
             <option>Points</option>
             <option>Complete/Incomplete</option>
@@ -162,6 +164,7 @@ export default function AssignmentEditor() {
               <option>In-person</option>
             </select>
             <br />
+            
             <label>Online Entry Options</label>
             <div>
               <div className="form-check">
