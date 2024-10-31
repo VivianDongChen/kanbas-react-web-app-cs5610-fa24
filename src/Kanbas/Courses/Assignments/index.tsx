@@ -107,7 +107,7 @@ export default function Assignments() {
 
                       <ProtectedRoute1>
                         <AssignmentControlButtons
-                          assignmentId={module._id} 
+                          assignmentId={module._id}
                           deleteAssignment={(assignmentId) =>
                             dispatch(deleteAssignment(assignmentId))
                           }

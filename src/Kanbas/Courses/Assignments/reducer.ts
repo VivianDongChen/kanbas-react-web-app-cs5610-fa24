@@ -8,19 +8,22 @@ const assignmentsSlice = createSlice({
   initialState,
   reducers: {
     addAssignment: (state, { payload: assignment }) => {
-      // Check if assignment already exists by _id to prevent duplicates
-      if (!assignment._id) {
-      const newAssignment: any = {
+      // 如果已经存在 _id，表明这是更新操作而不是添加新的作业
+      if (assignment._id) return;
+    
+      // 为新作业生成一个唯一 ID
+      const newAssignment = {
         _id: new Date().getTime().toString(),
-        title: assignment.title,
-        score: assignment.score,
-        available_date: assignment.available_date,
-        due_date: assignment.due_date,
-        course: assignment.course,
+        title: assignment.title || "",
+        score: assignment.score || "",
+        available_date: assignment.available_date || "",
+        due_date: assignment.due_date || "",
+        course: assignment.course || ""
       };
-      state.assignments = [...state.assignments, newAssignment] as any;
-    }
+    
+      state.assignments.push(newAssignment); // 使用 push 添加新作业
     },
+
     deleteAssignment: (state, { payload: assignmentId }) => {
       state.assignments = state.assignments.filter(
         (m: any) => m._id !== assignmentId
