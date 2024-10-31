@@ -18,54 +18,46 @@ export default function AssignmentEditor() {
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
       : null;
 
-  // 使用 useState 初始化 assignmentData
-const [assignmentData, setAssignmentData] = useState(existingAssignment || {
-  title: "",
-  score: "",
-  available_date: "",
-  until_date: "",
-  due_date: "",
-  assignmentGroup: "",
-  displayGradeAs: "",
-  course: cid,
-  instructions: `
-    The assignment is available online.
-    Submit a link to the landing page of your Web application running on Netlify.
-    The landing page should include the following:
-    - Your full name and section
-    - Links to each of the lab assignments
-    - Link to the Kanbas application
-    - Links to all relevant source code repositories
-    The Kanbas application should include a link to navigate back to the landing page.
-  `,
-});
+  const [assignmentData, setAssignmentData] = useState({
+    title: "",
+    score: "",
+    available_date: "",
+    until_date: "",
+    due_date: "",
+    assignmentGroup: "",
+    displayGradeAs: "",
+    course: cid,
+    instructions: `
+          The assignment is available online.
+          Submit a link to the landing page of your Web application running on Netlify.
+          The landing page should include the following:
+          - Your full name and section
+          - Links to each of the lab assignments
+          - Link to the Kanbas application
+          - Links to all relevant source code repositories
+          The Kanbas application should include a link to navigate back to the landing page.
+        `,
+  });
 
-
-useEffect(() => {
-  if (existingAssignment) {
-    setAssignmentData(existingAssignment);
-  } else if (aid !== "new") {
-    // 防止当 aid 存在但找不到对应作业时误操作
-    navigate(`/Kanbas/Courses/${cid}/Assignments`);
-  }
-}, [existingAssignment, aid, cid, navigate]);
-
+  // 使用 useEffect 在 existingAssignment 发生变化时更新 assignmentData
+  useEffect(() => {
+    if (aid !== "new" && existingAssignment) {
+      setAssignmentData(existingAssignment);
+    }
+  }, [existingAssignment, aid]);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setAssignmentData((prevData:any) => ({ ...prevData, [name]: value }));
+    setAssignmentData((prevData: any) => ({ ...prevData, [name]: value }));
   };
 
   // Handle the Save button logic: either add a new assignment or update an existing one
   const handleSave = () => {
     if (aid === "new") {
-      // Add a new assignment using your `addAssignment` reducer function
       dispatch(addAssignment({ ...assignmentData, course: cid }));
     } else {
-      // Update an existing assignment using your `updateAssignment` reducer function
       dispatch(updateAssignment({ ...assignmentData, _id: aid }));
     }
-    // Navigate back to the assignments list after saving
     navigate(`/Kanbas/Courses/${cid}/Assignments`);
   };
 
@@ -265,12 +257,13 @@ useEffect(() => {
 
             <div className="col">
               <label>Until</label>
-              <input 
-              type="datetime-local" 
-              className="form-control" 
-              name="until_date"
-              value={assignmentData.until_date}
-              onChange={handleChange}/>
+              <input
+                type="datetime-local"
+                className="form-control"
+                name="until_date"
+                value={assignmentData.until_date}
+                onChange={handleChange}
+              />
             </div>
           </div>
         </div>
