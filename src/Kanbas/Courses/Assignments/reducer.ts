@@ -9,7 +9,8 @@ const assignmentsSlice = createSlice({
   reducers: {
     addAssignment: (state, { payload: assignment }) => {
       // Check if assignment already exists by _id to prevent duplicates
-  if (!state.assignments.some(a => a._id === assignment._id)) {
+      const isExistingAssignment = state.assignments.some(a => a._id === assignment._id);
+      if (!isExistingAssignment) {
       const newAssignment: any = {
         _id: new Date().getTime().toString(),
         title: assignment.title,
