@@ -18,27 +18,12 @@ export default function AssignmentEditor() {
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
       : null;
 
-  //   // Initialize state with either existing assignment data or an empty form
-  // const [assignmentData, setAssignmentData] = useState(
-  //   existingAssignment || {
-  //     title: "",
-  //     score: "",
-  //     available_date: "",
-  //     due_date: "",
-  //   }
-  // );
-
-  // useEffect(() => {
-  //   if (existingAssignment) {
-  //     setAssignmentData(existingAssignment);
-  //   }
-  // }, [existingAssignment]);
-
   // 使用 useState 初始化 assignmentData
   const [assignmentData, setAssignmentData] = useState({
     title: "",
     score: "",
     available_date: "",
+    until_date: "",
     due_date: "",
     assignmentGroup: "",
     displayGradeAs: "",
@@ -110,30 +95,6 @@ export default function AssignmentEditor() {
           value={assignmentData.instructions}
           onChange={handleChange}
         />
-        {/* <div className="border p-3">
-          <p>
-            The assignment is{" "}
-            <span style={{ color: "red" }}>available online</span>
-          </p>
-          <p>
-            Submit a link to the landing page of your Web application running on{" "}
-            <span style={{ color: "black" }}>Netlify</span>.
-          </p>
-          <p>The landing page should include the following:</p>
-          <ul>
-            <li>Your full name and section</li>
-            <li>Links to each of the lab assignments</li>
-            <li>
-              Link to the <span style={{ color: "black" }}>Kanbas</span>{" "}
-              application
-            </li>
-            <li>Links to all relevant source code repositories</li>
-          </ul>
-          <p>
-            The <span style={{ color: "black" }}>Kanbas</span> application
-            should include a link to navigate back to the landing page.
-          </p>
-        </div> */}
       </div>
       <br />
 
@@ -300,7 +261,12 @@ export default function AssignmentEditor() {
 
             <div className="col">
               <label>Until</label>
-              <input type="datetime-local" className="form-control" />
+              <input 
+              type="datetime-local" 
+              className="form-control" 
+              name="until_date"
+              value={assignmentData.until_date}
+              onChange={handleChange}/>
             </div>
           </div>
         </div>
