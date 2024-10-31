@@ -80,7 +80,7 @@ export default function Assignments() {
                           className="wd-assignment-link"
                           to={`/Kanbas/Courses/${cid}/AssignmentEditor/${module._id}`}
                         >
-                          <span>{module._id}</span>
+                          <span>{module.title || module._id}</span>
                         </Link>
                         <br />
                         {module.modules && (

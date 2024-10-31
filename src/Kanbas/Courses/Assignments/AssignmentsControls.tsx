@@ -1,6 +1,5 @@
 import { FaPlus } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-import AssignmentEditor from "../AssignmentEditor";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
