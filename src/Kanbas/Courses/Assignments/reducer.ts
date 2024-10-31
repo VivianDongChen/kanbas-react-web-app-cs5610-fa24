@@ -8,6 +8,8 @@ const assignmentsSlice = createSlice({
   initialState,
   reducers: {
     addAssignment: (state, { payload: assignment }) => {
+      // Check if assignment already exists by _id to prevent duplicates
+  if (!state.assignments.some(a => a._id === assignment._id)) {
       const newAssignment: any = {
         _id: new Date().getTime().toString(),
         title: assignment.title,
@@ -17,6 +19,7 @@ const assignmentsSlice = createSlice({
         course: assignment.course,
       };
       state.assignments = [...state.assignments, newAssignment] as any;
+    }
     },
     deleteAssignment: (state, { payload: assignmentId }) => {
       state.assignments = state.assignments.filter(
