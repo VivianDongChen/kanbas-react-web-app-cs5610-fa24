@@ -7,11 +7,15 @@ import "../../styles.css";
 import React, { useEffect, useState } from "react";
 import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, editAssignment, updateAssignment, deleteAssignment } from "./reducer";
+import {
+  addAssignment,
+  editAssignment,
+  updateAssignment,
+  deleteAssignment,
+} from "./reducer";
 import AssignmentsControls from "./AssignmentsControls";
 
 export default function Assignments() {
-
   const { cid } = useParams();
   const [assignmentName, setAssignmentName] = useState("");
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
@@ -19,14 +23,16 @@ export default function Assignments() {
 
   return (
     <div>
-      <ProtectedRoute1><AssignmentsControls 
-      assignmentName = {assignmentName}
-      setAssignmentName = {setAssignmentName}
-      addAssignment = {() => {
-        dispatch(addAssignment({title: assignmentName, course: cid }));
-        setAssignmentName("");
-      }}
-      /></ProtectedRoute1>
+      <ProtectedRoute1>
+        <AssignmentsControls
+          assignmentName={assignmentName}
+          setAssignmentName={setAssignmentName}
+          addAssignment={() => {
+            dispatch(addAssignment({ title: assignmentName, course: cid }));
+            setAssignmentName("");
+          }}
+        />
+      </ProtectedRoute1>
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
@@ -56,10 +62,12 @@ export default function Assignments() {
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <ProtectedRoute1><span className="badge bg-light text-dark border rounded-pill px-3 me-3">
-                40% of Total
-              </span>
-              <AssignmentsControlButtons /></ProtectedRoute1>
+              <ProtectedRoute1>
+                <span className="badge bg-light text-dark border rounded-pill px-3 me-3">
+                  40% of Total
+                </span>
+                <AssignmentsControlButtons />
+              </ProtectedRoute1>
             </div>
           </div>
           <div id="assignmentCollapse" className="collapse show">
@@ -97,7 +105,14 @@ export default function Assignments() {
                         {module.score && ` | ${module.score}pt`}
                       </div>
 
-                      <ProtectedRoute1><AssignmentControlButtons /></ProtectedRoute1>
+                      <ProtectedRoute1>
+                        <AssignmentControlButtons
+                          assignmentId={module._id} 
+                          deleteAssignment={(assignmentId) =>
+                            dispatch(deleteAssignment(assignmentId))
+                          }
+                        />
+                      </ProtectedRoute1>
                     </div>
                   </li>
                 ))}
