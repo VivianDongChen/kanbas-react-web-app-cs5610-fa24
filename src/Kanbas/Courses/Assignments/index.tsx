@@ -23,14 +23,7 @@ export default function Assignments() {
   return (
     <div>
       <ProtectedRoute1>
-        <AssignmentsControls
-          // assignmentName={assignmentName}
-          // setAssignmentName={setAssignmentName}
-          // addAssignment={() => {
-          //   dispatch(addAssignment({ title: assignmentName, course: cid })); //Dispatches addAssignment with the current assignmentName and cid
-          //   setAssignmentName("");  //Clears the assignmentName field after dispatching.
-          // }}
-        />
+        <AssignmentsControls/>
       </ProtectedRoute1>
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
