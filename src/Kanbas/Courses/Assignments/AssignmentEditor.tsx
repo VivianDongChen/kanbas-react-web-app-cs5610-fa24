@@ -79,7 +79,7 @@ useEffect(() => {
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setAssignmentData((prevData) => ({ ...prevData, [name]: value }));
+    setAssignmentData((prevData:any) => ({ ...prevData, [name]: value }));
   };
 
   // Handle the Save button logic: either add a new assignment or update an existing one
