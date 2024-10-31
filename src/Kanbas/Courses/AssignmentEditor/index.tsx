@@ -20,7 +20,7 @@ export default function AssignmentEditor() {
   // Initialize state with either existing assignment data or an empty form
   const [assignmentData, setAssignmentData] = useState(
     existingAssignment || {
-      name: "",
+      title: "",
       score: "",
       available_date: "",
       due_date: "",
@@ -57,10 +57,10 @@ export default function AssignmentEditor() {
         <label htmlFor="assignmentName">Assignment Name</label>
         <input
           type="text"
-          id="assignmentName"
-          name="name"
+          id="assignmentTitle"
+          name="title"
           className="form-control"
-          defaultValue={assignmentData.name}
+          defaultValue={assignmentData.title}
           onChange={handleChange}
         />
       </div>
