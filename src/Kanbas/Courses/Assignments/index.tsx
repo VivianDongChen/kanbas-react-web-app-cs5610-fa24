@@ -9,28 +9,27 @@ import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
-  editAssignment,
   updateAssignment,
   deleteAssignment,
 } from "./reducer";
 import AssignmentsControls from "./AssignmentsControls";
 
 export default function Assignments() {
-  const { cid } = useParams();
-  const [assignmentName, setAssignmentName] = useState("");
-  const { assignments } = useSelector((state: any) => state.assignmentsReducer);
-  const dispatch = useDispatch();
+  const { cid } = useParams(); // course ID extracted from the URL using useParams
+  const [assignmentName, setAssignmentName] = useState(""); // State for storing the name of a new assignment, managed with setAssignmentName
+  const { assignments } = useSelector((state: any) => state.assignmentsReducer); // Retrieved from the Redux store’s assignmentsReducer
+  const dispatch = useDispatch(); // dispatch function from Redux for dispatching actions like addAssignment and deleteAssignment
 
   return (
     <div>
       <ProtectedRoute1>
         <AssignmentsControls
-          assignmentName={assignmentName}
-          setAssignmentName={setAssignmentName}
-          addAssignment={() => {
-            dispatch(addAssignment({ title: assignmentName, course: cid }));
-            setAssignmentName("");
-          }}
+          // assignmentName={assignmentName}
+          // setAssignmentName={setAssignmentName}
+          // addAssignment={() => {
+          //   dispatch(addAssignment({ title: assignmentName, course: cid })); //Dispatches addAssignment with the current assignmentName and cid
+          //   setAssignmentName("");  //Clears the assignmentName field after dispatching.
+          // }}
         />
       </ProtectedRoute1>
       <br />
@@ -38,10 +37,10 @@ export default function Assignments() {
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
           <div
             className="wd-title d-flex justify-content-between align-items-center p-3 bg-light"
-            data-bs-toggle="collapse"
-            data-bs-target="#assignmentCollapse"
-            aria-expanded="true"
-            style={{ cursor: "pointer" }}
+            data-bs-toggle="collapse" //a clickable area that enables users to hide (collapse) or show (expand) the list of assignments beneath it.
+            data-bs-target="#assignmentCollapse" //a Bootstrap attribute that links the clickable element (in this case, a header or button) to another HTML element with the ID assignmentCollapse.
+            aria-expanded="true"  //the element is currently expanded and visible.
+            style={{ cursor: "pointer" }} //makes the cursor display as a hand icon, which is typically used to indicate that the element is clickable
           >
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-4 text-secondary" />
@@ -71,9 +70,10 @@ export default function Assignments() {
             </div>
           </div>
           <div id="assignmentCollapse" className="collapse show">
-            <ul className="wd-assignments list-group list-group-flush">
+            {/* Bootstrap’s list-group and list-group-flush classes to give it a list appearance without borders around each item */}
+            <ul className="wd-assignments list-group list-group-flush"> 
               {assignments
-                .filter((module: any) => module.course === cid)
+                .filter((module: any) => module.course === cid) //Filters assignments to display only those that match the current course ID.
                 .map((module: any) => (
                   <li
                     key={module._id}
@@ -88,7 +88,7 @@ export default function Assignments() {
                           className="wd-assignment-link"
                           to={`/Kanbas/Courses/${cid}/AssignmentEditor/${module._id}`}
                         >
-                          <span>{module.title || module._id}</span>
+                          <span>{module.title}</span>
                         </Link>
                         <br />
                         {module.modules && (

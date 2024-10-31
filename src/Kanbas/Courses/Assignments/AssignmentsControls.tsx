@@ -3,16 +3,16 @@ import { FaSearch } from "react-icons/fa";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
-export default function AssignmentsControls({
-  assignmentName,
-  setAssignmentName,
-  addAssignment,
-}: {
-  assignmentName: string;
-  setAssignmentName: (title: string) => void;
-  addAssignment: () => void;
-}) {
-  const { cid } = useParams();
+export default function AssignmentsControls(){
+//   assignmentName,
+//   setAssignmentName,
+//   addAssignment,
+// }: {
+//   assignmentName: string;
+//   setAssignmentName: (title: string) => void;
+//   addAssignment: () => void;
+// }) {
+  const { cid } = useParams(); //Extracts the cid parameter from the URL
   return (
     <div
       id="wd-modules-controls"
