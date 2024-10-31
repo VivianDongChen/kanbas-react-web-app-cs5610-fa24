@@ -23,7 +23,7 @@ export default function Assignments() {
       assignmentName = {assignmentName}
       setAssignmentName = {setAssignmentName}
       addAssignment = {() => {
-        dispatch(addAssignment({name: assignmentName, course: cid }));
+        dispatch(addAssignment({title: assignmentName, course: cid }));
         setAssignmentName("");
       }}
       /></ProtectedRoute1>
