@@ -18,28 +18,53 @@ export default function AssignmentEditor() {
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
       : null;
 
-    // Initialize state with either existing assignment data or an empty form
-  const [assignmentData, setAssignmentData] = useState(
-    existingAssignment || {
-      title: "",
-      score: "",
-      available_date: "",
-      due_date: "",
-    }
-  );
-  
+  //   // Initialize state with either existing assignment data or an empty form
+  // const [assignmentData, setAssignmentData] = useState(
+  //   existingAssignment || {
+  //     title: "",
+  //     score: "",
+  //     available_date: "",
+  //     due_date: "",
+  //   }
+  // );
+
+  // useEffect(() => {
+  //   if (existingAssignment) {
+  //     setAssignmentData(existingAssignment);
+  //   }
+  // }, [existingAssignment]);
+
+  // 使用 useState 初始化 assignmentData
+  const [assignmentData, setAssignmentData] = useState({
+    title: "",
+    score: "",
+    available_date: "",
+    due_date: "",
+    assignmentGroup: "",
+    displayGradeAs: "",
+    course: cid,
+    instructions: `
+      The assignment is available online.
+      Submit a link to the landing page of your Web application running on Netlify.
+      The landing page should include the following:
+      - Your full name and section
+      - Links to each of the lab assignments
+      - Link to the Kanbas application
+      - Links to all relevant source code repositories
+      The Kanbas application should include a link to navigate back to the landing page.
+    `, // 默认指令
+  });
+
+  // 当 existingAssignment 存在时，通过 useEffect 将其数据设置到 assignmentData
   useEffect(() => {
     if (existingAssignment) {
       setAssignmentData(existingAssignment);
     }
-  }, [existingAssignment]);
+  }, [existingAssignment, cid]);
 
-
-
-  // Handle input changes and update the state
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setAssignmentData({ ...assignmentData, [name]: value });
+    setAssignmentData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   // Handle the Save button logic: either add a new assignment or update an existing one
@@ -78,7 +103,14 @@ export default function AssignmentEditor() {
       {/* Instructions */}
       <div className="form-group">
         <label>Instructions</label>
-        <div className="border p-3">
+        <textarea
+          name="instructions"
+          className="form-control"
+          rows={8}
+          value={assignmentData.instructions}
+          onChange={handleChange}
+        />
+        {/* <div className="border p-3">
           <p>
             The assignment is{" "}
             <span style={{ color: "red" }}>available online</span>
@@ -101,7 +133,7 @@ export default function AssignmentEditor() {
             The <span style={{ color: "black" }}>Kanbas</span> application
             should include a link to navigate back to the landing page.
           </p>
-        </div>
+        </div> */}
       </div>
       <br />
 
@@ -126,7 +158,12 @@ export default function AssignmentEditor() {
           Assignment Group
         </label>
         <div className="col-sm-10">
-          <select name="assignmentGroup" className="form-select" value={assignmentData.assignmentGroup} onChange={handleChange}>
+          <select
+            name="assignmentGroup"
+            className="form-select"
+            value={assignmentData.assignmentGroup}
+            onChange={handleChange}
+          >
             <option>ASSIGNMENT</option>
             <option>Quizzes</option>
             <option>Labs</option>
@@ -142,7 +179,12 @@ export default function AssignmentEditor() {
           Display Grade as
         </label>
         <div className="col-sm-10">
-          <select className="form-select" name="displayGradeAs" value={assignmentData.displayGradeAs} onChange={handleChange}>
+          <select
+            className="form-select"
+            name="displayGradeAs"
+            value={assignmentData.displayGradeAs}
+            onChange={handleChange}
+          >
             <option>Percentage</option>
             <option>Points</option>
             <option>Complete/Incomplete</option>
@@ -164,7 +206,7 @@ export default function AssignmentEditor() {
               <option>In-person</option>
             </select>
             <br />
-            
+
             <label>Online Entry Options</label>
             <div>
               <div className="form-check">
@@ -237,6 +279,7 @@ export default function AssignmentEditor() {
             <label>Due</label>
             <input
               type="datetime-local"
+              name="due_date"
               className="form-control"
               value={assignmentData.due_date}
               onChange={handleChange}
@@ -249,6 +292,7 @@ export default function AssignmentEditor() {
               <input
                 type="datetime-local"
                 className="form-control"
+                name="available_date"
                 value={assignmentData.available_date}
                 onChange={handleChange}
               />
