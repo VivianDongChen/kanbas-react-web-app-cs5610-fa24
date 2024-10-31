@@ -60,7 +60,7 @@ export default function AssignmentEditor() {
           id="assignmentTitle"
           name="title"
           className="form-control"
-          defaultValue={assignmentData.title}
+          value={assignmentData.title}
           onChange={handleChange}
         />
       </div>
@@ -104,7 +104,7 @@ export default function AssignmentEditor() {
             type="number"
             name="score"
             className="form-control"
-            defaultValue={assignmentData.score}
+            value={assignmentData.score}
             onChange={handleChange}
           />
         </div>
@@ -228,7 +228,7 @@ export default function AssignmentEditor() {
             <input
               type="datetime-local"
               className="form-control"
-              defaultValue={assignmentData.due_date}
+              value={assignmentData.due_date}
               onChange={handleChange}
             />
           </div>
@@ -239,7 +239,7 @@ export default function AssignmentEditor() {
               <input
                 type="datetime-local"
                 className="form-control"
-                defaultValue={assignmentData.available_date}
+                value={assignmentData.available_date}
                 onChange={handleChange}
               />
             </div>
