@@ -40,12 +40,15 @@ const [assignmentData, setAssignmentData] = useState(existingAssignment || {
   `,
 });
 
-// 当 existingAssignment 存在时，通过 useEffect 将其数据设置到 assignmentData
+
 useEffect(() => {
   if (existingAssignment) {
     setAssignmentData(existingAssignment);
+  } else if (aid !== "new") {
+    // 防止当 aid 存在但找不到对应作业时误操作
+    navigate(`/Kanbas/Courses/${cid}/Assignments`);
   }
-}, [existingAssignment]);
+}, [existingAssignment, aid, cid, navigate]);
 
 
   const handleChange = (e: any) => {
