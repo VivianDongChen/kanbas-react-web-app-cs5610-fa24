@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "../Assignments/reducer"; // Use your reducer functions
+import { useEffect } from "react";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams(); // Extract course ID and assignment ID from URL
@@ -16,6 +17,12 @@ export default function AssignmentEditor() {
     aid !== "new"
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
       : null;
+
+  useEffect(() => {
+    if (existingAssignment) {
+      setAssignmentData(existingAssignment);
+    }
+  }, [existingAssignment]);
 
   // Initialize state with either existing assignment data or an empty form
   const [assignmentData, setAssignmentData] = useState(
