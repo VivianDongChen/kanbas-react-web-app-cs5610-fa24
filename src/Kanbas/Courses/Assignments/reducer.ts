@@ -18,10 +18,12 @@ const assignmentsSlice = createSlice({
         score: assignment.score || "",
         available_date: assignment.available_date || "",
         due_date: assignment.due_date || "",
-        course: assignment.course || ""
+        course: assignment.course || "",
+        modules: assignment.modules || "" // 添加 modules 属性
       };
     
-      state.assignments.push(newAssignment); // 使用 push 添加新作业
+      // 将新作业添加到作业列表中
+      state.assignments.push(newAssignment);
     },
 
     deleteAssignment: (state, { payload: assignmentId }) => {
