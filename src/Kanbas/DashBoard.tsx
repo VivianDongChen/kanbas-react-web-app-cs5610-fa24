@@ -26,10 +26,6 @@ export default function Dashboard({
   // const enrollments = useSelector((state: any) => state.enrollmentReducer); // Current enrollment state
   const dispatch = useDispatch();
 
-  console.log("Dashboard Component Loaded"); // 检查组件是否正常加载
-  console.log("Current User:", currentUser);
-  console.log("Enrollments:", enrollments);
-
   const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
 
   const handleToggleEnrollments = () => {
@@ -47,16 +43,6 @@ export default function Dashboard({
   // This filters courses based on showAllCourses.
   // If showAllCourses is true, all courses are displayed.
   // Otherwise, only courses that the student is enrolled in are displayed.
-
-  // const filteredCourses = showAllCourses
-  //   ? courses
-  //   : courses.filter((course) =>
-  //       enrollments.some(
-  //         (enrollment: any) =>
-  //           enrollment.course === course._id &&
-  //           enrollment.user === currentUser._id // Check that the enrollment matches the current user
-  //       )
-  //     );
 
   const filteredCourses = showAllCourses
     ? courses
