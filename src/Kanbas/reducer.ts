@@ -26,7 +26,7 @@ return initialEnrollments.length ? initialEnrollments : []; // 避免空白页�
 };
 
 const initialState = {
-enrollments: getInitialEnrollments(),
+enrollments: getInitialEnrollments() || [],
 };
 
 console.log("Initial state of enrollments:", initialState.enrollments);
