@@ -9,7 +9,6 @@ const assignmentsSlice = createSlice({ //createSlice function
   initialState,
   reducers: {  //reducer holds functions for manipulating the assignments state
     addAssignment: (state, { payload: assignment }) => {
-      console.log("Adding assignment:", assignment);
       if (assignment._id) return;// If the assignment already has an _id, treat it as an update rather than a new addition.
     
       // creates a new assignment abject with a unique ID and default value for missing properties
@@ -25,7 +24,6 @@ const assignmentsSlice = createSlice({ //createSlice function
     
       // adds the assignment to the state's assignments list.
       state.assignments.push(newAssignment);
-      console.log("Updated assignments:", state.assignments);
     },
 
 
@@ -38,11 +36,14 @@ const assignmentsSlice = createSlice({ //createSlice function
 
     //Updates an assignment from state.assignments by _id
     updateAssignment: (state, { payload: assignment }) => {
-      console.log("Updating assignment:", assignment);
-      state.assignments = state.assignments.map((m: any) =>
-        m._id === assignment._id ? { ...m, ...assignment } : m //if a match is found, it spreads both the existing assignment and the new data(assignment) into an updated object
+
+      // state.assignments = state.assignments.map((m: any) =>
+      //   m._id === assignment._id ? { ...m, ...assignment } : m //if a match is found, it spreads both the existing assignment and the new data(assignment) into an updated object
+      // ) as any;
+      state.assignments = state.assignments.map((m: any) => 
+        m._id === assignment._id && m.course === assignment.course ? { ...m, ...assignment } : m
       ) as any;
-      console.log("Updated assignments:", state.assignments);
+
     },
   },
 });
