@@ -9,18 +9,20 @@ const assignmentsSlice = createSlice({ //createSlice function
   initialState,
   reducers: {  //reducer holds functions for manipulating the assignments state
     addAssignment: (state, { payload: assignment }) => {
-      if (assignment._id) return;// If the assignment already has an _id, treat it as an update rather than a new addition.
-    
-      // creates a new assignment abject with a unique ID and default value for missing properties
+      // 为新作业生成一个唯一 ID，确保 course 和 _id 的唯一组合
       const newAssignment = {
-        _id: new Date().getTime().toString(),
-        title: assignment.title || "",
-        score: assignment.score || "",
-        available_date: assignment.available_date || "",
-        due_date: assignment.due_date || "",
-        course: assignment.course || "",
-        modules: assignment.modules || "" 
+          _id: `${assignment.course}-${new Date().getTime().toString()}`, // 包含 course 信息在内的唯一 ID
+          title: assignment.title || "",
+          score: assignment.score || "",
+          available_date: assignment.available_date || "",
+          due_date: assignment.due_date || "",
+          course: assignment.course || "",
+          modules: assignment.modules || ""
       };
+  
+      // 将新作业添加到 assignments 列表
+      state.assignments.push(newAssignment);
+  },
     
       // adds the assignment to the state's assignments list.
       state.assignments.push(newAssignment);
