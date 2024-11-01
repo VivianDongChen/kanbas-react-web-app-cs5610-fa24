@@ -23,7 +23,7 @@ export default function Dashboard({
   updateCourse: () => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const enrollments = useSelector((state: any) => state.enrollmentReducer); // Current enrollment state
+  const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
   console.log("Enrollments in component after loading:", enrollments);
   const dispatch = useDispatch();
 
@@ -44,17 +44,6 @@ export default function Dashboard({
   // This filters courses based on showAllCourses.
   // If showAllCourses is true, all courses are displayed.
   // Otherwise, only courses that the student is enrolled in are displayed.
-
-  // const filteredCourses = showAllCourses
-  //   ? courses
-  //   : courses.filter((course) =>
-  //       enrollments?.some(
-  //         // Use optional chaining
-  //         (enrollment: any) =>
-  //           enrollment.course === course._id &&
-  //           enrollment.user === currentUser._id
-  //       )
-  //     );
 
   const filteredCourses = showAllCourses
   ? courses
