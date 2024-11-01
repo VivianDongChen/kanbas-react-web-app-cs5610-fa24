@@ -21,7 +21,7 @@ export default function Dashboard({
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
 }) {
-  
+
   console.log("Dashboard Component Loaded"); // 检查组件是否正常加载
 
   const { currentUser } = useSelector((state: any) => state.accountReducer);
@@ -46,15 +46,25 @@ export default function Dashboard({
   // If showAllCourses is true, all courses are displayed.
   // Otherwise, only courses that the student is enrolled in are displayed.
 
-  const filteredCourses = showAllCourses
-    ? courses
-    : courses.filter((course) =>
-        enrollments.some(
-          (enrollment: any) =>
-            enrollment.course === course._id &&
-            enrollment.user === currentUser._id // Check that the enrollment matches the current user
-        )
-      );
+  // const filteredCourses = showAllCourses
+  //   ? courses
+  //   : courses.filter((course) =>
+  //       enrollments.some(
+  //         (enrollment: any) =>
+  //           enrollment.course === course._id &&
+  //           enrollment.user === currentUser._id // Check that the enrollment matches the current user
+  //       )
+  //     );
+
+      const filteredCourses = showAllCourses
+  ? courses
+  : courses.filter((course) =>
+      enrollments?.some(  // Use optional chaining
+        (enrollment: any) =>
+          enrollment.course === course._id &&
+          enrollment.user === currentUser._id
+      )
+    );
 
 
   return (
