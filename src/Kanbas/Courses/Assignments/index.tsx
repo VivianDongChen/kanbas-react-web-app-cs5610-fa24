@@ -5,7 +5,7 @@ import { FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import "../../styles.css";
 import React, { useEffect, useState } from "react";
-import ProtectedRoute1 from "../../Account/ProtectedRoute1";
+import ProtectedRouteFaculty from "../../Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import {deleteAssignment} from "./reducer";
 import AssignmentsControls from "./AssignmentsControls";
@@ -18,9 +18,9 @@ export default function Assignments() {
 
   return (
     <div>
-      <ProtectedRoute1>
+      <ProtectedRouteFaculty>
         <AssignmentsControls/>
-      </ProtectedRoute1>
+      </ProtectedRouteFaculty>
       <br />
       <ul id="wd-assignment-editor" className="list-group rounded-0">
         <li className="wd-assignment-editor list-group-item p-0 mb-3 fs-5 border-gray">
@@ -50,12 +50,12 @@ export default function Assignments() {
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <ProtectedRoute1>
+              <ProtectedRouteFaculty>
                 <span className="badge bg-light text-dark border rounded-pill px-3 me-3">
                   40% of Total
                 </span>
                 <AssignmentsControlButtons />
-              </ProtectedRoute1>
+              </ProtectedRouteFaculty>
             </div>
           </div>
           <div id="assignmentCollapse" className="collapse show">
@@ -94,14 +94,14 @@ export default function Assignments() {
                         {module.score && ` | ${module.score}pt`}
                       </div>
 
-                      <ProtectedRoute1>
+                      <ProtectedRouteFaculty>
                         <AssignmentControlButtons
                           assignmentId={module._id}
                           deleteAssignment={(assignmentId) =>
                             dispatch(deleteAssignment(assignmentId))
                           }
                         />
-                      </ProtectedRoute1>
+                      </ProtectedRouteFaculty>
                     </div>
                   </li>
                 ))}

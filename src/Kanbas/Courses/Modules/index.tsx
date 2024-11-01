@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 import React, { useState } from "react";
 import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
-import ProtectedRoute1 from "../../Account/ProtectedRoute1";
+import ProtectedRouteFaculty from "../../Account/ProtectedRouteFaculty";
 
 export default function Modules() {
   
@@ -17,14 +17,14 @@ export default function Modules() {
 
   return (
     <div className="wd-modules">
-      <ProtectedRoute1><ModulesControls
+      <ProtectedRouteFaculty><ModulesControls
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
           dispatch(addModule({ name: moduleName, course: cid }));
           setModuleName("");
         }}
-      /></ProtectedRoute1>
+      /></ProtectedRouteFaculty>
       <br />
       <br />
       <br />
@@ -53,20 +53,20 @@ export default function Modules() {
                     defaultValue={module.name}
                   />
                 )}
-                <ProtectedRoute1><ModuleControlButtons
+                <ProtectedRouteFaculty><ModuleControlButtons
                   moduleId={module._id}
                   deleteModule={(moduleId) => {
                     dispatch(deleteModule(moduleId));
                   }}
                   editModule={(moduleId) => dispatch(editModule(moduleId))}
-                /></ProtectedRoute1>
+                /></ProtectedRouteFaculty>
               </div>
               {module.lessons && (
                 <ul className="wd-lessons list-group rounded-0">
                   {module.lessons.map((lesson: any) => (
                     <li className="wd-lesson list-group-item p-3 ps-1">
                       <BsGripVertical className="me-2 fs-3" /> {lesson.name}{" "}
-                      <ProtectedRoute1><LessonControlButtons /></ProtectedRoute1>
+                      <ProtectedRouteFaculty><LessonControlButtons /></ProtectedRouteFaculty>
                     </li>
                   ))}
                 </ul>

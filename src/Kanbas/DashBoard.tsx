@@ -3,7 +3,7 @@ import "./Dashboard.css";
 import * as db from "./Database";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import ProtectedRoute1 from "./Account/ProtectedRoute1";
+import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 
 export default function Dashboard({
   courses,
@@ -26,7 +26,7 @@ export default function Dashboard({
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <ProtectedRoute1><h5>
+      <ProtectedRouteFaculty><h5>
         New Course
         <button
           className="btn btn-primary float-end"
@@ -62,8 +62,8 @@ export default function Dashboard({
         value={course.image}
         onChange={(e) => setCourse({ ...course, image: e.target.value })}
       />
-      <hr /></ProtectedRoute1>
-      <h2 id="wd-dashboard-published">Published Courses <ProtectedRoute1>({courses.length})</ProtectedRoute1></h2>
+      <hr /></ProtectedRouteFaculty>
+      <h2 id="wd-dashboard-published">Published Courses <ProtectedRouteFaculty>({courses.length})</ProtectedRouteFaculty></h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
@@ -100,7 +100,7 @@ export default function Dashboard({
                       </p>
                       <button className="btn btn-primary"> Go </button>
 
-                      <ProtectedRoute1><button
+                      <ProtectedRouteFaculty><button
                         onClick={(event) => {
                           event.preventDefault();
                           deleteCourse(course._id);
@@ -120,7 +120,7 @@ export default function Dashboard({
                         className="btn btn-warning me-2 float-end"
                       >
                         Edit
-                      </button></ProtectedRoute1>
+                      </button></ProtectedRouteFaculty>
                     </div>
                   </Link>
                 </div>
