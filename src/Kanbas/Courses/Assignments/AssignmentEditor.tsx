@@ -41,7 +41,9 @@ export default function AssignmentEditor() {
 
   // 当用户打开已有的作业进行编辑时，加载并展示该作业的内容；如果是新建作业，则不进行任何数据加载。
   useEffect(() => {
+    console.log("Current assignment data:", assignmentData);
     if (aid !== "new" && existingAssignment) {
+      console.log("Setting assignment data from existingAssignment", existingAssignment);
       setAssignmentData(existingAssignment);  // Updates assignmentData if an existing assignment is found
     }
   }, [existingAssignment, aid]); 
