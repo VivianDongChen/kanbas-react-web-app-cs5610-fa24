@@ -12,9 +12,11 @@ const getInitialEnrollments = (): Enrollment[] => {
 try {
 const savedEnrollments = localStorage.getItem("enrollments");
 if (savedEnrollments) {
+    console.log("Loading enrollments from localStorage");
 return JSON.parse(savedEnrollments);
 } else {
 // 如果localStorage中没有数据，返回初始的数据库enrollments或空数组
+console.log("Loading enrollments from Database:", initialEnrollments);
 return initialEnrollments.length ? initialEnrollments : [];
 }
 } catch (error) {
@@ -26,6 +28,8 @@ return initialEnrollments.length ? initialEnrollments : []; // 避免空白页�
 const initialState = {
 enrollments: getInitialEnrollments(),
 };
+
+console.log("Initial state of enrollments:", initialState.enrollments);
 
 const enrollmentSlice = createSlice({
 name: "enrollments",
