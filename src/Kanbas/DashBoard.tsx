@@ -149,14 +149,19 @@ export default function Dashboard({
                       ) ? (
                         <button
                           className="btn btn-danger"
-                          onClick={() => handleUnenroll(course._id)}
+                          onClick={(event) => {
+                            event.preventDefault();
+                            handleUnenroll(course._id);
+                          }}
                         >
                           Unenroll
                         </button>
                       ) : (
                         <button
                           className="btn btn-success"
-                          onClick={() => handleEnroll(course._id)}
+                          onClick={(event) => {
+                            event.preventDefault();
+                            handleEnroll(course._id)}
                         >
                           Enroll
                         </button>
