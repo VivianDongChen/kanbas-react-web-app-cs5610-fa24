@@ -5,6 +5,7 @@ import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
+import { enrollments } from "./Database"; // 导入 assignments 数据
 
 export default function Dashboard({
   courses,
@@ -22,13 +23,13 @@ export default function Dashboard({
   updateCourse: () => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const enrollments = useSelector((state: any) => state.enrollmentReducer); // Current enrollment state
+  // const enrollments = useSelector((state: any) => state.enrollmentReducer); // Current enrollment state
   const dispatch = useDispatch();
 
   console.log("Dashboard Component Loaded"); // 检查组件是否正常加载
   console.log("Current User:", currentUser);
   console.log("Enrollments:", enrollments);
-  
+
   const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
 
   const handleToggleEnrollments = () => {
