@@ -161,7 +161,7 @@ export default function Dashboard({
                           className="btn btn-success"
                           onClick={(event) => {
                             event.preventDefault();
-                            handleEnroll(course._id)}
+                            handleEnroll(course._id)}}
                         >
                           Enroll
                         </button>
