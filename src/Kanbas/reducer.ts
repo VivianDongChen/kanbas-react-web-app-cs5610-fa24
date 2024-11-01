@@ -77,7 +77,7 @@ course: string;
 
 // 初始化 enrollments，不使用 localStorage，仅从初始数据库导入
 const initialState = {
-enrollments: initialEnrollments, // 直接使用导入的初始 enrollments 数据
+enrollments: initialEnrollments|| [], // 直接使用导入的初始 enrollments 数据
 };
 
 const enrollmentSlice = createSlice({
