@@ -45,16 +45,27 @@ export default function Dashboard({
   // If showAllCourses is true, all courses are displayed.
   // Otherwise, only courses that the student is enrolled in are displayed.
 
+  // const filteredCourses = showAllCourses
+  //   ? courses
+  //   : courses.filter((course) =>
+  //       enrollments?.some(
+  //         // Use optional chaining
+  //         (enrollment: any) =>
+  //           enrollment.course === course._id &&
+  //           enrollment.user === currentUser._id
+  //       )
+  //     );
+
   const filteredCourses = showAllCourses
-    ? courses
-    : courses.filter((course) =>
-        enrollments?.some(
-          // Use optional chaining
-          (enrollment: any) =>
-            enrollment.course === course._id &&
-            enrollment.user === currentUser._id
-        )
-      );
+  ? courses
+  : courses.filter((course) =>
+      Array.isArray(enrollments) &&
+      enrollments.some(
+        (enrollment: any) =>
+          enrollment.course === course._id &&
+          enrollment.user === currentUser._id
+      )
+    );
 
   return (
     <div className="p-4" id="wd-dashboard">
