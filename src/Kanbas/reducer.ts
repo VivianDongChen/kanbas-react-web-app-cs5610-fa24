@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { enrollments as initialEnrollments } from "../Database"; 
+import { enrollments as initialEnrollments } from "./Database"; 
 
 // Enrollment interface定义
 interface Enrollment {
