@@ -65,7 +65,7 @@ export default function AssignmentEditor() {
   // Handle the Save button logic: either add a new assignment or update an existing one
   const handleSave = () => {
     if (aid === "new") {
-      dispatch(addAssignment({assignmentData}));
+      dispatch(addAssignment({...assignmentData}));
     } else {
       dispatch(updateAssignment({ ...assignmentData, _id: aid }));
     }

@@ -7,11 +7,7 @@ import "../../styles.css";
 import React, { useEffect, useState } from "react";
 import ProtectedRoute1 from "../../Account/ProtectedRoute1";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addAssignment,
-  updateAssignment,
-  deleteAssignment,
-} from "./reducer";
+import {deleteAssignment} from "./reducer";
 import AssignmentsControls from "./AssignmentsControls";
 
 export default function Assignments() {
