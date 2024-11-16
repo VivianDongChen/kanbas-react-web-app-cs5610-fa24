@@ -20,12 +20,12 @@ href={`${REMOTE_SERVER}/lab5/subtract/${a}/${b}`}>
 Subtract {a} - {b}
 </a>
 <hr/>
-<a className="btn btn-green" id="wd-path-parameter-subtract"
+<a className="btn btn-success" id="wd-path-parameter-multiply"
 href={`${REMOTE_SERVER}/lab5/multiply/${a}/${b}`}>
 Multiply {a} * {b}
 </a>
 <hr/>
-<a className="btn btn-orange" id="wd-path-parameter-subtract"
+<a className="btn btn-warning" id="wd-path-parameter-divide"
 href={`${REMOTE_SERVER}/lab5/divide/${a}/${b}`}>
 Divide {a} / {b}
 </a>
