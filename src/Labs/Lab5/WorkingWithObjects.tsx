@@ -15,8 +15,8 @@ export default function WorkingWithObjects() {
 
   const [module, setModule] = useState({
     id: 1,
-    name: "Module Name 11111111",
-    description: "Module Description 111111111",
+    name: "Module Name Default",
+    description: "Module Description Default",
     course: "2024-10-10",
   });
   const MODULE_API_URL = `${REMOTE_SERVER}/lab5/module`;
@@ -77,6 +77,26 @@ export default function WorkingWithObjects() {
         defaultValue={assignment.score}
         onChange={(e) =>
           setAssignment({ ...assignment, score: parseInt(e.target.value) })
+        }
+      />
+      <hr />
+
+
+      <h4>Modifying Completed of Assignment</h4>
+      <a
+        id="wd-update-assignment-completed"
+        className="btn btn-primary float-end"
+        href={`${ASSIGNMENT_API_URL}/completed/${assignment.completed}`}
+      >
+        Update Completed of Assignment
+      </a>
+      <input
+        type="checkbox"
+        className="form-check-input"
+        id="wd-assignment-completed"
+        checked={assignment.completed}
+        onChange={(e) =>
+          setAssignment({ ...assignment, completed: e.target.checked })
         }
       />
       <hr />
