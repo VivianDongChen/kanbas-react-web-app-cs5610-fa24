@@ -13,6 +13,15 @@ export default function WorkingWithObjects() {
         Get Assignment
       </a>
       <hr />
+      <h4>Retrieving Properties</h4>
+      <a
+        id="wd-retrieve-assignment-title"
+        className="btn btn-primary"
+        href={`${REMOTE_SERVER}/lab5/assignment/title`}
+      >
+        Get Title
+      </a>
+      <hr />
     </div>
   );
 }
