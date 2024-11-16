@@ -15,8 +15,8 @@ export default function WorkingWithObjects() {
 
   const [module, setModule] = useState({
     id: 1,
-    name: "adksldklfeeffefkl",
-    description: "sdadssaafeefefefda",
+    name: "Module Name 11111111",
+    description: "Module Description 111111111",
     course: "2024-10-10",
   });
   const MODULE_API_URL = `${REMOTE_SERVER}/lab5/module`;
@@ -66,7 +66,7 @@ export default function WorkingWithObjects() {
       <h4>Retrieving Module</h4>
       <a
         id="wd-retrieve-modules"
-        className="btn btn-secondary"
+        className="btn btn-danger"
         href={`${REMOTE_SERVER}/lab5/module`}
       >
         Get Module
@@ -75,11 +75,30 @@ export default function WorkingWithObjects() {
       <h4>Retrieving Name of Module</h4>
       <a
         id="wd-retrieve-module-name"
-        className="btn btn-secondary"
+        className="btn btn-danger"
         href={`${REMOTE_SERVER}/lab5/module/name`}
       >
         Get Module Name
       </a>
+      <hr />
+
+
+      <h4>Modifying Properties of Module</h4>
+      <a
+        id="wd-update-module-name"
+        className="btn btn-danger float-end"
+        href={`${MODULE_API_URL}/name/${module.name}`}
+      >
+        Update Name of Module
+      </a>
+      <input
+        className="form-control w-75"
+        id="wd-module-name"
+        defaultValue={module.name}
+        onChange={(e) =>
+          setModule({ ...module, name: e.target.value })
+        }
+      />
       <hr />
 
     </div>
