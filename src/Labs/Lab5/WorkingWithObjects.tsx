@@ -63,6 +63,24 @@ export default function WorkingWithObjects() {
       />
       <hr />
 
+      <h4>Modifying Score of Assignment</h4>
+      <a
+        id="wd-update-assignment-score"
+        className="btn btn-primary float-end"
+        href={`${ASSIGNMENT_API_URL}/score/${assignment.score}`}
+      >
+        Update Score of Assignment
+      </a>
+      <input
+        className="form-control w-75"
+        id="wd-assignment-score"
+        defaultValue={assignment.score}
+        onChange={(e) =>
+          setAssignment({ ...assignment, score: parseInt(e.target.value) })
+        }
+      />
+      <hr />
+
       <h4>Retrieving Module</h4>
       <a
         id="wd-retrieve-modules"
