@@ -13,6 +13,14 @@ export default function WorkingWithObjects() {
   });
   const ASSIGNMENT_API_URL = `${REMOTE_SERVER}/lab5/assignment`;
 
+  const [module, setModule] = useState({
+    id: 1,
+    name: "adksldklfeeffefkl",
+    description: "sdadssaafeefefefda",
+    course: "2024-10-10",
+  });
+  const MODULE_API_URL = `${REMOTE_SERVER}/lab5/module`;
+
   return (
     <div id="wd-working-with-objects">
       <h3>Working With Objects</h3>
@@ -36,7 +44,7 @@ export default function WorkingWithObjects() {
         Get Title
       </a>
       <hr />
-      
+
       <h4>Modifying Properties</h4>
       <a
         id="wd-update-assignment-title"
@@ -54,6 +62,26 @@ export default function WorkingWithObjects() {
         }
       />
       <hr />
+
+      <h4>Retrieving Module</h4>
+      <a
+        id="wd-retrieve-modules"
+        className="btn btn-secondary"
+        href={`${REMOTE_SERVER}/lab5/module`}
+      >
+        Get Module
+      </a>
+
+      <h4>Retrieving Name of Module</h4>
+      <a
+        id="wd-retrieve-module-name"
+        className="btn btn-secondary"
+        href={`${REMOTE_SERVER}/lab5/module/name`}
+      >
+        Get Module Name
+      </a>
+      <hr />
+
     </div>
   );
 }
