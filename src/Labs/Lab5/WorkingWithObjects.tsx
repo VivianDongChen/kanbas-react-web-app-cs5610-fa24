@@ -83,7 +83,7 @@ export default function WorkingWithObjects() {
       <hr />
 
 
-      <h4>Modifying Properties of Module</h4>
+      <h4>Modifying Name of Module</h4>
       <a
         id="wd-update-module-name"
         className="btn btn-danger float-end"
@@ -97,6 +97,24 @@ export default function WorkingWithObjects() {
         defaultValue={module.name}
         onChange={(e) =>
           setModule({ ...module, name: e.target.value })
+        }
+      />
+      <hr />
+
+      <h4>Modifying Description of Module</h4>
+      <a
+        id="wd-update-module-description"
+        className="btn btn-danger float-end"
+        href={`${MODULE_API_URL}/description/${module.description}`}
+      >
+        Update Description of Module
+      </a>
+      <input
+        className="form-control w-75"
+        id="wd-module-name"
+        defaultValue={module.description}
+        onChange={(e) =>
+          setModule({ ...module, description: e.target.value })
         }
       />
       <hr />
