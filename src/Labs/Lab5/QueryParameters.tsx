@@ -26,18 +26,21 @@ export default function QueryParameters() {
       >
         Add {a} + {b}
       </a>
+      <hr/>
       <a
         id="wd-query-parameter-subtract"
         href={`${REMOTE_SERVER}/lab5/calculator?operation=subtract&a=${a}&b=${b}`}
       >
         Subtract {a} - {b}
       </a>
+      <hr/>
       <a
         id="wd-query-parameter-multiply"
         href={`${REMOTE_SERVER}/lab5/calculator?operation=multiply&a=${a}&b=${b}`}
       >
         Multiply {a} * {b}
       </a>
+      <hr/>
       <a
         id="wd-query-parameter-divide"
         href={`${REMOTE_SERVER}/lab5/calculator?operation=divide&a=${a}&b=${b}`}
