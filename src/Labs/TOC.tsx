@@ -34,7 +34,7 @@ Lab 4
 </li>
 <li className="nav-item">
 <a id="wd-a5" href="#/Labs/Lab5"
-className={`nav-link ${pathname.includes("Lab1") ? "active" : ""}`}>
+className={`nav-link ${pathname.includes("Lab5") ? "active" : ""}`}>
 Lab 5
 </a>
 </li>
