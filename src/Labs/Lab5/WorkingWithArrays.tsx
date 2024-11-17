@@ -13,7 +13,7 @@ export default function WorkingWithArrays() {
         Get Todos
       </a>
       <hr />
-      
+
       <h4>Retrieving an Item from an Array by ID</h4>
       <a
         id="wd-retrieve-todo-by-id"
@@ -28,6 +28,16 @@ export default function WorkingWithArrays() {
         className="form-control w-50"
         onChange={(e) => setTodo({ ...todo, id: e.target.value })}
       />
+      <hr />
+
+      <h3>Filtering Array Items</h3>
+      <a
+        id="wd-retrieve-completed-todos"
+        className="btn btn-primary"
+        href={`${API}?completed=true`}
+      >
+        Get Completed Todos
+      </a>
       <hr />
     </div>
   );
