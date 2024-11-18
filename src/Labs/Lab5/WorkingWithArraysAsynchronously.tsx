@@ -37,8 +37,7 @@ export default function WorkingWithArraysAsynchronously() {
 
   const deleteTodo = async (todo: any) => {
     try {
-    //   await client.deleteTodo(todo);
-      await client.deleteTodo({ id: 999 });
+      await client.deleteTodo(todo);
       const newTodos = todos.filter((t) => t.id !== todo.id);
       setTodos(newTodos);
     } catch (error: any) {
@@ -56,8 +55,7 @@ export default function WorkingWithArraysAsynchronously() {
 
   const updateTodo = async (todo: any) => {
     try {
-    //   await client.updateTodo(todo);
-      await client.updateTodo({ id: 999, title: "Fake Title", completed: false });
+      await client.updateTodo(todo);
       setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
     } catch (error: any) {
       setErrorMessage(error.response.data.message);
