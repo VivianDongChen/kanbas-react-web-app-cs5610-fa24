@@ -48,6 +48,7 @@ export default function WorkingWithArraysAsynchronously() {
   };
   const updateTodo = async (todo: any) => {
     await client.updateTodo(todo);
+    const updatedTodo = { ...todo, editing: false }; 
     setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
   };
 
