@@ -79,7 +79,15 @@ export default function WorkingWithArraysAsynchronously() {
                 updateTodo({ ...todo, completed: e.target.checked })
               }
             />
-            {!todo.editing ? (
+            
+
+            <span
+              style={{
+                textDecoration: todo.completed ? "line-through" : "none",
+              }}
+            >
+              {/* {todo.title} */}
+              {!todo.editing ? (
               todo.title
             ) : (
               <input
@@ -93,13 +101,6 @@ export default function WorkingWithArraysAsynchronously() {
                 onChange={(e) => updateTodo({ ...todo, title: e.target.value })}
               />
             )}
-
-            <span
-              style={{
-                textDecoration: todo.completed ? "line-through" : "none",
-              }}
-            >
-              {todo.title}
             </span>
 
             <div className="float-end">
