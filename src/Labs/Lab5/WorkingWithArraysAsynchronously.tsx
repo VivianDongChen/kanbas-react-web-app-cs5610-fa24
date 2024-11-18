@@ -101,22 +101,22 @@ export default function WorkingWithArraysAsynchronously() {
               {todo.title}
             </span>
 
-            <FaPencil
-              onClick={() => editTodo(todo)}
-              className="text-primary float-end me-2 mt-1"
-            />
-            
-            <FaTrash
-              onClick={() => removeTodo(todo)}
-              className="text-danger float-end mt-1"
-              id="wd-remove-todo"
-            />
-
-            <TiDelete
-              onClick={() => deleteTodo(todo)}
-              className="text-danger float-end me-2 fs-3"
-              id="wd-delete-todo"
-            />
+            <div className="float-end">
+              <FaPencil
+                onClick={() => editTodo(todo)}
+                className="text-primary me-2 mt-1"
+              />
+              <TiDelete
+                onClick={() => deleteTodo(todo)}
+                className="text-danger me-2 fs-3"
+                id="wd-delete-todo"
+              />
+              <FaTrash
+                onClick={() => removeTodo(todo)}
+                className="text-danger mt-1"
+                id="wd-remove-todo"
+              />
+            </div>
           </li>
         ))}
       </ul>
