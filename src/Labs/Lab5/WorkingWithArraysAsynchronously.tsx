@@ -70,10 +70,6 @@ export default function WorkingWithArraysAsynchronously() {
       <ul className="list-group">
         {todos.map((todo) => (
           <li key={todo.id} className="list-group-item">
-            <FaPencil
-              onClick={() => editTodo(todo)}
-              className="text-primary float-end me-2 mt-1"
-            />
             <input
               type="checkbox"
               className="form-check-input me-2"
@@ -104,6 +100,12 @@ export default function WorkingWithArraysAsynchronously() {
             >
               {todo.title}
             </span>
+
+            <FaPencil
+              onClick={() => editTodo(todo)}
+              className="text-primary float-end me-2 mt-1"
+            />
+            
             <FaTrash
               onClick={() => removeTodo(todo)}
               className="text-danger float-end mt-1"
