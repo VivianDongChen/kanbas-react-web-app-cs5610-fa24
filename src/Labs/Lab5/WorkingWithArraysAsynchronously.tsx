@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as client from "./client";
 import { FaTrash } from "react-icons/fa";
 import { FaPlusCircle } from "react-icons/fa";
+import { TiDelete } from "react-icons/ti";
 
 export default function WorkingWithArraysAsynchronously() {
   const [todos, setTodos] = useState<any[]>([]);
@@ -30,6 +31,12 @@ export default function WorkingWithArraysAsynchronously() {
       completed: false,
     });
     setTodos([...todos, newTodo]);
+  };
+
+  const deleteTodo = async (todo: any) => {
+    await client.deleteTodo(todo);
+    const newTodos = todos.filter((t) => t.id !== todo.id);
+    setTodos(newTodos);
   };
 
   return (
@@ -67,6 +74,12 @@ export default function WorkingWithArraysAsynchronously() {
               onClick={() => removeTodo(todo)}
               className="text-danger float-end mt-1"
               id="wd-remove-todo"
+            />
+
+            <TiDelete
+              onClick={() => deleteTodo(todo)}
+              className="text-danger float-end me-2 fs-3"
+              id="wd-delete-todo"
             />
           </li>
         ))}
