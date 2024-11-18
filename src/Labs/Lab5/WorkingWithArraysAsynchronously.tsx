@@ -7,6 +7,7 @@ import { FaPencil } from "react-icons/fa6";
 
 export default function WorkingWithArraysAsynchronously() {
   const [todos, setTodos] = useState<any[]>([]);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const fetchTodos = async () => {
     const todos = await client.fetchTodos();
@@ -35,9 +36,14 @@ export default function WorkingWithArraysAsynchronously() {
   };
 
   const deleteTodo = async (todo: any) => {
-    await client.deleteTodo(todo);
-    const newTodos = todos.filter((t) => t.id !== todo.id);
-    setTodos(newTodos);
+    try {
+      await client.deleteTodo(todo);
+      const newTodos = todos.filter((t) => t.id !== todo.id);
+      setTodos(newTodos);
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   const editTodo = (todo: any) => {
@@ -46,10 +52,14 @@ export default function WorkingWithArraysAsynchronously() {
     );
     setTodos(updatedTodos);
   };
+
   const updateTodo = async (todo: any) => {
-    await client.updateTodo(todo);
-    const updatedTodo = { ...todo, editing: false }; 
-    setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+    try {
+      await client.updateTodo(todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+    } catch (error: any) {
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   return (
@@ -79,7 +89,6 @@ export default function WorkingWithArraysAsynchronously() {
                 updateTodo({ ...todo, completed: e.target.checked })
               }
             />
-            
 
             <span
               style={{
@@ -88,19 +97,21 @@ export default function WorkingWithArraysAsynchronously() {
             >
               {/* {todo.title} */}
               {!todo.editing ? (
-              todo.title
-            ) : (
-              <input
-                className="form-control w-50 float-start"
-                defaultValue={todo.title}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    updateTodo({ ...todo, editing: false });
+                todo.title
+              ) : (
+                <input
+                  className="form-control w-50 float-start"
+                  defaultValue={todo.title}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      updateTodo({ ...todo, editing: false });
+                    }
+                  }}
+                  onChange={(e) =>
+                    updateTodo({ ...todo, title: e.target.value })
                   }
-                }}
-                onChange={(e) => updateTodo({ ...todo, title: e.target.value })}
-              />
-            )}
+                />
+              )}
             </span>
 
             <div className="float-end">
