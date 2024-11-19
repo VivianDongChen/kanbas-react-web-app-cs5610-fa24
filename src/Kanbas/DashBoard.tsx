@@ -25,14 +25,13 @@ export default function Dashboard({
   
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
-  console.log("Enrollments in component after loading:", enrollments);
   const dispatch = useDispatch();
 
-  const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
+  // const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
 
-  const handleToggleEnrollments = () => {
-    setShowAllCourses((prev) => !prev); //This function toggles showAllCourses between true and false
-  };
+  // const handleToggleEnrollments = () => {
+  //   setShowAllCourses((prev) => !prev); //This function toggles showAllCourses between true and false
+  // };
 
   const handleEnroll = (courseId: string) => {
     dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
@@ -56,8 +55,6 @@ export default function Dashboard({
   //         enrollment.user === currentUser._id
   //     )
   //   );
-
-  const filteredCourses = courses;
 
   return (
     <div className="p-4" id="wd-dashboard">
@@ -105,14 +102,14 @@ export default function Dashboard({
       </ProtectedRouteFaculty>
 
       {/* Enrollments Button for Students */}
-      <ProtectedRouteStudent>
+      {/* <ProtectedRouteStudent>
         <button
           className="btn btn-primary float-end"
           onClick={handleToggleEnrollments}
         >
           {showAllCourses ? "Show Enrolled" : "Show All Courses"}
         </button>
-      </ProtectedRouteStudent>
+      </ProtectedRouteStudent> */}
 
       <h2 id="wd-dashboard-published">
         Published Courses{" "}
@@ -121,7 +118,7 @@ export default function Dashboard({
       <hr />
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {filteredCourses.map((course) => (
+          {courses.map((course) => (
             <div key={course._id} className="col" style={{ width: "300px" }}>
               <div className="card">
                 <Link
