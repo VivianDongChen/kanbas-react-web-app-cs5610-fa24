@@ -43,12 +43,10 @@ export default function Signin() {
         id="wd-signin-btn"
         className="btn btn-primary w-100"
       >
-        {" "}
-        Sign in{" "}
+        Sign in
       </button>
       <Link id="wd-signup-link" to="/Kanbas/Account/Signup">
-        {" "}
-        Sign up{" "}
+        Sign up
       </Link>
     </div>
   );
