@@ -5,7 +5,7 @@ import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
-import { enrollments } from "./Database"; // 导入 assignments 数据
+// import { enrollments } from "./Database"; 
 
 export default function Dashboard({
   courses,
@@ -22,6 +22,7 @@ export default function Dashboard({
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
 }) {
+  
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
   console.log("Enrollments in component after loading:", enrollments);
@@ -59,6 +60,7 @@ export default function Dashboard({
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
+
       <ProtectedRouteFaculty>
         <h5>
           New Course
@@ -67,8 +69,7 @@ export default function Dashboard({
             id="wd-add-new-course-click"
             onClick={addNewCourse}
           >
-            {" "}
-            Add{" "}
+            Add
           </button>
           <button
             className="btn btn-warning float-end me-2"
@@ -100,6 +101,7 @@ export default function Dashboard({
         />
         <hr />
       </ProtectedRouteFaculty>
+
       {/* Enrollments Button for Students */}
       <ProtectedRouteStudent>
         <button
@@ -109,6 +111,7 @@ export default function Dashboard({
           {showAllCourses ? "Show Enrolled" : "Show All Courses"}
         </button>
       </ProtectedRouteStudent>
+
       <h2 id="wd-dashboard-published">
         Published Courses{" "}
         <ProtectedRouteFaculty>({courses.length})</ProtectedRouteFaculty>
