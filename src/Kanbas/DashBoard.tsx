@@ -5,7 +5,7 @@ import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
-import { enrollments } from "./Database"; 
+// import { enrollments } from "./Database"; 
 
 export default function Dashboard({
   courses,
@@ -46,16 +46,18 @@ export default function Dashboard({
   // If showAllCourses is true, all courses are displayed.
   // Otherwise, only courses that the student is enrolled in are displayed.
 
-  const filteredCourses = showAllCourses
-  ? courses
-  : courses.filter((course) =>
-      Array.isArray(enrollments) &&
-      enrollments.some(
-        (enrollment: any) =>
-          enrollment.course === course._id &&
-          enrollment.user === currentUser._id
-      )
-    );
+  // const filteredCourses = showAllCourses
+  // ? courses
+  // : courses.filter((course) =>
+  //     Array.isArray(enrollments) &&
+  //     enrollments.some(
+  //       (enrollment: any) =>
+  //         enrollment.course === course._id &&
+  //         enrollment.user === currentUser._id
+  //     )
+  //   );
+
+  const filteredCourses = courses;
 
   return (
     <div className="p-4" id="wd-dashboard">
