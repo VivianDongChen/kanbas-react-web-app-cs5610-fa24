@@ -44,7 +44,7 @@ export default function Kanbas() {
 
   return (
     
-      <Provider store={store}>
+      // <Provider store={store}>
       <Session>  
       <div id="wd-kanbas">
       <KanbasNavigation />
@@ -72,7 +72,7 @@ export default function Kanbas() {
       </div>
     </div>
     </Session>
-    </Provider>
+    {/* </Provider> */}
     
     
   );
