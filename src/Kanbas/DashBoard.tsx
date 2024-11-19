@@ -5,7 +5,7 @@ import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
-// import { enrollments } from "./Database"; 
+import { enrollments } from "./Database"; 
 
 export default function Dashboard({
   courses,
