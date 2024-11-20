@@ -15,6 +15,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ProtectedRouteFaculty from "../../Account/ProtectedRouteFaculty";
 import { useState, useEffect } from "react";
 import * as coursesClient from "../client";
+import * as modulesClient from "./client";
 
 export default function Modules() {
   const { cid } = useParams();
@@ -36,6 +37,11 @@ export default function Modules() {
     const module = await coursesClient.createModuleForCourse(cid, newModule);
     dispatch(addModule(module));
   };
+
+  const removeModule = async (moduleId: string) => {
+    await modulesClient.deleteModule(moduleId);
+    dispatch(deleteModule(moduleId));
+    };
 
   return (
     <div className="wd-modules">
@@ -77,9 +83,7 @@ export default function Modules() {
               <ProtectedRouteFaculty>
                 <ModuleControlButtons
                   moduleId={module._id}
-                  deleteModule={(moduleId) => {
-                    dispatch(deleteModule(moduleId));
-                  }}
+                  deleteModule={(moduleId) => removeModule(moduleId)}
                   editModule={(moduleId) => dispatch(editModule(moduleId))}
                 />
               </ProtectedRouteFaculty>
