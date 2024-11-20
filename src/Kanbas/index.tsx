@@ -10,7 +10,7 @@ import { Provider, useSelector } from "react-redux";
 import store from "./store";
 import ProtectedRoute from "./Account/ProtectedRoute";
 import Session from "./Account/Session";
-import * as client from "./Courses/client";
+import * as courseClient from "./Courses/client";
 import * as userClient from "./Account/client";
 
 export default function Kanbas() {
@@ -40,21 +40,20 @@ export default function Kanbas() {
     description: "New Description",
   });
   
-  // const addNewCourse = () => {
-  //   setCourses([
-  //     ...courses,
-  //     { ...course, _id: new Date().getTime().toString() },
-  //   ]);
-  // };
-
   const addNewCourse = async () => {
-    const newCourse = await client.createCourse(course);
+    const newCourse = await courseClient.createCourse(course);
     setCourses([ ...courses, newCourse ]);
     };
 
-  const deleteCourse = (courseId: any) => {
+  // const deleteCourse = (courseId: any) => {
+  //   setCourses(courses.filter((course) => course._id !== courseId));
+  // };
+
+  const deleteCourse = async (courseId: string) => {
+    const status = await courseClient.deleteCourse(courseId);
     setCourses(courses.filter((course) => course._id !== courseId));
-  };
+    };
+    
   const updateCourse = () => {
     setCourses(
       courses.map((c) => {
