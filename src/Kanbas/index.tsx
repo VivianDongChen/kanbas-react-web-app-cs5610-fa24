@@ -40,12 +40,18 @@ export default function Kanbas() {
     description: "New Description",
   });
   
-  const addNewCourse = () => {
-    setCourses([
-      ...courses,
-      { ...course, _id: new Date().getTime().toString() },
-    ]);
-  };
+  // const addNewCourse = () => {
+  //   setCourses([
+  //     ...courses,
+  //     { ...course, _id: new Date().getTime().toString() },
+  //   ]);
+  // };
+
+  const addNewCourse = async () => {
+    const newCourse = await client.createCourse(course);
+    setCourses([ ...courses, newCourse ]);
+    };
+
   const deleteCourse = (courseId: any) => {
     setCourses(courses.filter((course) => course._id !== courseId));
   };
