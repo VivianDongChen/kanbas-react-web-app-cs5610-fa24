@@ -11,6 +11,7 @@ export default function Signin() {
 
   const signin = async () => {
     const user = await client.signin(credentials);
+    console.log("Signed in user:", user);
     if (!user) return;
     dispatch(setCurrentUser(user));
     navigate("/Kanbas/Dashboard");
