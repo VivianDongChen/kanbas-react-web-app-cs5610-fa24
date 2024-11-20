@@ -41,7 +41,12 @@ export default function Modules() {
   const removeModule = async (moduleId: string) => {
     await modulesClient.deleteModule(moduleId);
     dispatch(deleteModule(moduleId));
-    };
+  };
+
+  const saveModule = async (module: any) => {
+    await modulesClient.updateModule(module);
+    dispatch(updateModule(module));
+  };
 
   return (
     <div className="wd-modules">
@@ -74,7 +79,7 @@ export default function Modules() {
                   }
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
-                      dispatch(updateModule({ ...module, editing: false }));
+                      saveModule({ ...module, editing: false });
                     }
                   }}
                   defaultValue={module.name}
