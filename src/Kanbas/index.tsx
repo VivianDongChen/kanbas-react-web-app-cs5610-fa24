@@ -39,22 +39,31 @@ export default function Kanbas() {
     endDate: "2023-12-15",
     description: "New Description",
   });
-  
+
   const addNewCourse = async () => {
     const newCourse = await courseClient.createCourse(course);
-    setCourses([ ...courses, newCourse ]);
-    };
-
-  // const deleteCourse = (courseId: any) => {
-  //   setCourses(courses.filter((course) => course._id !== courseId));
-  // };
+    setCourses([...courses, newCourse]);
+  };
 
   const deleteCourse = async (courseId: string) => {
     const status = await courseClient.deleteCourse(courseId);
     setCourses(courses.filter((course) => course._id !== courseId));
-    };
-    
-  const updateCourse = () => {
+  };
+
+  // const updateCourse = () => {
+  //   setCourses(
+  //     courses.map((c) => {
+  //       if (c._id === course._id) {
+  //         return course;
+  //       } else {
+  //         return c;
+  //       }
+  //     })
+  //   );
+  // };
+
+  const updateCourse = async () => {
+    await courseClient.updateCourse(course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
