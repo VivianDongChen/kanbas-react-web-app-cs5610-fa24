@@ -57,6 +57,12 @@ export default function AssignmentEditor() {
   };
   
   const handleSave = async () => {
+
+    if (!cid) {
+      console.error("Course ID is missing");
+      return; // 防止继续执行
+    }
+  
     if (aid === "new") {
       console.log("Creating a new assignment...");
       const newAssignment = await createAssignmentForCourse(cid, assignmentData); 
