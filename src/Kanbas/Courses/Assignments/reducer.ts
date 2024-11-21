@@ -7,24 +7,16 @@ const initialState = {
 const assignmentsSlice = createSlice({ //createSlice function
   name: "assignments",
   initialState,
-  reducers: {  //reducer holds functions for manipulating the assignments state
-    // addAssignment: (state, { payload: assignment }) => {
-    //   if (assignment._id) return;// If the assignment already has an _id, treat it as an update rather than a new addition.
-    
-    //   // creates a new assignment abject with a unique ID and default value for missing properties
-    //   const newAssignment = {
-    //     _id: new Date().getTime().toString(),
-    //     title: assignment.title || "",
-    //     score: assignment.score || "",
-    //     available_date: assignment.available_date || "",
-    //     due_date: assignment.due_date || "",
-    //     course: assignment.course || "",
-    //     modules: assignment.modules || "" 
-    //   };
-    
-    //   // adds the assignment to the state's assignments list.
-    //   state.assignments.push(newAssignment);
-    // },
+  reducers: {  
+
+    // setModules: (state, action) => {
+    //   state.modules = action.payload;
+    //   },
+
+    setAssignments: (state, action) => {
+      state.assignments = action.payload;
+      },
+
     addAssignment: (state, { payload: assignment }) => {
       // 为新作业生成一个唯一 ID，确保 course 和 _id 的唯一组合
       const newAssignment = {
@@ -65,9 +57,10 @@ const assignmentsSlice = createSlice({ //createSlice function
 
 //
 export const {
+  setAssignments,
   addAssignment,
   deleteAssignment,
   updateAssignment,
-} = assignmentsSlice.actions;  //Actions (addAssignment, deleteAssignment, updateAssignment, and editAssignment) for use in other components.
+} = assignmentsSlice.actions;  
 
-export default assignmentsSlice.reducer; //The reducer is exported as the default, allowing it to be included in the Redux store configuration.
+export default assignmentsSlice.reducer; 
