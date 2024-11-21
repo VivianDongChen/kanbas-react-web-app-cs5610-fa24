@@ -44,10 +44,23 @@ Kanbas
 </a>
 </li>
 <li className="nav-item">
-<a id="wd-github" href="https://github.com/VivianDongChen/kanbas-react-web-app-cs5610-fa24.git" className="nav-link">
-My GitHub
+<a id="wd-github-web" href="https://github.com/VivianDongChen/kanbas-react-web-app-cs5610-fa24.git" className="nav-link">
+My GitHub - Web
 </a>
 </li>
+
+<li className="nav-item">
+<a id="wd-github-server" href="https://github.com/VivianDongChen/kanbas-node-server-app-cs5610-fa24" className="nav-link">
+My GitHub - Server
+</a>
+</li>
+
+<li className="nav-item">
+<a id="wd-render" href="https://dashboard.render.com/web/srv-csv9dcbtq21c73eln11g/events" className="nav-link">
+My Render
+</a>
+</li>
+
 </ul>
 );
 }
