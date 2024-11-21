@@ -3,16 +3,15 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer"; // Use your reducer functions
 import { useEffect } from "react";
+import * as assignmentsClient from "./client";
 
 export default function AssignmentEditor() {
-  const { cid, aid } = useParams(); // Extract course ID and assignment ID from URL
-  const navigate = useNavigate(); //Allows redirecting to other routes programmatically
+  // const { cid, aid } = useParams(); 
+  const { cid, aid } = useParams<{ cid: string; aid: string }>();
+  const navigate = useNavigate(); 
   const dispatch = useDispatch();
-
-  // assignments is retrieved from the Redux state, providing the current list of assignments.
   const { assignments } = useSelector((state: any) => state.assignmentsReducer); 
 
-  // If aid is not "new," the component searches for the assignment by cid and aid. If found, it’s stored in existingAssignment.
   const existingAssignment =
     aid !== "new"
       ? assignments.find((a: any) => a.course === cid && a._id === aid)
@@ -37,39 +36,38 @@ export default function AssignmentEditor() {
           - Links to all relevant source code repositories
           The Kanbas application should include a link to navigate back to the landing page.
         `,
-  }); // assignmentData holds fields for the assignment’s properties, with placeholders for each field.
+  }); 
 
-  // 当用户打开已有的作业进行编辑时，加载并展示该作业的内容；如果是新建作业，则不进行任何数据加载。
   useEffect(() => {
     console.log("Current assignment data:", assignmentData);
     if (aid !== "new" && existingAssignment) {
-      console.log("Setting assignment data from existingAssignment", existingAssignment);
       setAssignmentData(existingAssignment);  // Updates assignmentData if an existing assignment is found
     }
   }, [existingAssignment, aid]); 
-  //useEffect 中的依赖数组 [existingAssignment, aid] 用来控制 useEffect 的执行时机。
-  //当 existingAssignment 或 aid 的值发生变化时，useEffect 内部的代码会重新运行，以确保组件状态 assignmentData 与当前选择的作业数据保持同步。
 
-    // e（事件对象） 可以接受任何类型的数据（在 TypeScript 中具体类型通常为 React.ChangeEvent<HTMLInputElement> 
-    // 或 React.ChangeEvent<HTMLTextAreaElement>，以保证事件来自输入或文本区域
   const handleChange = (e: any) => { 
-    // e.target 是事件源，即当前触发事件的 HTML 元素（如 input 或 select 元素）。
-    // name 表示当前输入字段的 name 属性，用于标识这个字段的类型（如 "title"、"instructions" 等）。
-    // value 表示当前输入字段的值，用户输入的内容将存储在 value 中。
     const { name, value } = e.target;
-    // prevData 代表了调用 setAssignmentData 时 assignmentData 的完整当前值。
-    // [name]: value 使用“计算属性名”语法，将 name 属性的值设置为 value。    
     setAssignmentData((prevData: any) => ({ ...prevData, [name]: value }));
   };
 
-  // Handle the Save button logic: either add a new assignment or update an existing one
-  const handleSave = () => {
+  const createAssignmentForCourse = async (cid: string, assignmentData: any) => {
+    if (!cid) throw new Error("Course ID is required");
+    const assignment = await assignmentsClient.createAssignmentForCourse(cid, assignmentData);
+    return assignment;
+  };
+  
+  const handleSave = async () => {
     if (aid === "new") {
-      dispatch(addAssignment({...assignmentData}));
+      console.log("Creating a new assignment...");
+      const newAssignment = await createAssignmentForCourse(cid, assignmentData); 
+      if (newAssignment) {
+        dispatch(addAssignment(newAssignment)); 
+      }
     } else {
-      dispatch(updateAssignment({ ...assignmentData, _id: aid }));
+      console.log("Updating an existing assignment...");
+      dispatch(updateAssignment({ ...assignmentData, _id: aid })); 
     }
-    navigate(`/Kanbas/Courses/${cid}/Assignments`);
+    navigate(`/Kanbas/Courses/${cid}/Assignments`); 
   };
 
   if (aid !== "new" && !existingAssignment) {

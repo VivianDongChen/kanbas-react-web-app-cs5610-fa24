@@ -27,12 +27,6 @@ export default function Dashboard({
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
   const dispatch = useDispatch();
 
-  // const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
-
-  // const handleToggleEnrollments = () => {
-  //   setShowAllCourses((prev) => !prev); //This function toggles showAllCourses between true and false
-  // };
-
   const handleEnroll = (courseId: string) => {
     dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
   };
@@ -40,21 +34,6 @@ export default function Dashboard({
   const handleUnenroll = (courseId: string) => {
     dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
   };
-
-  // This filters courses based on showAllCourses.
-  // If showAllCourses is true, all courses are displayed.
-  // Otherwise, only courses that the student is enrolled in are displayed.
-
-  // const filteredCourses = showAllCourses
-  // ? courses
-  // : courses.filter((course) =>
-  //     Array.isArray(enrollments) &&
-  //     enrollments.some(
-  //       (enrollment: any) =>
-  //         enrollment.course === course._id &&
-  //         enrollment.user === currentUser._id
-  //     )
-  //   );
 
   return (
     <div className="p-4" id="wd-dashboard">
