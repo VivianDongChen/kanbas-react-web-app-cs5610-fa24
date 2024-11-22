@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import React, { useState } from "react";
-import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
+import ProtectedRouteFaculty from "../Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
-import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
+import ProtectedRouteStudent from "../Account/ProtectedRouteStudent";
 
 
 export default function Dashboard({

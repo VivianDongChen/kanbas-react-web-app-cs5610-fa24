@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Account from "./Account";
-import Dashboard from "./DashBoard";
+import Dashboard from "./Dashboard/DashBoard";
 import KanbasNavigation from "./Navigation";
 import Courses from "./Courses";
 import "./styles.css";
