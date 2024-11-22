@@ -35,6 +35,7 @@ const enrollmentSlice = createSlice({
   name: "enrollments",
   initialState,
   reducers: {
+
     enrollCourse: (
       state,
       { payload }: PayloadAction<{ user: string; course: string }>
@@ -53,6 +54,7 @@ const enrollmentSlice = createSlice({
         localStorage.setItem("enrollments", JSON.stringify(state.enrollments));
       }
     },
+
     unenrollCourse: (
       state,
       { payload }: PayloadAction<{ user: string; course: string }>
@@ -64,6 +66,7 @@ const enrollmentSlice = createSlice({
       );
       localStorage.setItem("enrollments", JSON.stringify(state.enrollments));
     },
+    
     setEnrollments: (
       state,
       { payload: enrollments }: PayloadAction<Enrollment[]>
