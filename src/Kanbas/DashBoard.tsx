@@ -5,7 +5,7 @@ import ProtectedRouteFaculty from "./Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "./Account/ProtectedRouteStudent";
-// import { enrollments } from "./Database"; 
+
 
 export default function Dashboard({
   courses,
@@ -26,6 +26,12 @@ export default function Dashboard({
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
   const dispatch = useDispatch();
+
+  const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
+
+  const handleToggleEnrollments = () => {
+    setShowAllCourses((prev) => !prev); //This function toggles showAllCourses between true and false
+  };
 
   const handleEnroll = (courseId: string) => {
     dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
@@ -81,14 +87,14 @@ export default function Dashboard({
       </ProtectedRouteFaculty>
 
       {/* Enrollments Button for Students */}
-      {/* <ProtectedRouteStudent>
+       <ProtectedRouteStudent>
         <button
           className="btn btn-primary float-end"
           onClick={handleToggleEnrollments}
         >
           {showAllCourses ? "Show Enrolled" : "Show All Courses"}
         </button>
-      </ProtectedRouteStudent> */}
+      </ProtectedRouteStudent> 
 
       <h2 id="wd-dashboard-published">
         Published Courses{" "}
