@@ -26,12 +26,13 @@ export default function Dashboard({
   
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
+  const [allCourses, setAllCourses] = useState([]); // Separate state for all courses
   const dispatch = useDispatch();
 
-  const [showAllCourses, setShowAllCourses] = useState(false); // a boolean state that toggles between displaying all courses or only enrolled courses for students.
+  const [showAllCourses, setShowAllCourses] = useState(false); 
 
-  const handleToggleEnrollments = () => {
-    setShowAllCourses((prev) => !prev); //This function toggles showAllCourses between true and false
+  const handleShowAllCourses = () => {
+    setShowAllCourses((prev) => !prev); 
   };
 
   const handleEnroll = (courseId: string) => {
@@ -42,25 +43,39 @@ export default function Dashboard({
     dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
   };
 
-  // This filters courses based on showAllCourses.
-  // If showAllCourses is true, all courses are displayed.
-  // Otherwise, only courses that the student is enrolled in are displayed.
+  // const fetchAllCourses = async () => {
+  //   let courses = [];
+  //   try {
+  //     courses = await courseClient.fetchAllCourses();
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   setCourse(courses);
+  // };
 
-  const fetchAllCourses = async () => {
-    let courses = [];
-    try {
-      courses = await courseClient.fetchAllCourses();
-    } catch (error) {
-      console.error(error);
-    }
-    setCourse(courses);
-  };
+  // useEffect(() => {
+  //   if (showAllCourses) {
+  //     fetchAllCourses();
+  //   }
+  // }, [showAllCourses]);
 
+  // Fetch all courses when toggling showAllCourses
   useEffect(() => {
     if (showAllCourses) {
+      const fetchAllCourses = async () => {
+        try {
+          const courses = await courseClient.fetchAllCourses();
+          setAllCourses(courses);
+        } catch (error) {
+          console.error("Failed to fetch all courses:", error);
+        }
+      };
       fetchAllCourses();
     }
   }, [showAllCourses]);
+
+  // Determine courses to display based on toggle
+  const displayedCourses = showAllCourses ? allCourses : courses;
 
   return (
     <div className="p-4" id="wd-dashboard">
@@ -111,7 +126,7 @@ export default function Dashboard({
        <ProtectedRouteStudent>
         <button
           className="btn btn-primary float-end"
-          onClick={handleToggleEnrollments}
+          onClick={handleShowAllCourses}
         >
           {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </button>
