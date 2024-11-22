@@ -17,3 +17,13 @@ export const createAssignmentForCourse = async (courseId: string, assignment: an
     );
     return response.data;
   };
+
+//   export const updateModule = async (module: any) => {
+//     const { data } = await axiosWithCredentials.put(`${MODULES_API}/${module._id}`, module);
+//     return data;
+//   };
+
+export const updateAssignmentData = async (assignment: any) => {
+    const { data } = await axiosWithCredentials.put(`${ASSIGNMENTS_API}/${assignment._id}`, assignment);
+    return data;
+  };
