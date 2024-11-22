@@ -5,7 +5,6 @@ import KanbasNavigation from "./Navigation";
 import Courses from "./Courses";
 import "./styles.css";
 import { useEffect, useState } from "react";
-// import * as db from "./Database";
 import { Provider, useSelector } from "react-redux";
 import store from "./store";
 import ProtectedRoute from "./Account/ProtectedRoute";
@@ -15,7 +14,7 @@ import * as userClient from "./Account/client";
 
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
-
+  // const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
 
   const fetchCourses = async () => {
@@ -27,6 +26,7 @@ export default function Kanbas() {
     }
     setCourses(courses);
   };
+
   useEffect(() => {
     fetchCourses();
   }, [currentUser]);

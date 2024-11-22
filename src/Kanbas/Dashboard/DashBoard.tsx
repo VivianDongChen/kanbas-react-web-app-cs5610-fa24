@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProtectedRouteFaculty from "../Account/ProtectedRouteFaculty";
 import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "../Account/ProtectedRouteStudent";
+import * as courseClient from "../Courses/client";
 
 
 export default function Dashboard({
@@ -40,6 +41,26 @@ export default function Dashboard({
   const handleUnenroll = (courseId: string) => {
     dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
   };
+
+  // This filters courses based on showAllCourses.
+  // If showAllCourses is true, all courses are displayed.
+  // Otherwise, only courses that the student is enrolled in are displayed.
+
+  const fetchAllCourses = async () => {
+    let courses = [];
+    try {
+      courses = await courseClient.fetchAllCourses();
+    } catch (error) {
+      console.error(error);
+    }
+    setCourse(courses);
+  };
+
+  useEffect(() => {
+    if (showAllCourses) {
+      fetchAllCourses();
+    }
+  }, [showAllCourses]);
 
   return (
     <div className="p-4" id="wd-dashboard">
@@ -92,7 +113,7 @@ export default function Dashboard({
           className="btn btn-primary float-end"
           onClick={handleToggleEnrollments}
         >
-          {showAllCourses ? "Show Enrolled" : "Show All Courses"}
+          {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </button>
       </ProtectedRouteStudent> 
 
