@@ -23,12 +23,11 @@ export default function Dashboard({
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
 }) {
-  
+
+  const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
   const [allCourses, setAllCourses] = useState([]); // Separate state for all courses
-  const dispatch = useDispatch();
-
   const [showAllCourses, setShowAllCourses] = useState(false); 
 
   const handleShowAllCourses = () => {
@@ -64,8 +63,8 @@ export default function Dashboard({
     if (showAllCourses) {
       const fetchAllCourses = async () => {
         try {
-          const courses = await courseClient.fetchAllCourses();
-          setAllCourses(courses);
+          const fetchedCourses = await courseClient.fetchAllCourses();
+          setAllCourses(fetchedCourses); // Store all courses locally
         } catch (error) {
           console.error("Failed to fetch all courses:", error);
         }
@@ -76,6 +75,7 @@ export default function Dashboard({
 
   // Determine courses to display based on toggle
   const displayedCourses = showAllCourses ? allCourses : courses;
+
 
   return (
     <div className="p-4" id="wd-dashboard">
@@ -139,7 +139,7 @@ export default function Dashboard({
       <hr />
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {courses.map((course) => (
+          {displayedCourses.map((course) => (
             <div key={course._id} className="col" style={{ width: "300px" }}>
               <div className="card">
                 <Link
