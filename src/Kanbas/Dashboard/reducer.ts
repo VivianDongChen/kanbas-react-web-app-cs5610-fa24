@@ -29,8 +29,6 @@ const initialState = {
   enrollments: getInitialEnrollments() || [],
 };
 
-console.log("Initial state of enrollments:", initialState.enrollments);
-
 const enrollmentSlice = createSlice({
   name: "enrollments",
   initialState,
