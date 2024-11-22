@@ -55,6 +55,11 @@ export default function AssignmentEditor() {
     const assignment = await assignmentsClient.createAssignmentForCourse(cid, assignmentData);
     return assignment;
   };
+
+  const updateAssignmentData = async (assignmentData: any) => {
+    const assignment = await assignmentsClient.updateAssignmentData(assignmentData);
+    return assignment;
+  };
   
   const handleSave = async () => {
 
@@ -64,14 +69,16 @@ export default function AssignmentEditor() {
     }
   
     if (aid === "new") {
-      console.log("Creating a new assignment...");
       const newAssignment = await createAssignmentForCourse(cid, assignmentData); 
       if (newAssignment) {
         dispatch(addAssignment(newAssignment)); 
       }
     } else {
-      console.log("Updating an existing assignment...");
-      dispatch(updateAssignment({ ...assignmentData, _id: aid })); 
+      const assignmentUpdated = await updateAssignmentData(assignmentData);
+      if (assignmentUpdated) {
+        dispatch(updateAssignment({ ...assignmentUpdated, _id: aid })); 
+      }
+      
     }
     navigate(`/Kanbas/Courses/${cid}/Assignments`); 
   };
