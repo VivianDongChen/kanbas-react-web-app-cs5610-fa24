@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { enrollCourse, unenrollCourse } from "./reducer";
 import ProtectedRouteStudent from "../Account/ProtectedRouteStudent";
 import * as courseClient from "../Courses/client";
+import * as enrollmentClient from "./client";
 
 
 export default function Dashboard({
@@ -34,37 +35,12 @@ export default function Dashboard({
     setShowAllCourses((prev) => !prev); 
   };
 
-  const handleEnroll = (courseId: string) => {
-    dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
-  };
-
-  const handleUnenroll = (courseId: string) => {
-    dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
-  };
-
-  // const fetchAllCourses = async () => {
-  //   let courses = [];
-  //   try {
-  //     courses = await courseClient.fetchAllCourses();
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  //   setCourse(courses);
-  // };
-
-  // useEffect(() => {
-  //   if (showAllCourses) {
-  //     fetchAllCourses();
-  //   }
-  // }, [showAllCourses]);
-
-  // Fetch all courses when toggling showAllCourses
   useEffect(() => {
     if (showAllCourses) {
       const fetchAllCourses = async () => {
         try {
           const fetchedCourses = await courseClient.fetchAllCourses();
-          setAllCourses(fetchedCourses); // Store all courses locally
+          setAllCourses(fetchedCourses); 
         } catch (error) {
           console.error("Failed to fetch all courses:", error);
         }
@@ -73,9 +49,42 @@ export default function Dashboard({
     }
   }, [showAllCourses]);
 
-  // Determine courses to display based on toggle
+
   const displayedCourses = showAllCourses ? allCourses : courses;
 
+  // const handleEnroll = (courseId: string) => {
+  //   dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
+  // };
+
+  const handleEnroll = async (courseId: string) => {
+    try {
+      // Interact with the server to enroll the user in the course
+      await enrollmentClient.enrollCourse(currentUser._id, courseId);
+  
+      // If successful, update the Redux store
+      dispatch(enrollCourse({ user: currentUser._id, course: courseId }));
+    } catch (error) {
+      console.error("Failed to enroll in course:", error);
+      // Optionally display an error message to the user
+    }
+  };
+
+  // const handleUnenroll = (courseId: string) => {
+  //   dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
+  // };
+
+  const handleUnenroll = async (courseId: string) => {
+    try {
+      // Interact with the server to unenroll the user from the course
+      await enrollmentClient.unenrollCourse(currentUser._id, courseId);
+  
+      // If successful, update the Redux store
+      dispatch(unenrollCourse({ user: currentUser._id, course: courseId }));
+    } catch (error) {
+      console.error("Failed to unenroll from course:", error);
+      // Optionally display an error message to the user
+    }
+  };
 
   return (
     <div className="p-4" id="wd-dashboard">
