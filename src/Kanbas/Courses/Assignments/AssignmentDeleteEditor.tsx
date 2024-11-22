@@ -1,3 +1,5 @@
+import * as assignmentsClient from "./client";
+
 export default function AssignmentDeleteEditor({
     dialogTitle,
     assignmentId,
@@ -7,6 +9,17 @@ export default function AssignmentDeleteEditor({
     assignmentId: string;
     deleteAssignment: (assignmentId: string) => void;
   }) {
+
+    const handleDelete = async (assignmentId: string) => {
+      try {
+        await assignmentsClient.removeAssignment(assignmentId);
+        deleteAssignment(assignmentId);
+      } catch (error) {
+        console.error("Failed to delete assignment:", error);
+        alert("Failed to delete the assignment. Please try again.");
+      }
+    };
+
     return (
       <div
         id={`delete-dialog-${assignmentId}`}
@@ -38,7 +51,7 @@ export default function AssignmentDeleteEditor({
                 type="button"
                 className="btn btn-danger"
                 data-bs-dismiss="modal" // 点击 Yes 后关闭对话框
-                onClick={() => deleteAssignment(assignmentId)} // 删除作业
+                onClick={() => handleDelete(assignmentId)}
               >
                 Yes
               </button>
