@@ -43,10 +43,16 @@ export default function Kanbas() {
     if (!currentUser) return; // 用户未登录时跳过
     try {
       const enrollments: Enrollment[] = await userClient.findMyEnrollments();
+      console.log("Fetched Enrollments:", enrollments);
+
       const allCourses: Course[] = await courseClient.fetchAllCourses();
+      console.log("Fetched All Courses:", allCourses);
+
       const enrolledCourses = allCourses.filter((course) =>
         enrollments.some((enrollment) => enrollment.courseId === course._id)
       );
+      console.log("Filtered Enrolled Courses:", enrolledCourses);
+      
       setCourses(enrolledCourses); // 更新本地状态
     } catch (error) {
       console.error("Failed to fetch courses or enrollments:", error);
