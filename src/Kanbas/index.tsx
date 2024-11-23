@@ -52,7 +52,7 @@ export default function Kanbas() {
         enrollments.some((enrollment) => enrollment.courseId === course._id)
       );
       console.log("Filtered Enrolled Courses:", enrolledCourses);
-      
+
       setCourses(enrolledCourses); // 更新本地状态
     } catch (error) {
       console.error("Failed to fetch courses or enrollments:", error);
@@ -107,6 +107,7 @@ export default function Kanbas() {
               path="Dashboard"
               element={
                 <ProtectedRoute>
+                  {console.log("Kanbas Courses Passed to Dashboard:", courses)} // 打印传递的课程
                   <Dashboard
                     courses={courses}
                     course={course}

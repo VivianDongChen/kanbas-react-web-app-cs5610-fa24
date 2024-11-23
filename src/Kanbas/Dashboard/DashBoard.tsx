@@ -38,6 +38,7 @@ export default function Dashboard({
   };
 
   useEffect(() => {
+    console.log("Dashboard Courses Received:", courses);
     if (showAllCourses) {
       const fetchAllCourses = async () => {
         try {
@@ -57,6 +58,8 @@ export default function Dashboard({
     ? allCourses
     : courses // 如果 allCourses 为空，则使用 courses 作为备选
   : courses;
+
+  console.log("Displayed Courses for Rendering:", displayedCourses); // 打印用于渲染的课程
 
   const handleEnroll = async (courseId: string) => {
     try {
