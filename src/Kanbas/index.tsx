@@ -17,14 +17,25 @@ export default function Kanbas() {
   // const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
 
+  // const fetchCourses = async () => {
+  //   let courses = [];
+  //   try {
+  //     courses = await userClient.findMyCourses();
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   setCourses(courses);
+  // };
+
   const fetchCourses = async () => {
-    let courses = [];
     try {
-      courses = await userClient.findMyCourses();
+      if (currentUser) {
+        const userCourses = await userClient.findMyCourses(); // 获取用户的注册课程
+        setCourses(userCourses); // 更新到本地状态
+      }
     } catch (error) {
-      console.error(error);
+      console.error("Failed to fetch user courses:", error);
     }
-    setCourses(courses);
   };
 
   useEffect(() => {
