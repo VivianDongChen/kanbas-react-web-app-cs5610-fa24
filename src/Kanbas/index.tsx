@@ -30,9 +30,9 @@ export default function Kanbas() {
 
   interface Enrollment {
     userId: string;
-    courseId: string;
+    course: string;
   }
-  
+
   interface Course {
     _id: string;
     name: string;
@@ -48,8 +48,11 @@ export default function Kanbas() {
       const allCourses: Course[] = await courseClient.fetchAllCourses();
       console.log("Fetched All Courses:", allCourses);
 
+      console.log("Enrollments Before Filter:", enrollments);
+      console.log("All Courses Before Filter:", allCourses);
+
       const enrolledCourses = allCourses.filter((course) =>
-        enrollments.some((enrollment) => enrollment.courseId === course._id)
+        enrollments.some((enrollment) => enrollment.course === course._id)
       );
       console.log("Filtered Enrolled Courses:", enrolledCourses);
 
@@ -107,7 +110,8 @@ export default function Kanbas() {
               path="Dashboard"
               element={
                 <ProtectedRoute>
-                  {console.log("Kanbas Courses Passed to Dashboard:", courses)} // 打印传递的课程
+                  {console.log("Kanbas Courses Passed to Dashboard:", courses)}{" "}
+                  // 打印传递的课程
                   <Dashboard
                     courses={courses}
                     course={course}
