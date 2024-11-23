@@ -18,23 +18,44 @@ export default function Kanbas() {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
 
   // const fetchCourses = async () => {
-  //   let courses = [];
   //   try {
-  //     courses = await userClient.findMyCourses();
+  //     if (currentUser) {
+  //       const userCourses = await userClient.findMyCourses(); // 获取用户的注册课程
+  //       setCourses(userCourses); // 更新到本地状态
+  //     }
   //   } catch (error) {
-  //     console.error(error);
+  //     console.error("Failed to fetch user courses:", error);
   //   }
-  //   setCourses(courses);
   // };
 
+  interface Enrollment {
+    userId: string;
+    courseId: string;
+  }
+  
+  interface Course {
+    _id: string;
+    name: string;
+    description?: string;
+  }
+
   const fetchCourses = async () => {
+    if (!currentUser) return; // 用户未登录时跳过
     try {
-      if (currentUser) {
-        const userCourses = await userClient.findMyCourses(); // 获取用户的注册课程
-        setCourses(userCourses); // 更新到本地状态
-      }
+      // 获取用户最新的 enrollment
+      const enrollments: Enrollment[] = await userClient.findMyEnrollments();
+  
+      // 获取所有课程
+      const allCourses: Course[] = await courseClient.fetchAllCourses();
+  
+      // 过滤用户注册的课程
+      const enrolledCourses = allCourses.filter((course) =>
+        enrollments.some((enrollment) => enrollment.courseId === course._id)
+      );
+  
+      setCourses(enrolledCourses); // 更新本地状态
     } catch (error) {
-      console.error("Failed to fetch user courses:", error);
+      console.error("Failed to fetch courses or enrollments:", error);
     }
   };
 
@@ -93,6 +114,7 @@ export default function Kanbas() {
                     addNewCourse={addNewCourse}
                     deleteCourse={deleteCourse}
                     updateCourse={updateCourse}
+                    fetchCourses={fetchCourses} // 将 fetchCourses 传递到 Dashboard
                   />
                 </ProtectedRoute>
               }

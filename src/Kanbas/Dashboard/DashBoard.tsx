@@ -16,6 +16,7 @@ export default function Dashboard({
   addNewCourse,
   deleteCourse,
   updateCourse,
+  fetchCourses,
 }: {
   courses: any[];
   course: any;
@@ -23,6 +24,7 @@ export default function Dashboard({
   addNewCourse: () => void;
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
+  fetchCourses:() => Promise<void>;
 }) {
 
   const dispatch = useDispatch();
@@ -35,12 +37,26 @@ export default function Dashboard({
     setShowAllCourses((prev) => !prev); 
   };
 
+  // useEffect(() => {
+  //   if (showAllCourses) {
+  //     const fetchAllCourses = async () => {
+  //       try {
+  //         const fetchedCourses = await courseClient.fetchAllCourses();
+  //         setAllCourses(fetchedCourses); 
+  //       } catch (error) {
+  //         console.error("Failed to fetch all courses:", error);
+  //       }
+  //     };
+  //     fetchAllCourses();
+  //   }
+  // }, [showAllCourses]);
+
   useEffect(() => {
-    if (showAllCourses) {
+    if (showAllCourses && allCourses.length === 0) {
       const fetchAllCourses = async () => {
         try {
           const fetchedCourses = await courseClient.fetchAllCourses();
-          setAllCourses(fetchedCourses); 
+          setAllCourses(fetchedCourses);
         } catch (error) {
           console.error("Failed to fetch all courses:", error);
         }
@@ -52,37 +68,25 @@ export default function Dashboard({
 
   const displayedCourses = showAllCourses ? allCourses : courses;
 
-  // const handleEnroll = (courseId: string) => {
-  //   dispatch(enrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to enroll course from the student’s enrollment list, using the course’s ID as a parameter.
-  // };
 
   const handleEnroll = async (courseId: string) => {
     try {
-      // Interact with the server to enroll the user in the course
       await enrollmentClient.enrollCourse(currentUser._id, courseId);
-  
-      // If successful, update the Redux store
       dispatch(enrollCourse({ user: currentUser._id, course: courseId }));
+      await fetchCourses(); // 刷新 courses 列表
     } catch (error) {
       console.error("Failed to enroll in course:", error);
-      // Optionally display an error message to the user
-    }
-  };
 
-  // const handleUnenroll = (courseId: string) => {
-  //   dispatch(unenrollCourse({ user: currentUser._id, course: courseId })); // Dispatch action to unenroll course from the student’s enrollment list, using the course’s ID as a parameter.
-  // };
+  };
 
   const handleUnenroll = async (courseId: string) => {
     try {
-      // Interact with the server to unenroll the user from the course
       await enrollmentClient.unenrollCourse(currentUser._id, courseId);
-  
-      // If successful, update the Redux store
       dispatch(unenrollCourse({ user: currentUser._id, course: courseId }));
+      await fetchCourses(); // 刷新 courses 列表
     } catch (error) {
       console.error("Failed to unenroll from course:", error);
-      // Optionally display an error message to the user
+
     }
   };
 
