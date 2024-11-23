@@ -37,26 +37,12 @@ export default function Dashboard({
     setShowAllCourses((prev) => !prev); 
   };
 
-  // useEffect(() => {
-  //   if (showAllCourses) {
-  //     const fetchAllCourses = async () => {
-  //       try {
-  //         const fetchedCourses = await courseClient.fetchAllCourses();
-  //         setAllCourses(fetchedCourses); 
-  //       } catch (error) {
-  //         console.error("Failed to fetch all courses:", error);
-  //       }
-  //     };
-  //     fetchAllCourses();
-  //   }
-  // }, [showAllCourses]);
-
   useEffect(() => {
-    if (showAllCourses && allCourses.length === 0) {
+    if (showAllCourses) {
       const fetchAllCourses = async () => {
         try {
           const fetchedCourses = await courseClient.fetchAllCourses();
-          setAllCourses(fetchedCourses);
+          setAllCourses(fetchedCourses); 
         } catch (error) {
           console.error("Failed to fetch all courses:", error);
         }
@@ -65,9 +51,7 @@ export default function Dashboard({
     }
   }, [showAllCourses]);
 
-
   const displayedCourses = showAllCourses ? allCourses : courses;
-
 
   const handleEnroll = async (courseId: string) => {
     try {
@@ -75,8 +59,8 @@ export default function Dashboard({
       dispatch(enrollCourse({ user: currentUser._id, course: courseId }));
       await fetchCourses(); // 刷新 courses 列表
     } catch (error) {
-      console.error("Failed to enroll in course:", error);
-
+        console.error("Failed to enroll in course:", error);
+    }
   };
 
   const handleUnenroll = async (courseId: string) => {
@@ -86,7 +70,6 @@ export default function Dashboard({
       await fetchCourses(); // 刷新 courses 列表
     } catch (error) {
       console.error("Failed to unenroll from course:", error);
-
     }
   };
 
