@@ -30,7 +30,7 @@ export default function Dashboard({
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
-  const [allCourses, setAllCourses] = useState([]); // Separate state for all courses
+  const [allCourses, setAllCourses] = useState([]); 
   const [showAllCourses, setShowAllCourses] = useState(false); 
 
   const handleShowAllCourses = () => {
@@ -51,7 +51,12 @@ export default function Dashboard({
     }
   }, [showAllCourses]);
 
-  const displayedCourses = showAllCourses ? allCourses : courses;
+  // const displayedCourses = showAllCourses ? allCourses : courses;
+  const displayedCourses = showAllCourses
+  ? allCourses.length > 0
+    ? allCourses
+    : courses // 如果 allCourses 为空，则使用 courses 作为备选
+  : courses;
 
   const handleEnroll = async (courseId: string) => {
     try {
