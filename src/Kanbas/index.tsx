@@ -111,7 +111,6 @@ export default function Kanbas() {
               element={
                 <ProtectedRoute>
                   {console.log("Kanbas Courses Passed to Dashboard:", courses)}{" "}
-                  // 打印传递的课程
                   <Dashboard
                     courses={courses}
                     course={course}
