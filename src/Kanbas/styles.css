@@ -24,30 +24,35 @@ body * {
     --bs-secondary-rgb: 199, 205, 209;
 }
 
+/* .list-group-item {
+    --bs-list-group-border-color: gray;
+} */
+
 .wd-lesson {
     border-left: 3px solid green !important;
 }
 
-.list-group.wd>.list-group-item.active {
+.list-group.wd > .list-group-item.active {
     color: black;
     background-color: white;
     border-left: 3px solid black !important;
-}
+    }
+    
 
+
+/* 默认样式：字体红色，无边框 */
 .list-group-item {
-    border-left: 4px solid transparent;
-    /* 默认竖线是透明的 */
-    color:  red;
-    /* 默认字体颜色是红色 */
-    background-color: transparent;
-    /* 清除背景色 */
+    color: red; /* 默认字体颜色为红色 */
+    background-color: transparent; /* 移除背景色 */
+    border: none; /* 移除边框 */
+    border-left: 3px solid transparent; /* 默认竖线透明 */
+    padding: 10px 15px; /* 调整间距，保持整洁 */
+    text-decoration: none; /* 移除链接的下划线 */
 }
 
+/* 激活样式：字体黑色，左侧黑色竖线 */
 .list-group-item.active {
-    border-left: 4px solid red;
-    /* 激活时竖线变为红色 */
-    color: black;
-    /* 激活时字体变为红色 */
-    background-color: transparent;
-    /* 背景色保持透明 */
+    color: black; /* 激活时字体颜色为黑色 */
+    background-color: transparent; /* 背景透明 */
+    border-left: 3px solid black !important; /* 激活时左侧竖线为黑色 */
 }
