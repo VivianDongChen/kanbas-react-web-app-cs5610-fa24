@@ -19,10 +19,12 @@ export default function Users() {
   const [role, setRole] = useState("");
   const filterUsersByRole = async (role: string) => {
     setRole(role);
-    if (role) {
+    if (role && !name) {
       const users = await client.findUsersByRole(role);
       setUsers(users);
-    } else {
+    } else if (role && name){
+      fetchFilteredUsers(); 
+    }else {
       fetchUsers();
     }
   };
@@ -30,12 +32,19 @@ export default function Users() {
   const [name, setName] = useState("");
   const filterUsersByName = async (name: string) => {
     setName(name);
-    if (name) {
+    if (name && !role) {
       const users = await client.findUsersByPartialName(name);
       setUsers(users);
+    }else if(name && role){
+      fetchFilteredUsers(); 
     } else {
       fetchUsers();
     }
+  };
+
+  const fetchFilteredUsers = async () => {
+    const filteredUsers = await client.findUsersByFilters(role, name);
+    setUsers(filteredUsers);
   };
 
   return (
