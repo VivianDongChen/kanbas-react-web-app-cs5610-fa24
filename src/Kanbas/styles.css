@@ -55,4 +55,6 @@ body * {
     color: black; /* 激活时字体颜色为黑色 */
     background-color: transparent; /* 背景透明 */
     border-left: 3px solid black !important; /* 激活时左侧竖线为黑色 */
+    border-radius: 0; /* 确保没有圆角 */
+    box-shadow: none; /* 避免任何阴影 */
 }
