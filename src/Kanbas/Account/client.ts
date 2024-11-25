@@ -55,22 +55,12 @@ export const findAllUsers = async () => {
   return response.data;
 };
 
-export const findUsersByRole = async (role: string) => {
-  const response = await axiosWithCredentials.get(`${USERS_API}?role=${role}`);
-  return response.data;
-};
-
-export const findUsersByPartialName = async (name: string) => {
-  const response = await axios.get(`${USERS_API}?name=${name}`);
-  return response.data;
-};
-
 export const findUsersByFilters = async (role: string, name: string) => {
   const query = new URLSearchParams();
 
-  if (role) query.append("role", role); // 添加 role 参数
-  if (name) query.append("name", name); // 添加 name 参数
+  if (role) query.append("role", role); 
+  if (name) query.append("name", name); 
 
   const response = await axiosWithCredentials.get(`${USERS_API}?${query.toString()}`);
-  return response.data; // 返回查询结果
+  return response.data; 
 };
