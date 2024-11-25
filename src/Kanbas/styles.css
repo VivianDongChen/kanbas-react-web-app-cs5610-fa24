@@ -24,16 +24,30 @@ body * {
     --bs-secondary-rgb: 199, 205, 209;
 }
 
-.list-group-item {
-    --bs-list-group-border-color: gray;
-}
-
 .wd-lesson {
     border-left: 3px solid green !important;
 }
 
-.list-group.wd > .list-group-item.active {
+.list-group.wd>.list-group-item.active {
     color: black;
     background-color: white;
     border-left: 3px solid black !important;
-    }
+}
+
+.list-group-item {
+    border-left: 4px solid transparent;
+    /* 默认竖线是透明的 */
+    color:  red;
+    /* 默认字体颜色是红色 */
+    background-color: transparent;
+    /* 清除背景色 */
+}
+
+.list-group-item.active {
+    border-left: 4px solid red;
+    /* 激活时竖线变为红色 */
+    color: black;
+    /* 激活时字体变为红色 */
+    background-color: transparent;
+    /* 背景色保持透明 */
+}

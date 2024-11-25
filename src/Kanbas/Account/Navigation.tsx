@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import "../styles.css";
 
 export default function AccountNavigation() {
 
@@ -23,7 +23,8 @@ export default function AccountNavigation() {
       {currentUser && currentUser.role === "ADMIN" && (
         <Link
           to={`/Kanbas/Account/Users`}
-          className={`list-group-item ${active("Users")}`}
+          className={`list-group-item ${active("Users")}`
+        }
         >
           Users
         </Link>
