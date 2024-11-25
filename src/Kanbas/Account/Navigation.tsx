@@ -7,7 +7,6 @@ export default function AccountNavigation() {
   const links = currentUser ? ["Profile"] : ["Signin", "Signup"];
   return (
     <div id="wd-account-navigation">
-
       {links.includes("Signin") && (
         <Link
           to={`/Kanbas/Account/Signin`}
@@ -39,7 +38,16 @@ export default function AccountNavigation() {
           Profile
         </Link>
       )}
-      
+
+      {currentUser && currentUser.role === "ADMIN" && (
+        <Link
+          to={`/Kanbas/Account/Users`}
+          className={`list-group-item ${active("Users")}`}
+        >
+          {" "}
+          Users{" "}
+        </Link>
+      )}
     </div>
   );
 }
