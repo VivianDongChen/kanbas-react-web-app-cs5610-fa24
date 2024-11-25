@@ -47,9 +47,15 @@ export const findMyCourses = async () => {
   );
   return data;
 };
+
 export const findMyEnrollments = async () => {
   const { data } = await axiosWithCredentials.get(
     `${USERS_API}/current/enrollments`
   );
   return data;
 };
+
+export const findUsersByRole = async (role: string) => {
+  const response = await axiosWithCredentials.get(`${USERS_API}?role=${role}`);
+  return response.data;
+  };
