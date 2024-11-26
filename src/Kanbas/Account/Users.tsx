@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import PeopleTable from "../Courses/People/Table";
 import * as client from "./client";
 import { FaPlus } from "react-icons/fa";
+import { useParams } from "react-router";
 
 export default function Users() {
+  const { uid } = useParams();
   const [users, setUsers] = useState<any[]>([]);
   const [role, setRole] = useState("");
   const [name, setName] = useState("");
