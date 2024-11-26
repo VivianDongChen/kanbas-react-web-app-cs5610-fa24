@@ -13,26 +13,18 @@ export const signin = async (credentials: any) => {
   return response.data;
 };
 
+export const signout = async () => {
+  const response = await axiosWithCredentials.post(`${USERS_API}/signout`);
+  return response.data;
+};
+
 export const signup = async (user: any) => {
   const response = await axiosWithCredentials.post(`${USERS_API}/signup`, user);
   return response.data;
 };
 
-export const updateUser = async (user: any) => {
-  const response = await axiosWithCredentials.put(
-    `${USERS_API}/${user._id}`,
-    user
-  );
-  return response.data;
-};
-
 export const profile = async () => {
   const response = await axiosWithCredentials.post(`${USERS_API}/profile`);
-  return response.data;
-};
-
-export const signout = async () => {
-  const response = await axiosWithCredentials.post(`${USERS_API}/signout`);
   return response.data;
 };
 
@@ -58,9 +50,34 @@ export const findAllUsers = async () => {
 export const findUsersByFilters = async (role: string, name: string) => {
   const query = new URLSearchParams();
 
-  if (role) query.append("role", role); 
-  if (name) query.append("name", name); 
+  if (role) query.append("role", role);
+  if (name) query.append("name", name);
 
-  const response = await axiosWithCredentials.get(`${USERS_API}?${query.toString()}`);
-  return response.data; 
+  const response = await axiosWithCredentials.get(
+    `${USERS_API}?${query.toString()}`
+  );
+  return response.data;
+};
+
+export const findUserById = async (id: string) => {
+  const response = await axiosWithCredentials.get(`${USERS_API}/${id}`);
+  return response.data;
+};
+
+export const deleteUser = async (userId: string) => {
+  const response = await axiosWithCredentials.delete(`${USERS_API}/${userId}`);
+  return response.data;
+};
+
+export const updateUser = async (user: any) => {
+  const response = await axiosWithCredentials.put(
+    `${USERS_API}/${user._id}`,
+    user
+  );
+  return response.data;
+};
+
+export const createUser = async (user: any) => {
+  const response = await axiosWithCredentials.post(`${USERS_API}`, user);
+  return response.data;
 };
