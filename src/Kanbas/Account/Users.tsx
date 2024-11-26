@@ -51,7 +51,6 @@ export default function Users() {
   return (
     <div>
       <h3>Users</h3>
-
       <div style={{ display: "flex", gap: "1rem" }}>
         <input
           type="text"
@@ -74,7 +73,7 @@ export default function Users() {
           <option value="FACULTY">Faculty</option>
           <option value="ADMIN">Administrators</option>
         </select>
-        
+
         <button
           onClick={createUser}
           className="float-end btn btn-danger wd-add-people"
