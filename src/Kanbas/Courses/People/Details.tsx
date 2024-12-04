@@ -178,7 +178,7 @@ export default function PeopleDetails() {
         onClick={() => deleteUser(uid)}
         className="btn btn-danger float-end wd-delete"
       >
-        Delete
+        Delete123
       </button>
       <button
         onClick={() => navigate(-1)}
