@@ -56,8 +56,8 @@ My GitHub - Server
 </li>
 
 <li className="nav-item">
-<a id="wd-render" href="https://dashboard.heroku.com/apps/ancient-island-42384" className="nav-link">
-My Heroku
+<a id="wd-render" href="https://kanbas-node-server-app-cs5610-fa24.onrender.com" className="nav-link">
+My Render
 </a>
 </li>
 
