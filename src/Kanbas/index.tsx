@@ -53,9 +53,19 @@ export default function Kanbas() {
     description: "New Description",
   });
 
+  // const addNewCourse = async () => {
+  //   const newCourse = await courseClient.createCourse(course);
+  //   setCourses([...courses, newCourse]);
+  // };
+
   const addNewCourse = async () => {
-    const newCourse = await courseClient.createCourse(course);
-    setCourses([...courses, newCourse]);
+    try {
+      const newCourse = await courseClient.createCourse(course); // 调用后端接口
+      console.log("New course added:", newCourse); // 调试输出
+      await fetchCourses(); // 确保列表同步更新
+    } catch (error) {
+      console.error("Failed to add new course:", error);
+    }
   };
 
   const deleteCourse = async (courseId: string) => {
