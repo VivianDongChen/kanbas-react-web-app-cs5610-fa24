@@ -133,7 +133,8 @@ export default function Dashboard({
         />
         <hr />
       </ProtectedRouteFaculty>
-      {/* Enrollments Button for Students */}
+
+      {/* Show All/Show Enrolled Button for Students */}
       <ProtectedRouteStudent>
         <button
           className="btn btn-primary float-end"
@@ -142,9 +143,10 @@ export default function Dashboard({
           {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </button>
       </ProtectedRouteStudent>
+
       <h2 id="wd-dashboard-published">
         Published Courses{" "}
-        <ProtectedRouteFaculty>({courses.length})</ProtectedRouteFaculty>
+        ({displayedCourses.length})
       </h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
@@ -182,7 +184,7 @@ export default function Dashboard({
                           enrollment.user === currentUser._id // Only show Unenroll if this user is enrolled
                       ) ? (
                         <button
-                          className="btn btn-danger"
+                          className="btn btn-danger float-end"
                           onClick={(event) => {
                             event.preventDefault();
                             handleUnenroll(course._id);
@@ -192,7 +194,7 @@ export default function Dashboard({
                         </button>
                       ) : (
                         <button
-                          className="btn btn-success"
+                          className="btn btn-success float-end"
                           onClick={(event) => {
                             event.preventDefault();
                             handleEnroll(course._id);
