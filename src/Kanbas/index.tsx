@@ -14,20 +14,7 @@ import * as userClient from "./Account/client";
 
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
-  // const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-
-  // const fetchCourses = async () => {
-  //   try {
-  //     if (currentUser) {
-  //       const userCourses = await userClient.findMyCourses(); // 获取用户的注册课程
-  //       setCourses(userCourses); // 更新到本地状态
-  //     }
-  //   } catch (error) {
-  //     console.error("Failed to fetch user courses:", error);
-  //   }
-  // };
-
   interface Enrollment {
     userId: string;
     course: string;
@@ -44,11 +31,9 @@ export default function Kanbas() {
     try {
       const enrollments: Enrollment[] = await userClient.findMyEnrollments();
       const allCourses: Course[] = await courseClient.fetchAllCourses();
-
       const enrolledCourses = allCourses.filter((course) =>
         enrollments.some((enrollment) => enrollment.course === course._id)
       );
-
       setCourses(enrolledCourses); // 更新本地状态
     } catch (error) {
       console.error("Failed to fetch courses or enrollments:", error);

@@ -8,7 +8,6 @@ import ProtectedRouteStudent from "../Account/ProtectedRouteStudent";
 import * as courseClient from "../Courses/client";
 import * as enrollmentClient from "./client";
 
-
 export default function Dashboard({
   courses,
   course,
@@ -24,17 +23,25 @@ export default function Dashboard({
   addNewCourse: () => void;
   deleteCourse: (course: any) => void;
   updateCourse: () => void;
-  fetchCourses:() => Promise<void>;
+  fetchCourses: () => Promise<void>;
 }) {
-
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const enrollments = useSelector((state: any) => state.enrollmentReducer.enrollments);
-  const [allCourses, setAllCourses] = useState([]); 
-  const [showAllCourses, setShowAllCourses] = useState(false); 
+  const enrollments = useSelector(
+    (state: any) => state.enrollmentReducer.enrollments
+  );
+  const [allCourses, setAllCourses] = useState([]);
+  const [showAllCourses, setShowAllCourses] = useState(false);
+
+  // 强制教师用户显示所有课程
+  useEffect(() => {
+    if (currentUser?.role === "FACULTY") {
+      setShowAllCourses(true);
+    }
+  }, [currentUser]);
 
   const handleShowAllCourses = () => {
-    setShowAllCourses((prev) => !prev); 
+    setShowAllCourses((prev) => !prev);
   };
 
   useEffect(() => {
@@ -43,7 +50,9 @@ export default function Dashboard({
       const fetchAllCourses = async () => {
         try {
           const fetchedCourses = await courseClient.fetchAllCourses();
-          setAllCourses(fetchedCourses); 
+          console.log("Fetched All Courses:", fetchedCourses);
+          setAllCourses(fetchedCourses);
+          console.log("All Courses State:", allCourses);
         } catch (error) {
           console.error("Failed to fetch all courses:", error);
         }
@@ -54,10 +63,10 @@ export default function Dashboard({
 
   // const displayedCourses = showAllCourses ? allCourses : courses;
   const displayedCourses = showAllCourses
-  ? allCourses.length > 0
-    ? allCourses
-    : courses // 如果 allCourses 为空，则使用 courses 作为备选
-  : courses;
+    ? allCourses.length > 0
+      ? allCourses
+      : courses // 如果 allCourses 为空，则使用 courses 作为备选
+    : courses;
 
   console.log("Displayed Courses for Rendering:", displayedCourses); // 打印用于渲染的课程
 
@@ -67,7 +76,7 @@ export default function Dashboard({
       dispatch(enrollCourse({ user: currentUser._id, course: courseId }));
       await fetchCourses(); // 刷新 courses 列表
     } catch (error) {
-        console.error("Failed to enroll in course:", error);
+      console.error("Failed to enroll in course:", error);
     }
   };
 
@@ -84,7 +93,6 @@ export default function Dashboard({
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-
       <ProtectedRouteFaculty>
         <h5>
           New Course
@@ -125,17 +133,15 @@ export default function Dashboard({
         />
         <hr />
       </ProtectedRouteFaculty>
-
       {/* Enrollments Button for Students */}
-       <ProtectedRouteStudent>
+      <ProtectedRouteStudent>
         <button
           className="btn btn-primary float-end"
           onClick={handleShowAllCourses}
         >
           {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </button>
-      </ProtectedRouteStudent> 
-
+      </ProtectedRouteStudent>
       <h2 id="wd-dashboard-published">
         Published Courses{" "}
         <ProtectedRouteFaculty>({courses.length})</ProtectedRouteFaculty>
@@ -189,7 +195,8 @@ export default function Dashboard({
                           className="btn btn-success"
                           onClick={(event) => {
                             event.preventDefault();
-                            handleEnroll(course._id)}}
+                            handleEnroll(course._id);
+                          }}
                         >
                           Enroll
                         </button>
