@@ -27,14 +27,14 @@ export default function Kanbas() {
   }
 
   const fetchCourses = async () => {
-    if (!currentUser) return; // 用户未登录时跳过
+    if (!currentUser) return; 
     try {
       const enrollments: Enrollment[] = await userClient.findMyEnrollments();
       const allCourses: Course[] = await courseClient.fetchAllCourses();
       const enrolledCourses = allCourses.filter((course) =>
         enrollments.some((enrollment) => enrollment.course === course._id)
       );
-      setCourses(enrolledCourses); // 更新本地状态
+      setCourses(enrolledCourses); 
     } catch (error) {
       console.error("Failed to fetch courses or enrollments:", error);
     }
@@ -53,16 +53,10 @@ export default function Kanbas() {
     description: "New Description",
   });
 
-  // const addNewCourse = async () => {
-  //   const newCourse = await courseClient.createCourse(course);
-  //   setCourses([...courses, newCourse]);
-  // };
-
   const addNewCourse = async () => {
     try {
-      const newCourse = await courseClient.createCourse(course); // 调用后端接口
-      console.log("New course added:", newCourse); // 调试输出
-      await fetchCourses(); // 确保列表同步更新
+      const newCourse = await courseClient.createCourse(course); 
+      await fetchCourses(); 
     } catch (error) {
       console.error("Failed to add new course:", error);
     }
@@ -98,7 +92,6 @@ export default function Kanbas() {
               path="Dashboard"
               element={
                 <ProtectedRoute>
-                  {console.log("Kanbas Courses Passed to Dashboard:", courses)}{" "}
                   <Dashboard
                     courses={courses}
                     course={course}
@@ -106,7 +99,7 @@ export default function Kanbas() {
                     addNewCourse={addNewCourse}
                     deleteCourse={deleteCourse}
                     updateCourse={updateCourse}
-                    fetchCourses={fetchCourses} // 将 fetchCourses 传递到 Dashboard
+                    fetchCourses={fetchCourses}
                   />
                 </ProtectedRoute>
               }

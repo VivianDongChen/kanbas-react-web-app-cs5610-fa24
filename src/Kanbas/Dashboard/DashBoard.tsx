@@ -33,42 +33,34 @@ export default function Dashboard({
   const [allCourses, setAllCourses] = useState([]);
   const [showAllCourses, setShowAllCourses] = useState(false);
 
-  // 强制教师用户显示所有课程
   useEffect(() => {
-    if (currentUser?.role === "FACULTY") {
-      setShowAllCourses(true);
-    }
+    const fetchCoursesForFaculty = async () => {
+      if (currentUser?.role === "FACULTY") {
+        await fetchAllCourses();
+        setShowAllCourses(true);
+      }
+    };
+
+    fetchCoursesForFaculty();
   }, [currentUser]);
 
-  const handleShowAllCourses = () => {
+  const fetchAllCourses = async () => {
+    try {
+      const fetchedCourses = await courseClient.fetchAllCourses();
+      setAllCourses(fetchedCourses);
+    } catch (error) {
+      console.error("Failed to fetch all courses:", error);
+    }
+  };
+
+  const handleShowAllCourses = async () => {
+    if (!showAllCourses) {
+      await fetchAllCourses();
+    }
     setShowAllCourses((prev) => !prev);
   };
 
-  useEffect(() => {
-    console.log("Dashboard Courses Received:", courses);
-    if (showAllCourses) {
-      const fetchAllCourses = async () => {
-        try {
-          const fetchedCourses = await courseClient.fetchAllCourses();
-          console.log("Fetched All Courses:", fetchedCourses);
-          setAllCourses(fetchedCourses);
-          console.log("All Courses State:", allCourses);
-        } catch (error) {
-          console.error("Failed to fetch all courses:", error);
-        }
-      };
-      fetchAllCourses();
-    }
-  }, [showAllCourses]);
-
-  // const displayedCourses = showAllCourses ? allCourses : courses;
-  const displayedCourses = showAllCourses
-    ? allCourses.length > 0
-      ? allCourses
-      : courses // 如果 allCourses 为空，则使用 courses 作为备选
-    : courses;
-
-  console.log("Displayed Courses for Rendering:", displayedCourses); // 打印用于渲染的课程
+  const displayedCourses = showAllCourses ? allCourses : courses;
 
   const handleEnroll = async (courseId: string) => {
     try {
@@ -99,7 +91,10 @@ export default function Dashboard({
           <button
             className="btn btn-primary float-end"
             id="wd-add-new-course-click"
-            onClick={addNewCourse}
+            onClick={async () => {
+              await addNewCourse();
+              await fetchAllCourses();
+            }}
           >
             Add
           </button>
@@ -133,7 +128,6 @@ export default function Dashboard({
         />
         <hr />
       </ProtectedRouteFaculty>
-
       {/* Show All/Show Enrolled Button for Students */}
       <ProtectedRouteStudent>
         <button
@@ -143,10 +137,8 @@ export default function Dashboard({
           {showAllCourses ? "Show Enrolled Courses" : "Show All Courses"}
         </button>
       </ProtectedRouteStudent>
-
       <h2 id="wd-dashboard-published">
-        Published Courses{" "}
-        ({displayedCourses.length})
+        Published Courses ({displayedCourses.length})
       </h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
