@@ -100,7 +100,12 @@ export default function Dashboard({
           </button>
           <button
             className="btn btn-warning float-end me-2"
-            onClick={updateCourse}
+            // onClick={updateCourse}
+
+            onClick={async () => {
+              await updateCourse();
+              await fetchAllCourses();
+            }}
             id="wd-update-course-click"
           >
             Update
