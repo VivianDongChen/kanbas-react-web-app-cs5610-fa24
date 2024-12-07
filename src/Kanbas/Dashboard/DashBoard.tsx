@@ -144,7 +144,9 @@ export default function Dashboard({
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {displayedCourses.map((course) => (
-            <div key={course._id} className="col" style={{ width: "300px" }}>
+
+            <div key={course._id} className="col"
+             style={{ width: "300px" }}>
               <div className="card">
                 <Link
                   to={`/Kanbas/Courses/${course._id}/Home`}
@@ -199,10 +201,11 @@ export default function Dashboard({
 
                     <ProtectedRouteFaculty>
                       <button
-                        onClick={(event) => {
-                          event.preventDefault();
-                          deleteCourse(course._id);
-                        }}
+                        onClick={async (event) => {
+                           event.preventDefault();
+                           await deleteCourse(course._id);
+                           await fetchAllCourses();
+                         }}
                         className="btn btn-danger float-end"
                         id="wd-delete-course-click"
                       >
