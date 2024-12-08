@@ -13,6 +13,7 @@ export const deleteModule = async (moduleId: string) => {
   return response.data;
 };
 
+//update modules
 export const updateModule = async (module: any) => {
   const { data } = await axiosWithCredentials.put(`${MODULES_API}/${module._id}`, module);
   return data;
