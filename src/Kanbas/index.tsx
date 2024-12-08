@@ -15,7 +15,6 @@ import * as userClient from "./Account/client";
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-
   const [enrolling, setEnrolling] = useState<boolean>(false);
 
   const findCoursesForUser = async () => {
@@ -48,9 +47,9 @@ export default function Kanbas() {
 
   useEffect(() => {
     if (enrolling) {
-      findCoursesForUser();
-    } else {
       fetchCourses();
+    } else {
+      findCoursesForUser();
     }
   }, [currentUser, enrolling]);
 
