@@ -15,34 +15,44 @@ import * as userClient from "./Account/client";
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  interface Enrollment {
-    userId: string;
-    course: string;
-  }
 
-  interface Course {
-    _id: string;
-    name: string;
-    description?: string;
-  }
+  const [enrolling, setEnrolling] = useState<boolean>(false);
+
+  const findCoursesForUser = async () => {
+    try {
+      const courses = await userClient.findCoursesForUser(currentUser._id);
+      setCourses(courses);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const fetchCourses = async () => {
-    if (!currentUser) return; 
     try {
-      const enrollments: Enrollment[] = await userClient.findMyEnrollments();
-      const allCourses: Course[] = await courseClient.fetchAllCourses();
-      const enrolledCourses = allCourses.filter((course) =>
-        enrollments.some((enrollment) => enrollment.course === course._id)
+      const allCourses = await courseClient.fetchAllCourses();
+      const enrolledCourses = await userClient.findCoursesForUser(
+        currentUser._id
       );
-      setCourses(enrolledCourses); 
+      const courses = allCourses.map((course: any) => {
+        if (enrolledCourses.find((c: any) => c._id === course._id)) {
+          return { ...course, enrolled: true };
+        } else {
+          return course;
+        }
+      });
+      setCourses(courses);
     } catch (error) {
-      console.error("Failed to fetch courses or enrollments:", error);
+      console.error(error);
     }
   };
 
   useEffect(() => {
-    fetchCourses();
-  }, [currentUser]);
+    if (enrolling) {
+      findCoursesForUser();
+    } else {
+      fetchCourses();
+    }
+  }, [currentUser, enrolling]);
 
   const [course, setCourse] = useState<any>({
     _id: "1234",
@@ -55,8 +65,8 @@ export default function Kanbas() {
 
   const addNewCourse = async () => {
     try {
-      const newCourse = await courseClient.createCourse(course); 
-      await fetchCourses(); 
+      const newCourse = await courseClient.createCourse(course);
+      await fetchCourses();
     } catch (error) {
       console.error("Failed to add new course:", error);
     }
@@ -100,6 +110,8 @@ export default function Kanbas() {
                     deleteCourse={deleteCourse}
                     updateCourse={updateCourse}
                     fetchCourses={fetchCourses}
+                    enrolling={enrolling}
+                    setEnrolling={setEnrolling}
                   />
                 </ProtectedRoute>
               }
