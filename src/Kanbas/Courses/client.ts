@@ -9,7 +9,6 @@ const USERS_API = `${REMOTE_SERVER}/api/users`;
 // Retrieve Courses from database
 export const fetchAllCourses = async () => {
   const { data } = await axiosWithCredentials.get(COURSES_API);
-  console.log("API response:", data); // 添加调试日志
   return data;
 };
 
@@ -37,11 +36,7 @@ export const updateCourse = async (course: any) => {
   return data;
 };
 
-
-
-
-
-
+// retrieve modules for a course
 export const findModulesForCourse = async (courseId: string) => {
   const response = await axiosWithCredentials.get(`${COURSES_API}/${courseId}/modules`);
   return response.data;
