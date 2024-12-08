@@ -37,26 +37,6 @@ export default function Dashboard({
     (state: any) => state.enrollmentReducer.enrollments
   );
 
-  // const handleEnroll = async (courseId: string) => {
-  //   try {
-  //     await enrollmentClient.enrollCourse(currentUser._id, courseId);
-  //     dispatch(enrollCourse({ user: currentUser._id, course: courseId }));
-  //     await fetchCourses();
-  //   } catch (error) {
-  //     console.error("Failed to enroll in course:", error);
-  //   }
-  // };
-
-  // const handleUnenroll = async (courseId: string) => {
-  //   try {
-  //     await enrollmentClient.unenrollCourse(currentUser._id, courseId);
-  //     dispatch(unenrollCourse({ user: currentUser._id, course: courseId }));
-  //     await fetchCourses();
-  //   } catch (error) {
-  //     console.error("Failed to unenroll from course:", error);
-  //   }
-  // };
-
   return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">
@@ -69,6 +49,7 @@ export default function Dashboard({
         </button>
       </h1>{" "}
       <hr />
+
       <ProtectedRouteFaculty>
         <h5>
           New Course
@@ -116,6 +97,7 @@ export default function Dashboard({
         />
         <hr />
       </ProtectedRouteFaculty>
+
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div className="row" id="wd-dashboard-courses">
@@ -157,34 +139,6 @@ export default function Dashboard({
                       {course.description}{" "}
                     </p>
                     <button className="btn btn-primary"> Go </button>
-
-                    {/* <ProtectedRouteStudent>
-                      {enrollments.some(
-                        (enrollment: any) =>
-                          enrollment.course === course._id &&
-                          enrollment.user === currentUser._id
-                      ) ? (
-                        <button
-                          className="btn btn-danger float-end"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            handleUnenroll(course._id);
-                          }}
-                        >
-                          Unenroll
-                        </button>
-                      ) : (
-                        <button
-                          className="btn btn-success float-end"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            handleEnroll(course._id);
-                          }}
-                        >
-                          Enroll
-                        </button>
-                      )}
-                    </ProtectedRouteStudent> */}
 
                     <ProtectedRouteFaculty>
                       <button
