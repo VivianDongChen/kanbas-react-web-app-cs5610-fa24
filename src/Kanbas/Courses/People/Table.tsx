@@ -1,9 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import PeopleDetails from "./Details";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import * as courseClient from "../client";
 
-export default function PeopleTable({ users = [] }: { users?: any[] }) {
+export default function PeopleTable({
+  users: propUsers = [],
+}: {
+  users?: any[];
+}) {
+  const { cid } = useParams();
+  const [users, setUsers] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (propUsers && propUsers.length > 0) {
+      setUsers(propUsers);
+    } else if (cid) {
+      const fetchUsersForCourse = async () => {
+        try {
+          const fetchedUsers = await courseClient.findUsersForCourse(cid);
+          console.log("Fetched users for course:", fetchedUsers);
+          setUsers(fetchedUsers);
+        } catch (error) {
+          console.error("Error fetching users for course:", error);
+        }
+      };
+      fetchUsersForCourse();
+    }
+  }, [propUsers, cid]);
+
+  useEffect(() => {
+    console.log("propUsers:", propUsers);
+    console.log("courseId:", cid);
+    console.log("Current users:", users);
+  }, [propUsers, cid, users]);
+
+  console.log("Current courseId from URL:", cid);
+
   return (
     <div id="wd-people-table">
       <PeopleDetails />
@@ -18,6 +51,7 @@ export default function PeopleTable({ users = [] }: { users?: any[] }) {
             <th>Total Activity</th>
           </tr>
         </thead>
+
         <tbody>
           {users.map((user: any) => (
             <tr key={user._id}>

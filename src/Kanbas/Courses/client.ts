@@ -50,3 +50,9 @@ export const createModuleForCourse = async (courseId: string, module: any) => {
   );
   return response.data;
 };
+
+//retrieve the users for a given course.
+export const findUsersForCourse = async (courseId: string) => {
+  const response = await axiosWithCredentials.get(`${COURSES_API}/${courseId}/People`);
+  return response.data;
+  };
