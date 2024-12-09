@@ -10,15 +10,16 @@ import { useSelector, useDispatch } from "react-redux";
 import {setAssignments,addAssignment,deleteAssignment} from "./reducer";
 import AssignmentsControls from "./AssignmentsControls";
 import * as assignmentsClient from "./client";
+import * as coursesClient from "../client";
 
 export default function Assignments() {
-  const { cid } = useParams(); // course ID extracted from the URL using useParams
+  const { cid } = useParams(); 
   const [assignmentName, setAssignmentName] = useState(""); // State for storing the name of a new assignment, managed with setAssignmentName
   const { assignments } = useSelector((state: any) => state.assignmentsReducer); // Retrieved from the Redux store’s assignmentsReducer
   const dispatch = useDispatch(); // dispatch function from Redux for dispatching actions like addAssignment and deleteAssignment
 
   const fetchAssignments = async () => {
-    const assignments = await assignmentsClient.findAssignmentsForCourse(cid as string);
+    const assignments = await coursesClient.findAssignmentsForCourse(cid as string);
     dispatch(setAssignments(assignments));
   };
 
