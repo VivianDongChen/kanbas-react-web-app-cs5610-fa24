@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer"; // Use your reducer functions
 import { useEffect } from "react";
 import * as assignmentsClient from "./client";
+import * as coursesClient from "../client";
 
 export default function AssignmentEditor() {
-  // const { cid, aid } = useParams(); 
   const { cid, aid } = useParams<{ cid: string; aid: string }>();
   const navigate = useNavigate(); 
   const dispatch = useDispatch();
@@ -52,12 +52,12 @@ export default function AssignmentEditor() {
 
   const createAssignmentForCourse = async (cid: string, assignmentData: any) => {
     if (!cid) throw new Error("Course ID is required");
-    const assignment = await assignmentsClient.createAssignmentForCourse(cid, assignmentData);
+    const assignment = await coursesClient.createAssignmentForCourse(cid, assignmentData);
     return assignment;
   };
 
   const updateAssignmentData = async (assignmentData: any) => {
-    const assignment = await assignmentsClient.updateAssignmentData(assignmentData);
+    const assignment = await assignmentsClient.updateAssignment(assignmentData);
     return assignment;
   };
   
@@ -65,7 +65,7 @@ export default function AssignmentEditor() {
 
     if (!cid) {
       console.error("Course ID is missing");
-      return; // 防止继续执行
+      return; 
     }
   
     if (aid === "new") {

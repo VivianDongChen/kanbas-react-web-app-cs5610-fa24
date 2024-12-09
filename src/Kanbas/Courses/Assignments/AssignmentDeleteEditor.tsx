@@ -12,7 +12,7 @@ export default function AssignmentDeleteEditor({
 
     const handleDelete = async (assignmentId: string) => {
       try {
-        await assignmentsClient.removeAssignment(assignmentId);
+        await assignmentsClient.deleteAssignment(assignmentId);
         deleteAssignment(assignmentId);
       } catch (error) {
         console.error("Failed to delete assignment:", error);
