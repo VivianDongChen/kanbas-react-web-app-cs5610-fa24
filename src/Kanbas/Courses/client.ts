@@ -1,10 +1,9 @@
 import axios from "axios";
 import { response } from "express";
-const axiosWithCredentials = axios.create({ withCredentials: true });
 
+const axiosWithCredentials = axios.create({ withCredentials: true });
 const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
 const COURSES_API = `${REMOTE_SERVER}/api/courses`;
-const USERS_API = `${REMOTE_SERVER}/api/users`;
 
 // Retrieve Courses from database
 export const fetchAllCourses = async () => {
@@ -51,7 +50,22 @@ export const createModuleForCourse = async (courseId: string, module: any) => {
   return response.data;
 };
 
-//retrieve the users for a given course.
+//retrieve assignments for a course
+export const findAssignmentsForCourse = async (courseId: string) => {
+  const response = await axiosWithCredentials.get(`${COURSES_API}/${courseId}/assignments`);
+  return response.data;
+};
+
+//create assignments for a course
+export const createAssignmentForCourse = async (courseId: string, assignment: any) => {
+    const response = await axiosWithCredentials.post(
+    `${COURSES_API}/${courseId}/assignments`,
+    assignment
+    );
+    return response.data;
+  };
+
+//retrieve all enrolled users for a given course.
 export const findUsersForCourse = async (courseId: string) => {
   const response = await axiosWithCredentials.get(`${COURSES_API}/${courseId}/People`);
   return response.data;
